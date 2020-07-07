@@ -12,7 +12,7 @@ public class ShowCard extends StatePanel {
 
     public void init(Card card) {
         this.card = card;
-        removeAll();
+        removeAllThings();
         setCard();
         setPanel();
     }

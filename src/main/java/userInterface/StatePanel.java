@@ -41,7 +41,7 @@ public abstract class StatePanel extends State {
 
     protected void setCard(Card card) {
         JButton jButton = new JButton();
-        jButton.setIcon(new ImageIcon(FileAssistance.getImage("cards", card.getCardName() + ".png")));
+        jButton.setIcon(new ImageIcon(FileAssistance.getImage("cards", card.getCardShowName() + ".png")));
         jButton.setBorder(null);
         jButton.setBounds(GraphicConstants.SHOW_CARD_X, GraphicConstants.SHOW_CARD_Y, GraphicConstants.SHOW_CARD_WIDTH,
                 GraphicConstants.SHOW_CARD_HEIGHT);

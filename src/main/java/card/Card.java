@@ -72,7 +72,7 @@ public class Card {
 
     public String printCardString() {
         String out = getCardName();
-        for (int i = 1; i <= 25 - getCardName().length(); i++)
+        for (int i = 1; i <= 35 - getCardName().length(); i++)
             out += " ";
         out += "ManaCost: " + getCardCost() + "   Class: " + getCardClass();
         return out;

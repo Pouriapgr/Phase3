@@ -9,6 +9,7 @@ public class ChoosePassivesPage extends StatePanel {
     ArrayList<Passive> passives = Passive.getAllHPassives();
 
     public ChoosePassivesPage() {
+        removeAllThings();
         setPassiveButtons();
         setPanel();
     }

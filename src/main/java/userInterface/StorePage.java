@@ -17,7 +17,7 @@ public class StorePage extends StatePanel {
     }
 
     private void init() {
-        removeAll();
+        removeAllThings();
 
         setCoins();
         setBuyInitial();
@@ -29,8 +29,8 @@ public class StorePage extends StatePanel {
 
     private void setCoins() {
         MyButton myButton = addMyButton("", "Coin",
-                GraphicConstants.FRAME_WIDTH - 103, 64, 90, 30);
-        myButton.setForeground(Color.ORANGE);
+                GraphicConstants.FRAME_WIDTH - 103, 34, 90, 30);
+        myButton.setForeground(Color.ORANGE.darker());
         myButton.setText(player.getPlayerCoins() + " $");
         myButton.setBorder(null);
     }
@@ -39,7 +39,7 @@ public class StorePage extends StatePanel {
         storeBuyButtons = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             StoreButton storeButton = new StoreButton(GraphicConstants.STORE_BUTTON_FIRST_X +
-                    i * GraphicConstants.STORE_BUTTON_X_SEPARATOR, GraphicConstants.STORE_BUTTON_FIRST_Y);
+                    i * GraphicConstants.STORE_BUTTON_X_SEPARATOR, GraphicConstants.STORE_BUTTON_FIRST_Y, -1);
             storeBuyButtons.add(storeButton);
         }
     }
@@ -49,7 +49,7 @@ public class StorePage extends StatePanel {
         for (int i = 0; i < 5; i++) {
             StoreButton storeButton = new StoreButton(GraphicConstants.STORE_BUTTON_FIRST_X +
                     i * GraphicConstants.STORE_BUTTON_X_SEPARATOR, GraphicConstants.STORE_BUTTON_FIRST_Y +
-                    GraphicConstants.STORE_BUTTON_Y_SEPARATOR);
+                    GraphicConstants.STORE_BUTTON_Y_SEPARATOR, 1);
             storeSellButtons.add(storeButton);
         }
     }

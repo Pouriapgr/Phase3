@@ -5,21 +5,24 @@ import constants.GraphicConstants;
 import file.FileAssistance;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class StoreButton extends JComponent {
     private Card card;
     private int x, y;
+    private int type;
     private JButton cardButton;
     private JButton valueButton;
 
     private boolean isOccupied = false;
     private boolean doOpp = false;
 
-    public StoreButton(int x, int y) {
+    public StoreButton(int x, int y, int type) {
         this.x = x;
         this.y = y;
+        this.type = type;
         setCardButton(x, y);
         setValueButton(x, y);
     }
@@ -48,7 +51,7 @@ public class StoreButton extends JComponent {
         this.card = card;
         isOccupied = true;
 
-        String cardName = card.getCardName();
+        String cardName = card.getCardShowName() + ".png";
 
         ImageIcon imageIcon = new ImageIcon(FileAssistance.getScaledImage("cards", cardName,
                 GraphicConstants.STORE_BUTTON_WIDTH, GraphicConstants.STORE_BUTTON_HEIGHT));
@@ -56,19 +59,24 @@ public class StoreButton extends JComponent {
         cardButton.setBorder(null);
         cardButton.setContentAreaFilled(false);
         cardButton.setIcon(imageIcon);
+
+        setNewValue();
     }
 
-    public void setEmpty() {
-        card = null;
-        isOccupied = false;
-        cardButton.setIcon(null);
+    public void setNewValue() {
+        String text = "";
+        if (type == 1)
+            text = "+";
+        else
+            text = "-";
+        text = text + card.getCardValue() + "$";
+        valueButton.setText(text);
+        if (type == 1)
+            valueButton.setForeground(Color.GREEN.darker().darker());
+        else
+            valueButton.setForeground(Color.RED.darker());
     }
 
-    public void setBound(int width, int height) {
-        cardButton.setBounds(x, y, width, height);
-        cardButton.setIcon(new ImageIcon(FileAssistance.getScaledImage("cards", card.getCardName() + ".png",
-                width, height)));
-    }
 
     public JButton getCardButton() {
         return cardButton;

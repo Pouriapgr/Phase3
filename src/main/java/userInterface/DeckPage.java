@@ -5,6 +5,7 @@ import constants.GraphicConstants;
 import file.FileAssistance;
 import module.Deck;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -18,7 +19,7 @@ public class DeckPage extends StatePanel {
     private void init(Deck deck) {
         this.deck = deck;
 
-        removeAll();
+        removeAllThings();
         setInfo();
         setCards();
         setAbility();
@@ -152,10 +153,11 @@ public class DeckPage extends StatePanel {
         ArrayList<Card> cards = deck.getDeckCards();
         for (int i = 0; i < cards.size(); i++) {
             Card card = cards.get(i);
-            MyButton myButton = addMyButton(card.printCardString(), card.getCardName(),
+            MyButton myButton = addMyButton("     " + card.printCardString(), card.getCardName(),
                     GraphicConstants.SHOW_DECK_CARD_FIRST_X, GraphicConstants.SHOW_DECK_CARD_FIRST_Y +
                             i * GraphicConstants.SHOW_DECK_CARD_SEPARATOR, GraphicConstants.SHOW_DECK_CARD_WIDTH
                     , GraphicConstants.SHOW_DECK_CARD_HEIGHT);
+            myButton.setHorizontalAlignment(SwingConstants.LEFT);
             myButton.setForeground(Color.BLACK);
         }
     }
@@ -170,10 +172,20 @@ public class DeckPage extends StatePanel {
                 return true;
             }
 
+            checkShowCard();
             checkNewRemoveCard();
             checkNewAddCard();
             checkChangeName();
             checkChangeHero();
+        }
+    }
+
+    private void checkShowCard() {
+        for (Card card : deck.getDeckCards()) {
+            if (newAction(card.getCardName())) {
+                uiController.changeState(this, new ShowCard(card));
+                return;
+            }
         }
     }
 

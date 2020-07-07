@@ -16,7 +16,7 @@ public class StatusPage extends StatePanel {
     private void init() {
         decks = player.getPlayerAllDecks();
 
-        removeAll();
+        removeAllThings();
         setDecks();
         setPanel();
     }

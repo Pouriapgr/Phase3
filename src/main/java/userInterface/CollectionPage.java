@@ -40,7 +40,7 @@ public class CollectionPage extends StatePanel {
         containFilter = "All Cards";
         heroFilter = LogicConstants.NEUTRAL_CARD;
 
-        removeAll();
+        removeAllThings();
         setCardEssentials();
         setDeckEssentials();
         setPanel();
@@ -135,7 +135,6 @@ public class CollectionPage extends StatePanel {
                 searchName = hintTextField.getText();
                 cardShowStart = 0;
                 initializeCards();
-                searchName = "";
             }
         });
     }
@@ -190,9 +189,9 @@ public class CollectionPage extends StatePanel {
             cards = player.getPlayerCards();
         if (containFilter.equals("Locked Cards"))
             cards = player.getBuyCards();
-        cards = applyFilters(cards);
         if (!searchName.equals(""))
             cards = player.searchName(searchName, cards);
+        cards = applyFilters(cards);
         ShowCards(cards);
     }
 

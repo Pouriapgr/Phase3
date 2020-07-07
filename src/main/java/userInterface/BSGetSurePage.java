@@ -14,7 +14,7 @@ public class BSGetSurePage extends StatePanel {
     }
 
     public void init(Card card, String op) {
-        removeAll();
+        removeAllThings();
         setAssure(op);
         setCard(card);
         setPanel();

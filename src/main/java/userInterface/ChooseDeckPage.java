@@ -21,7 +21,7 @@ public class ChooseDeckPage extends StatePanel {
         decks = player.getPlayerAllDecks();
         showDeck = null;
 
-        removeAll();
+        removeAllThings();
         setDecks();
         setPanel();
     }

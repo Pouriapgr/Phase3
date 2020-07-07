@@ -32,7 +32,7 @@ public abstract class State extends JPanel {
         myButton.setBounds(x, y, width, height);
         add(myButton);
         myButtons.add(myButton);
-        ImageIcon imageIcon = new ImageIcon(FileAssistance.getImage(pack, picName));
+        ImageIcon imageIcon = new ImageIcon(FileAssistance.getScaledImage(pack, picName, width, height));
         myButton.setIcon(imageIcon);
         myButton.setBorder(null);
         myButton.setContentAreaFilled(false);

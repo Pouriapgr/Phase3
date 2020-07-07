@@ -15,7 +15,7 @@ public class SignPage extends State {
     }
 
     private void init() {
-        removeAll();
+        removeAllThings();
         setLogin();
         setRegister();
         setPanel();

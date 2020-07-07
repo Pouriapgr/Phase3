@@ -310,7 +310,7 @@ public class Player {
 
     public ArrayList<Card> searchName(String pattern, ArrayList<Card> cards) {
         ArrayList<Card> ans = new ArrayList<>();
-        for (Card card : Card.getAllCards()) {
+        for (Card card : cards) {
             String name = card.getCardName();
             if (name.contains(pattern)) {
                 ans.add(card);
