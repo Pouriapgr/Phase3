@@ -45,33 +45,33 @@ public class PlayPage extends StatePanel {
     }
 
     private void setHandInitials(GameState gameState) {
-        handButtons = new ArrayList<>();
-        for (int i = 0; i <= 5; i++) {
-            StoreButton jButton = new StoreButton(player, GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
-                    i * GraphicConstants.PLAY_HAND_BUTTON_X_SEPARATOR, GraphicConstants.PLAY_HAND_BUTTON_FIRST_Y, ""
-                    , false);
-            jButton.getCardButton().addMouseListener(new MouseAdapter() {
-                public void mousePressed(MouseEvent event) {
-                    if (jButton.getCard() != null) {
-                        jButton.setDoOpp(true);
-                    }
-                }
-            });
-            handButtons.add(jButton);
-            add(jButton.getCardButton());
-            //jButton.setNewCard(gameState.getFirstHand().get(7 - i), true);
-        }
-    }
+//        handButtons = new ArrayList<>();
+//        for (int i = 0; i <= 5; i++) {
+//            StoreButton jButton = new StoreButton(player, GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
+//                    i * GraphicConstants.PLAY_HAND_BUTTON_X_SEPARATOR, GraphicConstants.PLAY_HAND_BUTTON_FIRST_Y, ""
+//                    , false);
+//            jButton.getCardButton().addMouseListener(new MouseAdapter() {
+//                public void mousePressed(MouseEvent event) {
+//                    if (jButton.getCard() != null) {
+//                        jButton.setDoOpp(true);
+//                    }
+//                }
+//            });
+//            handButtons.add(jButton);
+//            add(jButton.getCardButton());
+//            //jButton.setNewCard(gameState.getFirstHand().get(7 - i), true);
+//        }
+//    }
 
-    private void setPlayedInitials(GameState gameState) {
-        playedButtons = new ArrayList<>();
-        for (int i = 0; i <= 6; i++) {
-            StoreButton jButton = new StoreButton(player, GraphicConstants.PLAY_MINION_BUTTON_X +
-                    i * GraphicConstants.PLAY_MINION_BUTTON_SEPARATOR, GraphicConstants.PLAY_MINION_BUTTON_Y, ""
-                    , false);
-            jButton.getCardButton().addMouseListener(new MouseAdapter() {
-                public void mousePressed(MouseEvent event) {
-                    if (jButton.getCard() != null) {
+        private void setPlayedInitials (GameState gameState){
+            playedButtons = new ArrayList<>();
+            for (int i = 0; i <= 6; i++) {
+                StoreButton jButton = new StoreButton(player, GraphicConstants.PLAY_MINION_BUTTON_X +
+                        i * GraphicConstants.PLAY_MINION_BUTTON_SEPARATOR, GraphicConstants.PLAY_MINION_BUTTON_Y, ""
+                        , false);
+                jButton.getCardButton().addMouseListener(new MouseAdapter() {
+                    public void mousePressed(MouseEvent event) {
+                        if (jButton.getCard() != null) {
                         jButton.setDoOpp(true);
                     }
                 }
