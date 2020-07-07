@@ -214,8 +214,8 @@ public class PlayPage extends StatePanel {
         for (StoreButton storeButton : playedButtons) {
             if (storeButton.isDoOpp()) {
                 gameJFrame.changeState(this, new ShowCard(storeButton.getCard(), player, "", false,
-                        gameState));
-                storeButton.setDoOpp(false);
+                        //             gameState));
+                        //       storeButton.setDoOpp(false);
             }
         }
     }
