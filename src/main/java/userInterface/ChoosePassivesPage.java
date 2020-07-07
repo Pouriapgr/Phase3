@@ -43,7 +43,7 @@ public class ChoosePassivesPage extends StatePanel {
     private boolean checkNewSelect() {
         for (Passive passive : passives) {
             if (newAction(passive.getPassiveName())) {
-                uiController.changeState(this, new PlayPage());
+           //     uiController.changeState(this, new PlayPage());
                 return true;
             }
         }
