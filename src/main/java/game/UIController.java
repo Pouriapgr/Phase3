@@ -1,7 +1,6 @@
 package game;
 
 import userInterface.GameJFrame;
-import userInterface.SignPage;
 import userInterface.State;
 
 import java.awt.*;
@@ -11,7 +10,6 @@ public class UIController {
     private GameJFrame gameJFrame = GameJFrame.getInstance();
 
     private UIController() {
-        changeState(null, new SignPage());
     }
 
     public static UIController getInstance() {
@@ -23,8 +21,8 @@ public class UIController {
     public void changeState(State pre, State next) {
         if (next.runState()) {
             pre.updateState();
-            gameJFrame.setContentPane(pre);
-            gameJFrame.validate();
+            uiController.setContentPane(pre);
+            uiController.validate();
         }
     }
 

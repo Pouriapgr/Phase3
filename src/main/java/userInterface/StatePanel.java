@@ -27,7 +27,7 @@ public abstract class StatePanel extends State {
     private void setBackground() {
         JLabel jLabel = new JLabel();
         jLabel.setBounds(0, 0, GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT);
-        ImageIcon imageIcon = new ImageIcon(FileAssistance.getScaledImage("status", "background.jpg",
+        ImageIcon imageIcon = new ImageIcon(FileAssistance.getScaledImage("background", "background.jpg",
                 GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT));
         jLabel.setIcon(imageIcon);
         add(jLabel);

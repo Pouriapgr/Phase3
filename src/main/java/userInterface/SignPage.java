@@ -65,8 +65,7 @@ public class SignPage extends State {
             enterMenu(Player.loadPlayer(FileAssistance.findPlayerJSON(getMyTextField("Login_Username").getText())));
         } else {
             showError("Please Check Your Username and Password Again", (3 * GraphicConstants.FRAME_WIDTH) / 4,
-                    GraphicConstants.LOGIN_BUTTON_Y + GraphicConstants.LOGIN_BUTTON_HEIGHT +
-                            GraphicConstants.LOGIN_REGISTER_SEPARATOR);
+                    GraphicConstants.LOGIN_BUTTON_Y + GraphicConstants.LOGIN_BUTTON_HEIGHT);
         }
     }
 
@@ -79,7 +78,7 @@ public class SignPage extends State {
                     GraphicConstants.LOGIN_BUTTON_Y + GraphicConstants.LOGIN_BUTTON_HEIGHT +
                             GraphicConstants.LOGIN_REGISTER_SEPARATOR);
         } else {
-            enterMenu(new Player(getMyTextField("Register_Username").getText(), getMyTextField("Register_Password").getFieldName()));
+            enterMenu(new Player(getMyTextField("Register_Username").getText(), getMyTextField("Register_Password").getText()));
         }
     }
 

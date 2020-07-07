@@ -1,15 +1,1 @@
-{
-  "allPlayers": [
-    {
-      "playerUsername": "",
-      "playerPassword": "",
-      "playerId": 1
-    },
-    {
-      "playerUsername": "popo",
-      "playerPassword": "popo",
-      "playerId": 2
-    }
-  ],
-  "numberOfAll": 2
-}
+{"allPlayers":[{"playerUsername":"","playerPassword":"","playerId":1},{"playerUsername":"popo","playerPassword":"popo","playerId":2},{"playerUsername":"ppp","playerPassword":"Register_Password","playerId":3},{"playerUsername":"pp","playerPassword":"123","playerId":4}],"numberOfAll":4}

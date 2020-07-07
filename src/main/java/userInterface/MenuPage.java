@@ -17,7 +17,7 @@ public class MenuPage extends State {
     }
 
     private void init() {
-        removeAll();
+        removeAllThings();
         setPlayButton();
         setStoreButton();
         setStatusButton();
@@ -35,7 +35,7 @@ public class MenuPage extends State {
     public void setBackground() {
         JLabel jLabel = new JLabel();
         jLabel.setBounds(0, 0, GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT);
-        ImageIcon imageIcon = new ImageIcon(FileAssistance.getScaledImage("menu", "background.jpg",
+        ImageIcon imageIcon = new ImageIcon(FileAssistance.getScaledImage("background", "background.jpg",
                 GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT));
         jLabel.setIcon(imageIcon);
         add(jLabel);

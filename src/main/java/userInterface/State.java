@@ -21,6 +21,7 @@ public abstract class State extends JPanel {
     protected MyButton addMyButton(String action, String name, int x, int y, int width, int height) {
         MyButton myButton = new MyButton(action, name);
         myButton.setBounds(x, y, width, height);
+        myButton.setBorder(null);
         add(myButton);
         myButtons.add(myButton);
         return myButton;
@@ -83,6 +84,12 @@ public abstract class State extends JPanel {
             return true;
         }
         return false;
+    }
+
+    protected void removeAllThings() {
+        removeAll();
+        myButtons.clear();
+        myFields.clear();
     }
 
     public abstract boolean runState();
