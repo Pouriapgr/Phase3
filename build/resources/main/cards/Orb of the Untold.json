@@ -1,0 +1,12 @@
+{
+  "cardName": "Orb of the Untold",
+  "cardType": "Spell",
+  "cardClass": "Neutral",
+  "cardRarity": "Free",
+  "cardShowName": "Orb of the Untold",
+  "cardDescription": "Deal 20 damage split between all enemies.",
+  "cardCost": 4,
+  "cardValue": 0,
+  "cardHp": 0,
+  "cardAttack": 0
+}

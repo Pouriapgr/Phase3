@@ -1,0 +1,12 @@
+{
+  "cardName": "Party Elemental",
+  "cardType": "Minion",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Party Elemental",
+  "cardDescription": "Comes with a party!",
+  "cardCost": 3,
+  "cardValue": 10,
+  "cardHp": 2,
+  "cardAttack": 3
+}

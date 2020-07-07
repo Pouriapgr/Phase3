@@ -1,0 +1,12 @@
+{
+  "cardName": "Arena Treasure Chest",
+  "cardType": "Minion",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Arena Treasure Chest",
+  "cardDescription": "Deathrattle: Draw 2 cards.",
+  "cardCost": 4,
+  "cardValue": 10,
+  "cardHp": 4,
+  "cardAttack": 0
+}

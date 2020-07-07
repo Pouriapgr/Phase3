@@ -1,0 +1,12 @@
+{
+  "cardName": "Blessed Champion",
+  "cardType": "Spell",
+  "cardClass": "Paladin",
+  "cardRarity": "Rare",
+  "cardShowName": "Blessed Champion",
+  "cardDescription": "Double a minion\u0027s Attack.",
+  "cardCost": 5,
+  "cardValue": 15,
+  "cardHp": 0,
+  "cardAttack": 0
+}

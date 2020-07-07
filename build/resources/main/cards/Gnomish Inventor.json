@@ -1,0 +1,12 @@
+{
+  "cardName": "Gnomish Inventor",
+  "cardType": "Minion",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Gnomish Inventor",
+  "cardDescription": "Battlecry: Draw a card.",
+  "cardCost": 4,
+  "cardValue": 10,
+  "cardHp": 4,
+  "cardAttack": 2
+}

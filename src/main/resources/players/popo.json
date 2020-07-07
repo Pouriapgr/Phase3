@@ -1,0 +1,391 @@
+{
+  "playerUsername": "popo",
+  "playerPassword": "popo",
+  "playerIdentification": {
+    "playerUsername": "popo",
+    "playerPassword": "popo",
+    "playerId": 2
+  },
+  "playerId": 2,
+  "playerCoins": 40,
+  "playerAllDecks": [
+    {
+      "deckName": "0",
+      "deckHero": {
+        "heroName": "Alleria Windrunner",
+        "heroClass": "Hunter",
+        "heroPower": "All minions have Rush",
+        "heroShowName": "Alleria Windrunner",
+        "heroSpecialPower": "Deal 1 damage enemy played minions",
+        "heroHp": 30,
+        "heroAttack": 0
+      },
+      "deckCards": [
+        {
+          "cardName": "Swamp King Dred",
+          "cardType": "Minion",
+          "cardClass": "Hunter",
+          "cardRarity": "Legendry",
+          "cardShowName": "Swamp King Dred",
+          "cardDescription": "After your opponent plays a minion, attack it",
+          "cardCost": 7,
+          "cardValue": 30,
+          "cardHp": 9,
+          "cardAttack": 9
+        },
+        {
+          "cardName": "Strength in Numbers",
+          "cardType": "Quest",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Strength in Numbers",
+          "cardDescription": "Spend 10 Mana on minions. Summon a minion from your deck.",
+          "cardCost": 1,
+          "cardValue": 10,
+          "cardHp": 0,
+          "cardAttack": 0
+        },
+        {
+          "cardName": "Ashbringer",
+          "cardType": "Weapon",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Ashbringer",
+          "cardDescription": " ",
+          "cardCost": 5,
+          "cardValue": 10,
+          "cardHp": 3,
+          "cardAttack": 5
+        },
+        {
+          "cardName": "Gnomish Inventor",
+          "cardType": "Minion",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Gnomish Inventor",
+          "cardDescription": "Battlecry: Draw a card.",
+          "cardCost": 4,
+          "cardValue": 10,
+          "cardHp": 4,
+          "cardAttack": 2
+        },
+        {
+          "cardName": "Poisoned Daggers",
+          "cardType": "Weapon",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Poisoned Daggers",
+          "cardDescription": " ",
+          "cardCost": 1,
+          "cardValue": 10,
+          "cardHp": 2,
+          "cardAttack": 2
+        },
+        {
+          "cardName": "Book of Specters",
+          "cardType": "Spell",
+          "cardClass": "Neutral",
+          "cardRarity": "Epic",
+          "cardShowName": "Book of Specters",
+          "cardDescription": "Draw 3 cards. Discard any spells drawn.",
+          "cardCost": 2,
+          "cardValue": 20,
+          "cardHp": 0,
+          "cardAttack": 0
+        },
+        {
+          "cardName": "Flare",
+          "cardType": "Spell",
+          "cardClass": "Hunter",
+          "cardRarity": "Rare",
+          "cardShowName": "Flare",
+          "cardDescription": "All minions lose Stealth",
+          "cardCost": 2,
+          "cardValue": 15,
+          "cardHp": 0,
+          "cardAttack": 0
+        },
+        {
+          "cardName": "Battle Axe",
+          "cardType": "Weapon",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Battle Axe",
+          "cardDescription": " ",
+          "cardCost": 1,
+          "cardValue": 10,
+          "cardHp": 2,
+          "cardAttack": 2
+        },
+        {
+          "cardName": "Swarm of Locusts",
+          "cardType": "Spell",
+          "cardClass": "Neutral",
+          "cardRarity": "Rare",
+          "cardShowName": "Swarm of Locusts",
+          "cardDescription": "Summon seven 1/1 Locusts with Rush.",
+          "cardCost": 6,
+          "cardValue": 15,
+          "cardHp": 0,
+          "cardAttack": 0
+        }
+      ],
+      "deckNoOfLosses": 0,
+      "deckNoOfWins": 0,
+      "deckNoOfGames": 0
+    }
+  ],
+  "playerAllHeroes": [
+    {
+      "heroName": "Alleria Windrunner",
+      "heroClass": "Hunter",
+      "heroPower": "All minions have Rush",
+      "heroShowName": "Alleria Windrunner",
+      "heroSpecialPower": "Deal 1 damage enemy played minions",
+      "heroHp": 30,
+      "heroAttack": 0
+    },
+    {
+      "heroName": "Jaina Proudmore",
+      "heroClass": "Mage",
+      "heroPower": "Spells Cost -2 less Mana",
+      "heroShowName": "Jaina Proudmore",
+      "heroSpecialPower": "Deal 1 damage to an enemy character",
+      "heroHp": 30,
+      "heroAttack": 0
+    },
+    {
+      "heroName": "Prince Arthas",
+      "heroClass": "Paladin",
+      "heroPower": "At the end of each turn, add +1/+1 to a random friendly minion",
+      "heroShowName": "Prince Arthas",
+      "heroSpecialPower": "Summon 2 1/1 Sheep",
+      "heroHp": 30,
+      "heroAttack": 0
+    },
+    {
+      "heroName": "Valeera",
+      "heroClass": "Rogue",
+      "heroPower": "if you have a mismatch card, it Costs -2 mana",
+      "heroShowName": "Valeera",
+      "heroSpecialPower": "Steal a card from enemy Deck, if upgraded Steal a card from enemy hand",
+      "heroHp": 30,
+      "heroAttack": 0
+    },
+    {
+      "heroName": "Warlock",
+      "heroClass": "Warlock",
+      "heroPower": "Start game with +5 Health",
+      "heroShowName": "Warlock",
+      "heroSpecialPower": "Either +1/+1 a random minion or draw a card . Cost2 Health",
+      "heroHp": 30,
+      "heroAttack": 0
+    }
+  ],
+  "playerAllCards": [
+    {
+      "cardName": "Swamp King Dred",
+      "cardType": "Minion",
+      "cardClass": "Hunter",
+      "cardRarity": "Legendry",
+      "cardShowName": "Swamp King Dred",
+      "cardDescription": "After your opponent plays a minion, attack it",
+      "cardCost": 7,
+      "cardValue": 30,
+      "cardHp": 9,
+      "cardAttack": 9
+    },
+    {
+      "cardName": "Strength in Numbers",
+      "cardType": "Quest",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Strength in Numbers",
+      "cardDescription": "Spend 10 Mana on minions. Summon a minion from your deck.",
+      "cardCost": 1,
+      "cardValue": 10,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Forbidden Flame",
+      "cardType": "Spell",
+      "cardClass": "Mage",
+      "cardRarity": "Epic",
+      "cardShowName": "Forbidden Flame",
+      "cardDescription": "Spend all your Mana. Deal that much damage to a minion.",
+      "cardCost": 0,
+      "cardValue": 20,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Ashbringer",
+      "cardType": "Weapon",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Ashbringer",
+      "cardDescription": " ",
+      "cardCost": 5,
+      "cardValue": 10,
+      "cardHp": 3,
+      "cardAttack": 5
+    },
+    {
+      "cardName": "Gnomish Inventor",
+      "cardType": "Minion",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Gnomish Inventor",
+      "cardDescription": "Battlecry: Draw a card.",
+      "cardCost": 4,
+      "cardValue": 10,
+      "cardHp": 4,
+      "cardAttack": 2
+    },
+    {
+      "cardName": "Dreadscale",
+      "cardType": "Minion",
+      "cardClass": "Warlock",
+      "cardRarity": "Legendry",
+      "cardShowName": "Dreadscale",
+      "cardDescription": "At the end of your turn, deal 1 damage to all other minions.",
+      "cardCost": 3,
+      "cardValue": 30,
+      "cardHp": 2,
+      "cardAttack": 4
+    },
+    {
+      "cardName": "Blessed Champion",
+      "cardType": "Spell",
+      "cardClass": "Paladin",
+      "cardRarity": "Rare",
+      "cardShowName": "Blessed Champion",
+      "cardDescription": "Double a minion\u0027s Attack.",
+      "cardCost": 5,
+      "cardValue": 15,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Poisoned Daggers",
+      "cardType": "Weapon",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Poisoned Daggers",
+      "cardDescription": " ",
+      "cardCost": 1,
+      "cardValue": 10,
+      "cardHp": 2,
+      "cardAttack": 2
+    },
+    {
+      "cardName": "Book of Specters",
+      "cardType": "Spell",
+      "cardClass": "Neutral",
+      "cardRarity": "Epic",
+      "cardShowName": "Book of Specters",
+      "cardDescription": "Draw 3 cards. Discard any spells drawn.",
+      "cardCost": 2,
+      "cardValue": 20,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Flare",
+      "cardType": "Spell",
+      "cardClass": "Hunter",
+      "cardRarity": "Rare",
+      "cardShowName": "Flare",
+      "cardDescription": "All minions lose Stealth",
+      "cardCost": 2,
+      "cardValue": 15,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Blood Imp",
+      "cardType": "Minion",
+      "cardClass": "Warlock",
+      "cardRarity": "Common",
+      "cardShowName": "Blood Imp",
+      "cardDescription": "At the end of your turn , give another random friendly minion +1 Health.",
+      "cardCost": 1,
+      "cardValue": 10,
+      "cardHp": 1,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Battle Axe",
+      "cardType": "Weapon",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Battle Axe",
+      "cardDescription": " ",
+      "cardCost": 1,
+      "cardValue": 10,
+      "cardHp": 2,
+      "cardAttack": 2
+    },
+    {
+      "cardName": "Swarm of Locusts",
+      "cardType": "Spell",
+      "cardClass": "Neutral",
+      "cardRarity": "Rare",
+      "cardShowName": "Swarm of Locusts",
+      "cardDescription": "Summon seven 1/1 Locusts with Rush.",
+      "cardCost": 6,
+      "cardValue": 15,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Sathrovarr",
+      "cardType": "Minion",
+      "cardClass": "Neutral",
+      "cardRarity": "Legendry",
+      "cardShowName": "Sathrovarr",
+      "cardDescription": "Battlecry: Choose a friendly minion. Add a copy of it tp your hand, deck, and battlefield/",
+      "cardCost": 9,
+      "cardValue": 30,
+      "cardHp": 5,
+      "cardAttack": 5
+    },
+    {
+      "cardName": "Elven Minstrel",
+      "cardType": "Minion",
+      "cardClass": "Rogue",
+      "cardRarity": "Rare",
+      "cardShowName": "Elven Minstrel",
+      "cardDescription": "Combo: Draw 2 minions from your deck.",
+      "cardCost": 4,
+      "cardValue": 15,
+      "cardHp": 2,
+      "cardAttack": 3
+    },
+    {
+      "cardName": "Sprint",
+      "cardType": "Spell",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Sprint",
+      "cardDescription": "Draw 4 cards.",
+      "cardCost": 7,
+      "cardValue": 10,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Gnomish Army Knife",
+      "cardType": "Spell",
+      "cardClass": "Paladin",
+      "cardRarity": "Free",
+      "cardShowName": "Gnomish Army Knife",
+      "cardDescription": "Give a minion Charge,Windfury,Divine Shield,Lifesteal,Poisonous,Taunt, and Stealth.",
+      "cardCost": 5,
+      "cardValue": 0,
+      "cardHp": 0,
+      "cardAttack": 0
+    }
+  ]
+}

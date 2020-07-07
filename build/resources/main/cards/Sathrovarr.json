@@ -1,0 +1,12 @@
+{
+  "cardName": "Sathrovarr",
+  "cardType": "Minion",
+  "cardClass": "Neutral",
+  "cardRarity": "Legendry",
+  "cardShowName": "Sathrovarr",
+  "cardDescription": "Battlecry: Choose a friendly minion. Add a copy of it tp your hand, deck, and battlefield/",
+  "cardCost": 9,
+  "cardValue": 30,
+  "cardHp": 5,
+  "cardAttack": 5
+}

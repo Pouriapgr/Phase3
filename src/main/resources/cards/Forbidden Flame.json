@@ -1,0 +1,12 @@
+{
+  "cardName": "Forbidden Flame",
+  "cardType": "Spell",
+  "cardClass": "Mage",
+  "cardRarity": "Epic",
+  "cardShowName": "Forbidden Flame",
+  "cardDescription": "Spend all your Mana. Deal that much damage to a minion.",
+  "cardCost": 0,
+  "cardValue": 20,
+  "cardHp": 0,
+  "cardAttack": 0
+}

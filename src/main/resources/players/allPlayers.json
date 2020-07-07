@@ -1,0 +1,15 @@
+{
+  "allPlayers": [
+    {
+      "playerUsername": "",
+      "playerPassword": "",
+      "playerId": 1
+    },
+    {
+      "playerUsername": "popo",
+      "playerPassword": "popo",
+      "playerId": 2
+    }
+  ],
+  "numberOfAll": 2
+}

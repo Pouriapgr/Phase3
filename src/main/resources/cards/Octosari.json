@@ -1,0 +1,12 @@
+{
+  "cardName": "Octosari",
+  "cardType": "Minion",
+  "cardClass": "Neutral",
+  "cardRarity": "Legendry",
+  "cardShowName": "Octosari",
+  "cardDescription": "Deatrattle: Draw 8 cards.",
+  "cardCost": 8,
+  "cardValue": 30,
+  "cardHp": 8,
+  "cardAttack": 8
+}

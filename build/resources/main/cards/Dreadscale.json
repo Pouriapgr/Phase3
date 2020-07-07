@@ -1,0 +1,12 @@
+{
+  "cardName": "Dreadscale",
+  "cardType": "Minion",
+  "cardClass": "Warlock",
+  "cardRarity": "Legendry",
+  "cardShowName": "Dreadscale",
+  "cardDescription": "At the end of your turn, deal 1 damage to all other minions.",
+  "cardCost": 3,
+  "cardValue": 30,
+  "cardHp": 2,
+  "cardAttack": 4
+}

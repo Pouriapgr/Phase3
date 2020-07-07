@@ -1,0 +1,12 @@
+{
+  "cardName": "Skydiving Instructor",
+  "cardType": "Minion",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Skydiving Instructor",
+  "cardDescription": "Battkecry: Summon a 1-Cost minion from your deck.",
+  "cardCost": 3,
+  "cardValue": 10,
+  "cardHp": 2,
+  "cardAttack": 2
+}

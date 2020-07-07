@@ -1,0 +1,12 @@
+{
+  "cardName": "Battle Axe",
+  "cardType": "Weapon",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Battle Axe",
+  "cardDescription": " ",
+  "cardCost": 1,
+  "cardValue": 10,
+  "cardHp": 2,
+  "cardAttack": 2
+}

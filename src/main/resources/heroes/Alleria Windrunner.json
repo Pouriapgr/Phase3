@@ -1,0 +1,9 @@
+{
+  "heroName": "Alleria Windrunner",
+  "heroClass": "Hunter",
+  "heroPower": "All minions have Rush",
+  "heroShowName": "Alleria Windrunner",
+  "heroSpecialPower": "Deal 1 damage enemy played minions",
+  "heroHp": 30,
+  "heroAttack": 0
+}

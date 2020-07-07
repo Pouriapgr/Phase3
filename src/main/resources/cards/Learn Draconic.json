@@ -1,0 +1,12 @@
+{
+  "cardName": "Learn Draconic",
+  "cardType": "Quest",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Learn Draconic",
+  "cardDescription": "Spend 8 Mana on spells. Summon a 6/6 Dragon.",
+  "cardCost": 1,
+  "cardValue": 10,
+  "cardHp": 0,
+  "cardAttack": 0
+}

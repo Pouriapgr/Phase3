@@ -1,0 +1,12 @@
+{
+  "cardName": "Will of Mukla",
+  "cardType": "Spell",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Will of Mukla",
+  "cardDescription": "Restore 8 Health.",
+  "cardCost": 3,
+  "cardValue": 10,
+  "cardHp": 0,
+  "cardAttack": 0
+}

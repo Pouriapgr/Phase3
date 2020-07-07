@@ -1,0 +1,12 @@
+{
+  "cardName": "Book of Specters",
+  "cardType": "Spell",
+  "cardClass": "Neutral",
+  "cardRarity": "Epic",
+  "cardShowName": "Book of Specters",
+  "cardDescription": "Draw 3 cards. Discard any spells drawn.",
+  "cardCost": 2,
+  "cardValue": 20,
+  "cardHp": 0,
+  "cardAttack": 0
+}

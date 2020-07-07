@@ -1,0 +1,12 @@
+{
+  "cardName": "Strength in Numbers",
+  "cardType": "Quest",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Strength in Numbers",
+  "cardDescription": "Spend 10 Mana on minions. Summon a minion from your deck.",
+  "cardCost": 1,
+  "cardValue": 10,
+  "cardHp": 0,
+  "cardAttack": 0
+}

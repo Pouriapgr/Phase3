@@ -1,0 +1,60 @@
+Username: 
+CREATED_AT: 2020-05-08 17:58:06.333
+PASSWORD: 
+AddCard 2020-05-08 17:58:06.34 Blessed Champion
+AddCard 2020-05-08 17:58:06.343 Flare
+AddCard 2020-05-08 17:58:06.346 Sprint
+AddCard 2020-05-08 17:58:06.35 Strength in Numbers
+AddCard 2020-05-08 17:58:06.353 Orb of the Untold
+AddCard 2020-05-08 17:58:06.356 Blood Imp
+AddCard 2020-05-08 17:58:06.358 Skydiving Instructor
+AddCard 2020-05-08 17:58:06.361 Swarm of Locusts
+AddCard 2020-05-08 17:58:06.364 Stranglethorn Tiger
+AddCard 2020-05-08 17:58:06.367 Dreadscale
+AddCard 2020-05-08 17:58:06.369 Sathrovarr
+AddCard 2020-05-08 17:58:06.372 Fiery Burst
+AddCard 2020-05-08 17:58:06.375 Elven Minstrel
+AddCard 2020-05-08 17:58:06.378 Party Elemental
+AddCard 2020-05-08 17:58:06.381 Divine Sweets
+Signin 2020-05-08 17:58:06.465 
+Click 2020-05-08 17:58:48.932 StoreButton
+Navigate 2020-05-08 17:58:49.587 Store
+Click 2020-05-08 17:58:51.821 BackButton
+Click 2020-05-08 17:58:53.056 CollectionsButton
+Navigate 2020-05-08 17:58:53.442 Collections
+Click 2020-05-08 17:58:59.755 BackButton
+Click 2020-05-08 17:59:01.135 PlayButton
+Navigate 2020-05-08 17:59:01.341 ChooseDeck
+Click 2020-05-08 17:59:03.076 BackButton
+Click 2020-05-08 17:59:04.291 CollectionsButton
+Navigate 2020-05-08 17:59:04.665 Collections
+Click 2020-05-08 17:59:06.368 NewDeckButton
+Error 2020-05-08 17:59:06.37 CardMismatch
+Error 2020-05-08 17:59:06.374 CardMismatch
+Error 2020-05-08 17:59:06.378 CardMismatch
+Navigate 2020-05-08 17:59:06.634 Deck
+Click 2020-05-08 17:59:13.195 AddButton
+Click 2020-05-08 17:59:15.506 BackButton
+Click 2020-05-08 17:59:16.122 BackButton
+Click 2020-05-08 17:59:17.279 PlayButton
+Navigate 2020-05-08 17:59:17.467 ChooseDeck
+Click 2020-05-08 17:59:18.18 DeckButton
+Navigate 2020-05-08 17:59:18.494 Passive
+Click 2020-05-08 17:59:19.18 PassiveButton
+Navigate 2020-05-08 17:59:19.53 Play
+Click 2020-05-08 17:59:23.284 HandButton
+Navigate 2020-05-08 17:59:23.481 ShowCard
+Click 2020-05-08 17:59:25.165 SureButton
+PlayCard 2020-05-08 17:59:25.165 Strength in Numbers
+Click 2020-05-08 17:59:29.19 EndButton
+Click 2020-05-08 17:59:31.07 EndButton
+Click 2020-05-08 17:59:32.717 HandButton
+Navigate 2020-05-08 17:59:32.922 ShowCard
+Click 2020-05-08 17:59:34.587 SureButton
+PlayCard 2020-05-08 17:59:34.588 Skydiving Instructor
+Click 2020-05-08 17:59:36.028 PlayedButton
+Navigate 2020-05-08 17:59:36.233 ShowCard
+Click 2020-05-08 17:59:38.195 BackButton
+Click 2020-05-08 17:59:40.048 EndButton
+Click 2020-05-08 17:59:40.47 EndButton
+Signin 2020-06-23 19:05:39.293 

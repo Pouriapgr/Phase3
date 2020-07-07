@@ -1,0 +1,12 @@
+{
+  "cardName": "Pharaoh\u0027s Blessing",
+  "cardType": "Spell",
+  "cardClass": "Neutral",
+  "cardRarity": "Rare",
+  "cardShowName": "Pharaoh\u0027s Blessing",
+  "cardDescription": "Give a minion +4/+4, Divine Shield, Taunt",
+  "cardCost": 6,
+  "cardValue": 15,
+  "cardHp": 0,
+  "cardAttack": 0
+}

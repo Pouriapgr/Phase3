@@ -1,0 +1,12 @@
+{
+  "cardName": "Ashbringer",
+  "cardType": "Weapon",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Ashbringer",
+  "cardDescription": " ",
+  "cardCost": 5,
+  "cardValue": 10,
+  "cardHp": 3,
+  "cardAttack": 5
+}

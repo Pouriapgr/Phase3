@@ -1,0 +1,12 @@
+{
+  "cardName": "Sow the Seeds",
+  "cardType": "Spell",
+  "cardClass": "Neutral",
+  "cardRarity": "Free",
+  "cardShowName": "Sow the Seeds",
+  "cardDescription": "Give all minions in your deck +3/+3.",
+  "cardCost": 5,
+  "cardValue": 0,
+  "cardHp": 0,
+  "cardAttack": 0
+}

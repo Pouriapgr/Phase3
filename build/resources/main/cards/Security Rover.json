@@ -1,0 +1,12 @@
+{
+  "cardName": "Security Rover",
+  "cardType": "Minion",
+  "cardClass": "Neutral",
+  "cardRarity": "Rare",
+  "cardShowName": "Security Rover",
+  "cardDescription": "Whenever this minion takes damage, summon a 2/3 Mech with Taunt",
+  "cardCost": 6,
+  "cardValue": 15,
+  "cardHp": 6,
+  "cardAttack": 2
+}

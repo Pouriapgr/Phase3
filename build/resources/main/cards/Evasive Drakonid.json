@@ -1,0 +1,12 @@
+{
+  "cardName": "Evasive Drakonid",
+  "cardType": "Minion",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Evasive Drakonid",
+  "cardDescription": "Taunt. Can\u0027t be targeted by spells or Hero Powers.",
+  "cardCost": 7,
+  "cardValue": 10,
+  "cardHp": 7,
+  "cardAttack": 7
+}

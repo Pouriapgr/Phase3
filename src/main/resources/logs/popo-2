@@ -1,0 +1,59 @@
+Username: popo
+CREATED_AT: 2020-06-23 19:06:00.032
+PASSWORD: popo
+AddCard 2020-06-23 19:06:00.032 Swamp King Dred
+AddCard 2020-06-23 19:06:00.032 Strength in Numbers
+AddCard 2020-06-23 19:06:00.032 Forbidden Flame
+AddCard 2020-06-23 19:06:00.032 Ashbringer
+AddCard 2020-06-23 19:06:00.032 Gnomish Inventor
+AddCard 2020-06-23 19:06:00.032 Dreadscale
+AddCard 2020-06-23 19:06:00.048 Blessed Champion
+AddCard 2020-06-23 19:06:00.048 Poisoned Daggers
+AddCard 2020-06-23 19:06:00.048 Book of Specters
+AddCard 2020-06-23 19:06:00.048 Flare
+AddCard 2020-06-23 19:06:00.048 Blood Imp
+AddCard 2020-06-23 19:06:00.048 Battle Axe
+AddCard 2020-06-23 19:06:00.048 Swarm of Locusts
+AddCard 2020-06-23 19:06:00.063 Sathrovarr
+AddCard 2020-06-23 19:06:00.063 Elven Minstrel
+Signin 2020-06-23 19:06:00.132 
+Click 2020-06-23 19:06:02.259 PlayButton
+Navigate 2020-06-23 19:06:02.45 ChooseDeck
+Click 2020-06-23 19:06:03.876 BackButton
+Click 2020-06-23 19:06:05.65 CollectionsButton
+Navigate 2020-06-23 19:06:06.034 Collections
+Click 2020-06-23 19:06:09.44 NewDeckButton
+Error 2020-06-23 19:06:09.44 CardMismatch
+Error 2020-06-23 19:06:09.455 CardMismatch
+Error 2020-06-23 19:06:09.455 CardMismatch
+Error 2020-06-23 19:06:09.455 CardMismatch
+Navigate 2020-06-23 19:06:09.724 Deck
+Click 2020-06-23 19:06:21.295 BackButton
+Click 2020-06-23 19:06:22.258 BackButton
+Click 2020-06-23 19:06:23.326 PlayButton
+Navigate 2020-06-23 19:06:23.523 ChooseDeck
+Click 2020-06-23 19:06:24.444 DeckButton
+Error 2020-06-23 19:06:24.444 BadDeck
+Error 2020-06-23 19:06:24.445 BadDeck
+Click 2020-06-23 19:06:26.365 BackButton
+Navigate 2020-06-23 19:06:26.667 Deck
+Click 2020-06-23 19:06:34.532 BackButton
+Click 2020-06-23 19:06:36.238 CollectionsButton
+Navigate 2020-06-23 19:06:36.598 Collections
+Click 2020-06-23 19:06:39.119 BackButton
+Click 2020-06-23 19:06:40.247 StoreButton
+Navigate 2020-06-23 19:06:40.858 Store
+Click 2020-06-23 19:06:43.462 ValueButton
+Navigate 2020-06-23 19:06:43.66 ShowCard
+Click 2020-06-23 19:06:45.588 SureButton
+AddCard 2020-06-23 19:06:45.591 Sprint
+Click 2020-06-23 19:06:48.94 ValueButton
+Navigate 2020-06-23 19:06:49.143 ShowCard
+Click 2020-06-23 19:06:50.49 SureButton
+AddCard 2020-06-23 19:06:50.492 Gnomish Army Knife
+Click 2020-06-23 19:06:52.696 BackButton
+Click 2020-06-23 19:06:54.934 StoreButton
+Navigate 2020-06-23 19:06:55.544 Store
+Click 2020-06-23 19:07:01.491 RandButton
+Click 2020-06-23 19:07:02.717 RandButton
+Click 2020-06-23 19:07:04.813 RandButton

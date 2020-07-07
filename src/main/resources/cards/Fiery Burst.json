@@ -1,0 +1,12 @@
+{
+  "cardName": "Fiery Burst",
+  "cardType": "Spell",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Fiery Burst",
+  "cardDescription": "Deal 2 damage to all enemies.",
+  "cardCost": 3,
+  "cardValue": 10,
+  "cardHp": 0,
+  "cardAttack": 0
+}

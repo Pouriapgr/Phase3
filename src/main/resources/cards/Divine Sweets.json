@@ -1,0 +1,12 @@
+{
+  "cardName": "Divine Sweets",
+  "cardType": "Spell",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Divine Sweets",
+  "cardDescription": "Each player draws a card.",
+  "cardCost": 2,
+  "cardValue": 10,
+  "cardHp": 0,
+  "cardAttack": 0
+}

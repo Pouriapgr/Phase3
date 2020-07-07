@@ -1,0 +1,12 @@
+{
+  "cardName": "Swamp King Dred",
+  "cardType": "Minion",
+  "cardClass": "Hunter",
+  "cardRarity": "Legendry",
+  "cardShowName": "Swamp King Dred",
+  "cardDescription": "After your opponent plays a minion, attack it",
+  "cardCost": 7,
+  "cardValue": 30,
+  "cardHp": 9,
+  "cardAttack": 9
+}

@@ -1,0 +1,9 @@
+{
+  "heroName": "Valeera",
+  "heroClass": "Rogue",
+  "heroPower": "if you have a mismatch card, it Costs -2 mana",
+  "heroShowName": "Valeera",
+  "heroSpecialPower": "Steal a card from enemy Deck, if upgraded Steal a card from enemy hand",
+  "heroHp": 30,
+  "heroAttack": 0
+}

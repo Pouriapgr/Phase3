@@ -1,0 +1,12 @@
+{
+  "cardName": "Stranglethorn Tiger",
+  "cardType": "Minion",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Stranglethorn Tiger",
+  "cardDescription": "Stealth",
+  "cardCost": 5,
+  "cardValue": 10,
+  "cardHp": 5,
+  "cardAttack": 5
+}

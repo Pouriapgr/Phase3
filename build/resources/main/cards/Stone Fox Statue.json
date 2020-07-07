@@ -1,0 +1,12 @@
+{
+  "cardName": "Stone Fox Statue",
+  "cardType": "Spell",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Stone Fox Statue",
+  "cardDescription": "Choose a minion and add 2 copies of it to your hand that cost(0).",
+  "cardCost": 5,
+  "cardValue": 10,
+  "cardHp": 0,
+  "cardAttack": 0
+}

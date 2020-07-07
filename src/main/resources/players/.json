@@ -1,0 +1,379 @@
+{
+  "playerUsername": "",
+  "playerPassword": "",
+  "playerIdentification": {
+    "playerUsername": "",
+    "playerPassword": "",
+    "playerId": 1
+  },
+  "playerId": 1,
+  "playerCoins": 50,
+  "playerAllDecks": [
+    {
+      "deckName": "0",
+      "deckHero": {
+        "heroName": "Alleria Windrunner",
+        "heroClass": "Hunter",
+        "heroPower": "All minions have Rush",
+        "heroShowName": "Alleria Windrunner",
+        "heroSpecialPower": "Deal 1 damage enemy played minions",
+        "heroHp": 30,
+        "heroAttack": 0
+      },
+      "deckCards": [
+        {
+          "cardName": "Flare",
+          "cardType": "Spell",
+          "cardClass": "Hunter",
+          "cardRarity": "Rare",
+          "cardShowName": "Flare",
+          "cardDescription": "All minions lose Stealth",
+          "cardCost": 2,
+          "cardValue": 15,
+          "cardHp": 0,
+          "cardAttack": 0
+        },
+        {
+          "cardName": "Sprint",
+          "cardType": "Spell",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Sprint",
+          "cardDescription": "Draw 4 cards.",
+          "cardCost": 7,
+          "cardValue": 10,
+          "cardHp": 0,
+          "cardAttack": 0
+        },
+        {
+          "cardName": "Strength in Numbers",
+          "cardType": "Quest",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Strength in Numbers",
+          "cardDescription": "Spend 10 Mana on minions. Summon a minion from your deck.",
+          "cardCost": 1,
+          "cardValue": 10,
+          "cardHp": 0,
+          "cardAttack": 0
+        },
+        {
+          "cardName": "Orb of the Untold",
+          "cardType": "Spell",
+          "cardClass": "Neutral",
+          "cardRarity": "Free",
+          "cardShowName": "Orb of the Untold",
+          "cardDescription": "Deal 20 damage split between all enemies.",
+          "cardCost": 4,
+          "cardValue": 0,
+          "cardHp": 0,
+          "cardAttack": 0
+        },
+        {
+          "cardName": "Skydiving Instructor",
+          "cardType": "Minion",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Skydiving Instructor",
+          "cardDescription": "Battkecry: Summon a 1-Cost minion from your deck.",
+          "cardCost": 3,
+          "cardValue": 10,
+          "cardHp": 2,
+          "cardAttack": 2
+        },
+        {
+          "cardName": "Swarm of Locusts",
+          "cardType": "Spell",
+          "cardClass": "Neutral",
+          "cardRarity": "Rare",
+          "cardShowName": "Swarm of Locusts",
+          "cardDescription": "Summon seven 1/1 Locusts with Rush.",
+          "cardCost": 6,
+          "cardValue": 15,
+          "cardHp": 0,
+          "cardAttack": 0
+        },
+        {
+          "cardName": "Stranglethorn Tiger",
+          "cardType": "Minion",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Stranglethorn Tiger",
+          "cardDescription": "Stealth",
+          "cardCost": 5,
+          "cardValue": 10,
+          "cardHp": 5,
+          "cardAttack": 5
+        },
+        {
+          "cardName": "Sathrovarr",
+          "cardType": "Minion",
+          "cardClass": "Neutral",
+          "cardRarity": "Legendry",
+          "cardShowName": "Sathrovarr",
+          "cardDescription": "Battlecry: Choose a friendly minion. Add a copy of it tp your hand, deck, and battlefield/",
+          "cardCost": 9,
+          "cardValue": 30,
+          "cardHp": 5,
+          "cardAttack": 5
+        },
+        {
+          "cardName": "Fiery Burst",
+          "cardType": "Spell",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Fiery Burst",
+          "cardDescription": "Deal 2 damage to all enemies.",
+          "cardCost": 3,
+          "cardValue": 10,
+          "cardHp": 0,
+          "cardAttack": 0
+        },
+        {
+          "cardName": "Sprint",
+          "cardType": "Spell",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Sprint",
+          "cardDescription": "Draw 4 cards.",
+          "cardCost": 7,
+          "cardValue": 10,
+          "cardHp": 0,
+          "cardAttack": 0
+        }
+      ],
+      "deckNoOfLosses": 0,
+      "deckNoOfWins": 0,
+      "deckNoOfGames": 0
+    }
+  ],
+  "playerAllHeroes": [
+    {
+      "heroName": "Alleria Windrunner",
+      "heroClass": "Hunter",
+      "heroPower": "All minions have Rush",
+      "heroShowName": "Alleria Windrunner",
+      "heroSpecialPower": "Deal 1 damage enemy played minions",
+      "heroHp": 30,
+      "heroAttack": 0
+    },
+    {
+      "heroName": "Jaina Proudmore",
+      "heroClass": "Mage",
+      "heroPower": "Spells Cost -2 less Mana",
+      "heroShowName": "Jaina Proudmore",
+      "heroSpecialPower": "Deal 1 damage to an enemy character",
+      "heroHp": 30,
+      "heroAttack": 0
+    },
+    {
+      "heroName": "Prince Arthas",
+      "heroClass": "Paladin",
+      "heroPower": "At the end of each turn, add +1/+1 to a random friendly minion",
+      "heroShowName": "Prince Arthas",
+      "heroSpecialPower": "Summon 2 1/1 Sheep",
+      "heroHp": 30,
+      "heroAttack": 0
+    },
+    {
+      "heroName": "Valeera",
+      "heroClass": "Rogue",
+      "heroPower": "if you have a mismatch card, it Costs -2 mana",
+      "heroShowName": "Valeera",
+      "heroSpecialPower": "Steal a card from enemy Deck, if upgraded Steal a card from enemy hand",
+      "heroHp": 30,
+      "heroAttack": 0
+    },
+    {
+      "heroName": "Warlock",
+      "heroClass": "Warlock",
+      "heroPower": "Start game with +5 Health",
+      "heroShowName": "Warlock",
+      "heroSpecialPower": "Either +1/+1 a random minion or draw a card . Cost2 Health",
+      "heroHp": 30,
+      "heroAttack": 0
+    }
+  ],
+  "playerAllCards": [
+    {
+      "cardName": "Blessed Champion",
+      "cardType": "Spell",
+      "cardClass": "Paladin",
+      "cardRarity": "Rare",
+      "cardShowName": "Blessed Champion",
+      "cardDescription": "Double a minion\u0027s Attack.",
+      "cardCost": 5,
+      "cardValue": 15,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Flare",
+      "cardType": "Spell",
+      "cardClass": "Hunter",
+      "cardRarity": "Rare",
+      "cardShowName": "Flare",
+      "cardDescription": "All minions lose Stealth",
+      "cardCost": 2,
+      "cardValue": 15,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Sprint",
+      "cardType": "Spell",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Sprint",
+      "cardDescription": "Draw 4 cards.",
+      "cardCost": 7,
+      "cardValue": 10,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Strength in Numbers",
+      "cardType": "Quest",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Strength in Numbers",
+      "cardDescription": "Spend 10 Mana on minions. Summon a minion from your deck.",
+      "cardCost": 1,
+      "cardValue": 10,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Orb of the Untold",
+      "cardType": "Spell",
+      "cardClass": "Neutral",
+      "cardRarity": "Free",
+      "cardShowName": "Orb of the Untold",
+      "cardDescription": "Deal 20 damage split between all enemies.",
+      "cardCost": 4,
+      "cardValue": 0,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Blood Imp",
+      "cardType": "Minion",
+      "cardClass": "Warlock",
+      "cardRarity": "Common",
+      "cardShowName": "Blood Imp",
+      "cardDescription": "At the end of your turn , give another random friendly minion +1 Health.",
+      "cardCost": 1,
+      "cardValue": 10,
+      "cardHp": 1,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Skydiving Instructor",
+      "cardType": "Minion",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Skydiving Instructor",
+      "cardDescription": "Battkecry: Summon a 1-Cost minion from your deck.",
+      "cardCost": 3,
+      "cardValue": 10,
+      "cardHp": 2,
+      "cardAttack": 2
+    },
+    {
+      "cardName": "Swarm of Locusts",
+      "cardType": "Spell",
+      "cardClass": "Neutral",
+      "cardRarity": "Rare",
+      "cardShowName": "Swarm of Locusts",
+      "cardDescription": "Summon seven 1/1 Locusts with Rush.",
+      "cardCost": 6,
+      "cardValue": 15,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Stranglethorn Tiger",
+      "cardType": "Minion",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Stranglethorn Tiger",
+      "cardDescription": "Stealth",
+      "cardCost": 5,
+      "cardValue": 10,
+      "cardHp": 5,
+      "cardAttack": 5
+    },
+    {
+      "cardName": "Dreadscale",
+      "cardType": "Minion",
+      "cardClass": "Warlock",
+      "cardRarity": "Legendry",
+      "cardShowName": "Dreadscale",
+      "cardDescription": "At the end of your turn, deal 1 damage to all other minions.",
+      "cardCost": 3,
+      "cardValue": 30,
+      "cardHp": 2,
+      "cardAttack": 4
+    },
+    {
+      "cardName": "Sathrovarr",
+      "cardType": "Minion",
+      "cardClass": "Neutral",
+      "cardRarity": "Legendry",
+      "cardShowName": "Sathrovarr",
+      "cardDescription": "Battlecry: Choose a friendly minion. Add a copy of it tp your hand, deck, and battlefield/",
+      "cardCost": 9,
+      "cardValue": 30,
+      "cardHp": 5,
+      "cardAttack": 5
+    },
+    {
+      "cardName": "Fiery Burst",
+      "cardType": "Spell",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Fiery Burst",
+      "cardDescription": "Deal 2 damage to all enemies.",
+      "cardCost": 3,
+      "cardValue": 10,
+      "cardHp": 0,
+      "cardAttack": 0
+    },
+    {
+      "cardName": "Elven Minstrel",
+      "cardType": "Minion",
+      "cardClass": "Rogue",
+      "cardRarity": "Rare",
+      "cardShowName": "Elven Minstrel",
+      "cardDescription": "Combo: Draw 2 minions from your deck.",
+      "cardCost": 4,
+      "cardValue": 15,
+      "cardHp": 2,
+      "cardAttack": 3
+    },
+    {
+      "cardName": "Party Elemental",
+      "cardType": "Minion",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Party Elemental",
+      "cardDescription": "Comes with a party!",
+      "cardCost": 3,
+      "cardValue": 10,
+      "cardHp": 2,
+      "cardAttack": 3
+    },
+    {
+      "cardName": "Divine Sweets",
+      "cardType": "Spell",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Divine Sweets",
+      "cardDescription": "Each player draws a card.",
+      "cardCost": 2,
+      "cardValue": 10,
+      "cardHp": 0,
+      "cardAttack": 0
+    }
+  ]
+}

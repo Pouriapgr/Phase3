@@ -1,0 +1,12 @@
+{
+  "cardName": "Flare",
+  "cardType": "Spell",
+  "cardClass": "Hunter",
+  "cardRarity": "Rare",
+  "cardShowName": "Flare",
+  "cardDescription": "All minions lose Stealth",
+  "cardCost": 2,
+  "cardValue": 15,
+  "cardHp": 0,
+  "cardAttack": 0
+}

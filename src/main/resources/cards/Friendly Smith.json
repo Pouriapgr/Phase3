@@ -1,0 +1,12 @@
+{
+  "cardName": "Friendly Smith",
+  "cardType": "Spell",
+  "cardClass": "Rogue",
+  "cardRarity": "Common",
+  "cardShowName": "Friendly Smith",
+  "cardDescription": "Discover a weapon from any class. Add it to your Deck with +2/+2.",
+  "cardCost": 1,
+  "cardValue": 12,
+  "cardHp": 0,
+  "cardAttack": 0
+}
