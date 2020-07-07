@@ -61,7 +61,7 @@ public class PlayPage extends StatePanel {
 //            add(jButton.getCardButton());
 //            //jButton.setNewCard(gameState.getFirstHand().get(7 - i), true);
 //        }
-//    }
+   }
 
         private void setPlayedInitials (GameState gameState){
             playedButtons = new ArrayList<>();
