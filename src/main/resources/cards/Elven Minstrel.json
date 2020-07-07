@@ -1,0 +1,12 @@
+{
+  "cardName": "Elven Minstrel",
+  "cardType": "Minion",
+  "cardClass": "Rogue",
+  "cardRarity": "Rare",
+  "cardShowName": "Elven Minstrel",
+  "cardDescription": "Combo: Draw 2 minions from your deck.",
+  "cardCost": 4,
+  "cardValue": 15,
+  "cardHp": 2,
+  "cardAttack": 3
+}

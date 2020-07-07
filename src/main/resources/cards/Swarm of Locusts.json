@@ -1,0 +1,12 @@
+{
+  "cardName": "Swarm of Locusts",
+  "cardType": "Spell",
+  "cardClass": "Neutral",
+  "cardRarity": "Rare",
+  "cardShowName": "Swarm of Locusts",
+  "cardDescription": "Summon seven 1/1 Locusts with Rush.",
+  "cardCost": 6,
+  "cardValue": 15,
+  "cardHp": 0,
+  "cardAttack": 0
+}

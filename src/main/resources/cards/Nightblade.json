@@ -1,0 +1,12 @@
+{
+  "cardName": "Nightblade",
+  "cardType": "Minion",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Nightblade",
+  "cardDescription": "Battlecry: Deal 3 damage to the enemy hero.",
+  "cardCost": 5,
+  "cardValue": 10,
+  "cardHp": 4,
+  "cardAttack": 4
+}

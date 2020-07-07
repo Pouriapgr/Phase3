@@ -1,0 +1,12 @@
+{
+  "cardName": "Sprint",
+  "cardType": "Spell",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Sprint",
+  "cardDescription": "Draw 4 cards.",
+  "cardCost": 7,
+  "cardValue": 10,
+  "cardHp": 0,
+  "cardAttack": 0
+}

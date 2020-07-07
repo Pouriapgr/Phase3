@@ -1,0 +1,12 @@
+{
+  "cardName": "Poisoned Daggers",
+  "cardType": "Weapon",
+  "cardClass": "Neutral",
+  "cardRarity": "Common",
+  "cardShowName": "Poisoned Daggers",
+  "cardDescription": " ",
+  "cardCost": 1,
+  "cardValue": 10,
+  "cardHp": 2,
+  "cardAttack": 2
+}

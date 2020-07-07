@@ -1,0 +1,9 @@
+{
+  "heroName": "Jaina Proudmore",
+  "heroClass": "Mage",
+  "heroPower": "Spells Cost -2 less Mana",
+  "heroShowName": "Jaina Proudmore",
+  "heroSpecialPower": "Deal 1 damage to an enemy character",
+  "heroHp": 30,
+  "heroAttack": 0
+}

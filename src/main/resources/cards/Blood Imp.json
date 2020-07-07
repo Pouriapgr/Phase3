@@ -1,0 +1,12 @@
+{
+  "cardName": "Blood Imp",
+  "cardType": "Minion",
+  "cardClass": "Warlock",
+  "cardRarity": "Common",
+  "cardShowName": "Blood Imp",
+  "cardDescription": "At the end of your turn , give another random friendly minion +1 Health.",
+  "cardCost": 1,
+  "cardValue": 10,
+  "cardHp": 1,
+  "cardAttack": 0
+}

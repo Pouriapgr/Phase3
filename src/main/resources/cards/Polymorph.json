@@ -1,0 +1,12 @@
+{
+  "cardName": "Polymorph",
+  "cardType": "Spell",
+  "cardClass": "Mage",
+  "cardRarity": "Common",
+  "cardShowName": "Polymorph",
+  "cardDescription": "Transform a minion into a 1/1 Sheep.",
+  "cardCost": 4,
+  "cardValue": 10,
+  "cardHp": 0,
+  "cardAttack": 0
+}

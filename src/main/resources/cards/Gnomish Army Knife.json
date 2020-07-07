@@ -1,0 +1,12 @@
+{
+  "cardName": "Gnomish Army Knife",
+  "cardType": "Spell",
+  "cardClass": "Paladin",
+  "cardRarity": "Free",
+  "cardShowName": "Gnomish Army Knife",
+  "cardDescription": "Give a minion Charge,Windfury,Divine Shield,Lifesteal,Poisonous,Taunt, and Stealth.",
+  "cardCost": 5,
+  "cardValue": 0,
+  "cardHp": 0,
+  "cardAttack": 0
+}
