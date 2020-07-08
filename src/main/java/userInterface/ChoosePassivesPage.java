@@ -2,13 +2,17 @@ package userInterface;
 
 import card.Passive;
 import constants.GraphicConstants;
+import playlogic.PlayerInfo;
 
 import java.util.ArrayList;
 
 public class ChoosePassivesPage extends StatePanel {
-    ArrayList<Passive> passives = Passive.getAllHPassives();
+    private ArrayList<Passive> passives = Passive.getAllHPassives();
+    private PlayerInfo playerInfo;
 
-    public ChoosePassivesPage() {
+    public ChoosePassivesPage(PlayerInfo playerInfo) {
+        this.playerInfo = playerInfo;
+
         removeAllThings();
         setPassiveButtons();
         setPanel();
@@ -19,11 +23,8 @@ public class ChoosePassivesPage extends StatePanel {
             Passive passive = passives.get(i);
             addMyButton("", passive.getPassiveName(), GraphicConstants.PASSIVE_PAGE_X +
                             i * GraphicConstants.PASSIVE_PAGE_SEPARATOR, GraphicConstants.PASSIVE_PAGE_Y,
-                    GraphicConstants.STORE_BUTTON_WIDTH, GraphicConstants.STORE_BUTTON_HEIGHT);
-            addMyButton("SELECT PASSIVE", passive.getPassiveName(), GraphicConstants.PASSIVE_PAGE_X +
-                            i * GraphicConstants.PASSIVE_PAGE_SEPARATOR, GraphicConstants.PASSIVE_PAGE_Y +
-                            GraphicConstants.PASSIVE_PAGE_SEPARATOR,
-                    GraphicConstants.STORE_BS_BUTTON_WIDTH, GraphicConstants.STORE_BS_BUTTON_HEIGHT);
+                    GraphicConstants.STORE_BUTTON_WIDTH, GraphicConstants.STORE_BUTTON_HEIGHT, "passives",
+                    passive.getPassiveName() + ".png");
         }
     }
 
@@ -44,7 +45,7 @@ public class ChoosePassivesPage extends StatePanel {
     private boolean checkNewSelect() {
         for (Passive passive : passives) {
             if (newAction(passive.getPassiveName())) {
-           //     uiController.changeState(this, new PlayPage());
+                playerInfo.setPassive(passive);
                 return true;
             }
         }

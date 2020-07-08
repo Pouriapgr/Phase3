@@ -1,8 +1,6 @@
-package logic;
+package game;
 
 import card.Card;
-import game.InfoHolder;
-import game.UIController;
 import module.Player;
 
 public class Admin {

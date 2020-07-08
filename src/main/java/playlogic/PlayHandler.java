@@ -1,5 +1,4 @@
-package logic;
+package playlogic;
 
 public class PlayHandler {
-
 }

@@ -4,6 +4,9 @@ import constants.GraphicConstants;
 import file.FileAssistance;
 import game.InfoHolder;
 import game.UIController;
+import playUI.PlayPage;
+import playlogic.GameState;
+import playlogic.PlayerInfo;
 
 import javax.swing.*;
 
@@ -67,7 +70,7 @@ public class MenuPage extends State {
         while (true) {
             uiController.validate();
             if (newAction("Play"))
-                uiController.changeState(this, new ChooseDeckPage());
+                initializePlay();
             if (newAction("Collections"))
                 uiController.changeState(this, new CollectionPage());
             if (newAction("Status"))
@@ -75,6 +78,15 @@ public class MenuPage extends State {
             if (newAction("Store"))
                 uiController.changeState(this, new StorePage());
         }
+    }
+
+    private void initializePlay() {
+        PlayerInfo player1 = new PlayerInfo();
+        PlayerInfo player2 = new PlayerInfo();
+        uiController.changeState(this, new ChooseDeckPage(player1));
+        uiController.changeState(this, new ChooseDeckPage(player2));
+        GameState gameState = GameState.getInstance(1, player1, player2);
+        uiController.changeState(this, new PlayPage());
     }
 
     @Override

@@ -3,8 +3,8 @@ package userInterface;
 import card.Card;
 import constants.GraphicConstants;
 import file.FileAssistance;
+import game.Admin;
 import game.InfoHolder;
-import logic.Admin;
 import module.Player;
 
 import javax.swing.*;

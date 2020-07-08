@@ -1,3 +1,7 @@
+package playUI;
+
+import userInterface.StatePanel;
+
 //package userInterface;
 //
 //import constants.GraphicConstants;
@@ -10,7 +14,7 @@
 //import java.awt.event.MouseEvent;
 //import java.util.ArrayList;
 //
-//public class PlayPage extends StatePanel {
+public class PlayPage extends StatePanel {
 //    private GameState gameState;
 //
 //    private ArrayList<StoreButton> handButtons;
@@ -240,4 +244,4 @@
 //    public void setEnd(boolean end) {
 //        this.end = end;
 //    }
-//}
+}

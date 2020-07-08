@@ -70,7 +70,7 @@ public abstract class State extends JPanel {
         graphics.drawString(error, x - fontMetrics.stringWidth(error) / 2, y + fontMetrics.getHeight());
     }
 
-    protected void showError(String pre, String error, MyButton myButton) {
+    protected void showError(String pre, String error, JButton myButton) {
         myButton.setForeground(Color.red);
         myButton.setText(error);
         TimeAssistance.waitFor(2000L);

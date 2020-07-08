@@ -1,10 +1,9 @@
 package userInterface;
 
 import constants.GraphicConstants;
-import game.TimeAssistance;
 import module.Deck;
+import playlogic.PlayerInfo;
 
-import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -12,8 +11,10 @@ import java.util.ArrayList;
 public class ChooseDeckPage extends StatePanel {
     private ArrayList<Deck> decks;
     private DeckButton showDeck;
+    private PlayerInfo playerInfo;
 
-    public ChooseDeckPage() {
+    public ChooseDeckPage(PlayerInfo playerInfo) {
+        this.playerInfo = playerInfo;
         init();
     }
 
@@ -63,17 +64,13 @@ public class ChooseDeckPage extends StatePanel {
 
     private void checkSelectNewDeck() {
         if (showDeck != null) {
-            if (!player.canPlayDeck(showDeck.getDeck()).equals("YES")) {
-                String pre = showDeck.getText();
-                showDeck.setText(player.canPlayDeck(showDeck.getDeck()));
-                showDeck.setForeground(Color.RED);
-                TimeAssistance.waitFor(2000L);
-                showDeck.setText(pre);
-                showDeck.setForeground(Color.black);
-
-                uiController.changeState(this, new DeckPage(showDeck.getDeck()));
+            if (player.canPlayDeck(showDeck.getDeck()).equals("YES")) {
+                uiController.changeState(this, new ChoosePassivesPage(playerInfo));
+                playerInfo.setDeck(showDeck.getDeck());
             } else {
-                uiController.changeState(this, new ChoosePassivesPage());
+                String pre = showDeck.getText();
+                showError(pre, player.canPlayDeck(showDeck.getDeck()), showDeck);
+                uiController.changeState(this, new DeckPage(showDeck.getDeck()));
             }
             showDeck = null;
         }
