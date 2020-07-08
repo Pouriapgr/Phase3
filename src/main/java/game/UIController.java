@@ -1,5 +1,6 @@
 package game;
 
+import constants.GraphicConstants;
 import userInterface.GameJFrame;
 import userInterface.State;
 
@@ -24,6 +25,11 @@ public class UIController {
             uiController.setContentPane(pre);
             uiController.validate();
         }
+    }
+
+    public void changeFrame() {
+        gameJFrame.setSize(GraphicConstants.PLAY_FRAME_WIDTH, GraphicConstants.PLAY_FRAME_HEIGHT);
+        gameJFrame.setLocationRelativeTo(null);
     }
 
     public void setContentPane(Container contentPane) {

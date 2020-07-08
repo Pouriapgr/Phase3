@@ -18,4 +18,12 @@ public class PlayerInfo {
     public void setPassive(Passive passive) {
         this.passive = passive;
     }
+
+    public Deck getDeck() {
+        return deck;
+    }
+
+    public Passive getPassive() {
+        return passive;
+    }
 }

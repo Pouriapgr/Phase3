@@ -21,4 +21,12 @@ public class GameState {
         gameState = new GameState(noOfGame, player1, player2);
         return gameState;
     }
+
+    public PlayerInfo getPlayer1() {
+        return player1;
+    }
+
+    public PlayerInfo getPlayer2() {
+        return player2;
+    }
 }

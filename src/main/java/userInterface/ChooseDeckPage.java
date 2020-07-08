@@ -58,22 +58,26 @@ public class ChooseDeckPage extends StatePanel {
             if (newAction("Back")) {
                 return true;
             }
-            checkSelectNewDeck();
+            if (checkSelectNewDeck())
+                return true;
         }
     }
 
-    private void checkSelectNewDeck() {
+    private boolean checkSelectNewDeck() {
         if (showDeck != null) {
             if (player.canPlayDeck(showDeck.getDeck()).equals("YES")) {
-                uiController.changeState(this, new ChoosePassivesPage(playerInfo));
                 playerInfo.setDeck(showDeck.getDeck());
+                uiController.changeState(this, new ChoosePassivesPage(playerInfo));
+                return true;
             } else {
                 String pre = showDeck.getText();
                 showError(pre, player.canPlayDeck(showDeck.getDeck()), showDeck);
                 uiController.changeState(this, new DeckPage(showDeck.getDeck()));
             }
             showDeck = null;
+            return false;
         }
+        return false;
     }
 
     @Override

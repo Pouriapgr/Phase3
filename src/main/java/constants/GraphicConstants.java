@@ -4,6 +4,9 @@ public class GraphicConstants {
     final public static int FRAME_HEIGHT = 700;
     final public static int FRAME_WIDTH = 1050;
 
+    final public static int PLAY_FRAME_HEIGHT = 800;
+    final public static int PLAY_FRAME_WIDTH = 1300;
+
     final public static int LOGIN_REGISTER_SEPARATOR = FRAME_HEIGHT / 2 - 10;
     final public static int USERPASS_SEPARATOR = 2;
     final public static int USERNAME_FIELD_WIDTH = 200;
@@ -136,17 +139,19 @@ public class GraphicConstants {
     final public static int PLAY_HAND_BUTTON_X_SEPARATOR = 155;
     final public static int PLAY_HAND_BUTTON_FIRST_X = 40;
     final public static int PLAY_HAND_BUTTON_FIRST_Y = 510;
-    final public static int PLAY_HERO_BUTTON_WIDTH = 116;
+    final public static int PLAY_HERO_BUTTON_WIDTH = 120;
     final public static int PLAY_HERO_BUTTON_HEIGHT = 160;
-    final public static int PLAY_HERO_BUTTON_FIRST_X = (FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 10;
-    final public static int PLAY_HERO_BUTTON_FIRST_Y = 370;
+    final public static int PLAY_HERO_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 10;
+    final public static int PLAY_HERO_BUTTON_FIRST_Y = 520;
+    final public static int PLAY_HERO_BUTTON_SECOND_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 10;
+    final public static int PLAY_HERO_BUTTON_SECOND_Y = 100;
     final public static int PLAY_HEROHP_BUTTON_WIDTH = 120;
     final public static int PLAY_HEROHP_BUTTON_HEIGHT = 40;
-    final public static int PLAY_HEROHP_BUTTON_FIRST_X = (FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 + 120;
+    final public static int PLAY_HEROHP_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 + 120;
     final public static int PLAY_HEROHP_BUTTON_FIRST_Y = 450;
     final public static int PLAY_MANA_BUTTON_WIDTH = 120;
     final public static int PLAY_MANA_BUTTON_HEIGHT = 40;
-    final public static int PLAY_MANA_BUTTON_FIRST_X = (FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 + 120;
+    final public static int PLAY_MANA_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 + 120;
     final public static int PLAY_MANA_BUTTON_FIRST_Y = 405;
     final public static int PLAY_DECK_BUTTON_WIDTH = 220;
     final public static int PLAY_DECK_BUTTON_HEIGHT = 40;
@@ -154,11 +159,11 @@ public class GraphicConstants {
     final public static int PLAY_DECK_BUTTON_FIRST_Y = 450;
     final public static int PLAY_WEAPON_BUTTON_WIDTH = 120;
     final public static int PLAY_WEAPON_BUTTON_HEIGHT = 40;
-    final public static int PLAY_WEAPON_BUTTON_FIRST_X = (FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 - 120;
+    final public static int PLAY_WEAPON_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 - 120;
     final public static int PLAY_WEAPON_BUTTON_FIRST_Y = 405;
     final public static int PLAY_SKILL_BUTTON_WIDTH = 120;
     final public static int PLAY_SKILL_BUTTON_HEIGHT = 40;
-    final public static int PLAY_SKILL_BUTTON_FIRST_X = (FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 - 120;
+    final public static int PLAY_SKILL_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 - 120;
     final public static int PLAY_SKILL_BUTTON_FIRST_Y = 450;
     final public static int PLAY_MINION_BUTTON_WIDTH = 120;
     final public static int PLAY_MINION_BUTTON_HEIGHT = 170;

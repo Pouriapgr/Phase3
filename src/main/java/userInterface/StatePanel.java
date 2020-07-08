@@ -24,7 +24,7 @@ public abstract class StatePanel extends State {
         setBackground();
     }
 
-    private void setBackground() {
+    protected void setBackground() {
         JLabel jLabel = new JLabel();
         jLabel.setBounds(0, 0, GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT);
         ImageIcon imageIcon = new ImageIcon(FileAssistance.getScaledImage("background", "background.jpg",
@@ -33,7 +33,7 @@ public abstract class StatePanel extends State {
         add(jLabel);
     }
 
-    private void setBack() {
+    protected void setBack() {
         MyButton myButton = addMyButton("Back", "Back",
                 GraphicConstants.FRAME_WIDTH - 103, 0, 90, 30);
         myButton.setBorder(null);

@@ -1,72 +1,81 @@
 package playUI;
 
+import constants.GraphicConstants;
+import file.FileAssistance;
+import playlogic.GameState;
 import userInterface.StatePanel;
 
-//package userInterface;
-//
-//import constants.GraphicConstants;
-//import file.FileAssistance;
-//import logic.GameState;
-//
-//import javax.swing.*;
-//import java.awt.*;
-//import java.awt.event.MouseAdapter;
-//import java.awt.event.MouseEvent;
-//import java.util.ArrayList;
-//
+import javax.swing.*;
+
 public class PlayPage extends StatePanel {
-//    private GameState gameState;
-//
-//    private ArrayList<StoreButton> handButtons;
-//    private ArrayList<StoreButton> playedButtons;
-//    private JButton hpButton;
-//    private JButton manaButton;
-//    private JButton deckButton;
-//
-//    private boolean end = false;
-//
-//    public PlayPage() {
-//        gameState = gameState;
-//        player = gameState.getPlayer();
+    GameState gameState = GameState.getInstance();
+//    private ArrayList<PlayButton> handButtons;
+    //  private ArrayList<PlayButton> playedButtons;
+
+
+    public PlayPage() {
 //        handButtons = new ArrayList<>();
 //        playedButtons = new ArrayList<>();
-//
-//        setHandInitials(gameState);
-//        setPlayedInitials(gameState);
-//        setWeapon(gameState);
-//
-//        setEnd();
-//        setMana(gameState);
-//        setHero(gameState);
-//        setSkill(gameState);
-//        setHeroHp(gameState);
-//        setDeckCards(gameState);
+
+        setAdditionals();
+
 //
 //        showHand(gameState);
 //        showPlayed(gameState);
-//
-//        setPanel();
-//    }
-//
-//    private void setHandInitials(GameState gameState) {
-////        handButtons = new ArrayList<>();
-////        for (int i = 0; i <= 5; i++) {
-////            StoreButton jButton = new StoreButton(player, GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
-////                    i * GraphicConstants.PLAY_HAND_BUTTON_X_SEPARATOR, GraphicConstants.PLAY_HAND_BUTTON_FIRST_Y, ""
-////                    , false);
-////            jButton.getCardButton().addMouseListener(new MouseAdapter() {
-////                public void mousePressed(MouseEvent event) {
-////                    if (jButton.getCard() != null) {
-////                        jButton.setDoOpp(true);
-////                    }
-////                }
-////            });
-////            handButtons.add(jButton);
-////            add(jButton.getCardButton());
-////            //jButton.setNewCard(gameState.getFirstHand().get(7 - i), true);
-////        }
-//   }
-//
+
+        setPanel();
+    }
+
+    private void setAdditionals() {
+        //    setHandInitials();
+        //  setPlayedInitials();
+
+//        setWeapons();
+//        setEnds();
+//        setManas();
+        setHeroes();
+//        setHeroHps();
+//        setSkills();
+//        setDecks();
+    }
+
+    @Override
+    protected void setPanel() {
+        setBack();
+        setLayout(null);
+        setBounds(0, 0, GraphicConstants.PLAY_FRAME_WIDTH, GraphicConstants.PLAY_FRAME_HEIGHT);
+        setBackground();
+    }
+
+    @Override
+    protected void setBackground() {
+        JLabel jLabel = new JLabel();
+        jLabel.setBounds(0, 0, GraphicConstants.PLAY_FRAME_WIDTH, GraphicConstants.PLAY_FRAME_HEIGHT);
+        ImageIcon imageIcon = new ImageIcon(FileAssistance.getScaledImage("background", "background.jpg",
+                GraphicConstants.PLAY_FRAME_WIDTH, GraphicConstants.PLAY_FRAME_HEIGHT));
+        jLabel.setIcon(imageIcon);
+        add(jLabel);
+    }
+
+    // private void setHandInitials() {
+//        handButtons = new ArrayList<>();
+//        for (int i = 0; i <= 5; i++) {
+//            StoreButton jButton = new StoreButton(player, GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
+//                    i * GraphicConstants.PLAY_HAND_BUTTON_X_SEPARATOR, GraphicConstants.PLAY_HAND_BUTTON_FIRST_Y, ""
+//                    , false);
+//            jButton.getCardButton().addMouseListener(new MouseAdapter() {
+//                public void mousePressed(MouseEvent event) {
+//                    if (jButton.getCard() != null) {
+//                        jButton.setDoOpp(true);
+//                    }
+//                }
+//            });
+//            handButtons.add(jButton);
+//            add(jButton.getCardButton());
+//            //jButton.setNewCard(gameState.getFirstHand().get(7 - i), true);
+//        }
+    // }
+
 //        private void setPlayedInitials (GameState gameState){
 //            playedButtons = new ArrayList<>();
 //            for (int i = 0; i <= 6; i++) {
@@ -84,20 +93,21 @@ public class PlayPage extends StatePanel {
 //            add(jButton.getCardButton());
 //        }
 //    }
-//
-//    private void setHero(GameState gameState) {
-//        JButton jButton = new JButton();
-//        jButton.setBounds(GraphicConstants.PLAY_HERO_BUTTON_FIRST_X, GraphicConstants.PLAY_HERO_BUTTON_FIRST_Y,
-//                GraphicConstants.PLAY_HERO_BUTTON_WIDTH, GraphicConstants.PLAY_HERO_BUTTON_HEIGHT);
-//        jButton.setContentAreaFilled(false);
-//        jButton.setBorder(null);
-//        jButton.setIcon(new ImageIcon(FileAssistance.getScaledImage("heroes",
-//                gameState.getFirstHero().getHeroName() + ".png", GraphicConstants.PLAY_HERO_BUTTON_WIDTH,
-//                GraphicConstants.PLAY_HERO_BUTTON_HEIGHT)));
-//        add(jButton);
-//    }
-//
-//    private void setHeroHp(GameState gameState) {
+
+    private void setHeroes() {
+        addMyButton("", "Hero1", GraphicConstants.PLAY_HERO_BUTTON_FIRST_X,
+                GraphicConstants.PLAY_HERO_BUTTON_FIRST_Y, GraphicConstants.PLAY_HERO_BUTTON_WIDTH,
+                GraphicConstants.PLAY_HERO_BUTTON_HEIGHT, "heroes",
+                gameState.getPlayer1().getDeck().getDeckHero().getHeroName() + ".png");
+
+        addMyButton("", "Hero2", GraphicConstants.PLAY_HERO_BUTTON_SECOND_X,
+                GraphicConstants.PLAY_HERO_BUTTON_SECOND_Y, GraphicConstants.PLAY_HERO_BUTTON_WIDTH,
+                GraphicConstants.PLAY_HERO_BUTTON_HEIGHT, "heroes",
+                gameState.getPlayer2().getDeck().getDeckHero().getHeroName() + ".png");
+
+    }
+
+    //    private void setHeroHp(GameState gameState) {
 //        JButton jButton = new JButton();
 //        jButton.setBounds(GraphicConstants.PLAY_HEROHP_BUTTON_FIRST_X, GraphicConstants.PLAY_HEROHP_BUTTON_FIRST_Y,
 //                GraphicConstants.PLAY_HEROHP_BUTTON_WIDTH, GraphicConstants.PLAY_HEROHP_BUTTON_HEIGHT);
@@ -188,8 +198,8 @@ public class PlayPage extends StatePanel {
 //            playedButtons.get(i).setEmpty();
 //    }
 //
-//    @Override
-//    public boolean runState() {
+    @Override
+    public boolean runState() {
 //        gameJFrame.setContentPane(this);
 //
 //        while (true) {
@@ -201,7 +211,13 @@ public class PlayPage extends StatePanel {
 //            checkShowPlayed();
 //            checkEnd();
 //        }
-//    }
+        uiController.setContentPane(this);
+        while (true) {
+            if (gameState.getPlayer1() == null)
+                break;
+        }
+        return true;
+    }
 //
 //    private void checkShowHand() {
 //        for (StoreButton storeButton : handButtons) {
@@ -232,14 +248,15 @@ public class PlayPage extends StatePanel {
 //        updateState();
 //    }
 //
-//    @Override
-//    public void updateState() {
+//@Override
+public void updateState() {
+    System.out.println();
 //        manaButton.setText(gameState.manaToMax());
 //        hpButton.setText(Integer.toString(gameState.getFirstHero().getHeroHp()));
 //        deckButton.setText(gameState.getFirstDeck().size() + " CARDS REMAINED");
 //        showHand(gameState);
 //        showPlayed(gameState);
-//    }
+}
 //
 //    public void setEnd(boolean end) {
 //        this.end = end;
