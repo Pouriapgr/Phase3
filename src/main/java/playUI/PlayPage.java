@@ -3,9 +3,11 @@ package playUI;
 import constants.GraphicConstants;
 import file.FileAssistance;
 import playlogic.GameState;
+import userInterface.MyButton;
 import userInterface.StatePanel;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class PlayPage extends StatePanel {
     GameState gameState = GameState.getInstance();
@@ -30,13 +32,13 @@ public class PlayPage extends StatePanel {
         //    setHandInitials();
         //  setPlayedInitials();
 
-//        setWeapons();
-//        setEnds();
-//        setManas();
+        setWeapons();
+        setEnd();
+        setManas();
         setHeroes();
-//        setHeroHps();
-//        setSkills();
-//        setDecks();
+        setHeroesHps();
+        setDecks();
+        setSkills();
     }
 
     @Override
@@ -45,6 +47,13 @@ public class PlayPage extends StatePanel {
         setLayout(null);
         setBounds(0, 0, GraphicConstants.PLAY_FRAME_WIDTH, GraphicConstants.PLAY_FRAME_HEIGHT);
         setBackground();
+    }
+
+    @Override
+    protected void setBack() {
+        MyButton myButton = addMyButton("Back", "Back",
+                GraphicConstants.PLAY_FRAME_WIDTH - 103, 0, 90, 30);
+        myButton.setBorder(null);
     }
 
     @Override
@@ -95,83 +104,86 @@ public class PlayPage extends StatePanel {
 //    }
 
     private void setHeroes() {
-        addMyButton("", "Hero1", GraphicConstants.PLAY_HERO_BUTTON_FIRST_X,
+        addMyButton("", "1Hero", GraphicConstants.PLAY_HERO_BUTTON_FIRST_X,
                 GraphicConstants.PLAY_HERO_BUTTON_FIRST_Y, GraphicConstants.PLAY_HERO_BUTTON_WIDTH,
                 GraphicConstants.PLAY_HERO_BUTTON_HEIGHT, "heroes",
                 gameState.getPlayer1().getDeck().getDeckHero().getHeroName() + ".png");
 
-        addMyButton("", "Hero2", GraphicConstants.PLAY_HERO_BUTTON_SECOND_X,
+        addMyButton("", "2Hero", GraphicConstants.PLAY_HERO_BUTTON_SECOND_X,
                 GraphicConstants.PLAY_HERO_BUTTON_SECOND_Y, GraphicConstants.PLAY_HERO_BUTTON_WIDTH,
                 GraphicConstants.PLAY_HERO_BUTTON_HEIGHT, "heroes",
                 gameState.getPlayer2().getDeck().getDeckHero().getHeroName() + ".png");
 
     }
 
-    //    private void setHeroHp(GameState gameState) {
-//        JButton jButton = new JButton();
-//        jButton.setBounds(GraphicConstants.PLAY_HEROHP_BUTTON_FIRST_X, GraphicConstants.PLAY_HEROHP_BUTTON_FIRST_Y,
-//                GraphicConstants.PLAY_HEROHP_BUTTON_WIDTH, GraphicConstants.PLAY_HEROHP_BUTTON_HEIGHT);
-//        jButton.setText(Integer.toString(gameState.getFirstHero().getHeroHp()));
-//        jButton.setForeground(Color.RED);
-//        add(jButton);
-//        hpButton = jButton;
-//    }
-//
-//    private void setMana(GameState gameState) {
-//        JButton jButton = new JButton();
-//        jButton.setBounds(GraphicConstants.PLAY_MANA_BUTTON_FIRST_X, GraphicConstants.PLAY_MANA_BUTTON_FIRST_Y,
-//                GraphicConstants.PLAY_MANA_BUTTON_WIDTH, GraphicConstants.PLAY_MANA_BUTTON_HEIGHT);
-//        jButton.setText(gameState.manaToMax());
-//        jButton.setForeground(Color.BLUE);
-//        add(jButton);
-//        manaButton = jButton;
-//    }
-//
-//    private void setDeckCards(GameState gameState) {
-//        JButton jButton = new JButton();
-//        jButton.setBounds(GraphicConstants.PLAY_DECK_BUTTON_FIRST_X, GraphicConstants.PLAY_DECK_BUTTON_FIRST_Y,
-//                GraphicConstants.PLAY_DECK_BUTTON_WIDTH, GraphicConstants.PLAY_DECK_BUTTON_HEIGHT);
-//        jButton.setText(gameState.getFirstDeck().size() + " CARDS REMAINED");
-//        add(jButton);
-//        deckButton = jButton;
-//    }
-//
-//    private void setWeapon(GameState gameState) {
-//        JButton jButton = new JButton();
-//        jButton.setBounds(GraphicConstants.PLAY_WEAPON_BUTTON_FIRST_X, GraphicConstants.PLAY_WEAPON_BUTTON_FIRST_Y,
-//                GraphicConstants.PLAY_WEAPON_BUTTON_WIDTH, GraphicConstants.PLAY_WEAPON_BUTTON_HEIGHT);
-//        add(jButton);
-//
-//        if (gameState.getWeapon() == null) {
-//            jButton.setContentAreaFilled(false);
-//            jButton.setBorder(null);
-//        } else {
-//            jButton.setText(gameState.getWeapon().getCardHp() + "/" + gameState.getWeapon().getCardAttack());
-//            jButton.setContentAreaFilled(true);
-//        }
-//    }
-//
-//    private void setSkill(GameState gameState) {
-//        JButton jButton = new JButton();
-//        jButton.setBounds(GraphicConstants.PLAY_SKILL_BUTTON_FIRST_X, GraphicConstants.PLAY_SKILL_BUTTON_FIRST_Y,
-//                GraphicConstants.PLAY_SKILL_BUTTON_WIDTH, GraphicConstants.PLAY_SKILL_BUTTON_HEIGHT);
-//        jButton.setText("HERO POWER");
-//        add(jButton);
-//    }
-//
-//    private void setEnd() {
-//        JButton jButton = new JButton();
-//        jButton.setBounds(GraphicConstants.FRAME_WIDTH - 103, 33, 90, 30);
-//        jButton.setText("END");
-//        jButton.setBackground(Color.ORANGE);
-//        jButton.addMouseListener(new MouseAdapter() {
-//            public void mousePressed(MouseEvent event) {
-//                setEnd(true);
-//            }
-//        });
-//        add(jButton);
-//    }
-//
+    private void setHeroesHps() {
+        MyButton myButton = addMyButton("", "1HeroHp", GraphicConstants.PLAY_HEROHP_BUTTON_FIRST_X,
+                GraphicConstants.PLAY_HEROHP_BUTTON_FIRST_Y, GraphicConstants.PLAY_HEROHP_BUTTON_WIDTH,
+                GraphicConstants.PLAY_HEROHP_BUTTON_HEIGHT);
+        myButton.setText(Integer.toString(gameState.getPlayer1().getDeck().getDeckHero().getHeroHp()));
+        myButton.setForeground(Color.RED);
+
+        myButton = addMyButton("", "2HeroHp", GraphicConstants.PLAY_HEROHP_BUTTON_SECOND_X,
+                GraphicConstants.PLAY_HEROHP_BUTTON_SECOND_Y, GraphicConstants.PLAY_HEROHP_BUTTON_WIDTH,
+                GraphicConstants.PLAY_HEROHP_BUTTON_HEIGHT);
+        myButton.setText(Integer.toString(gameState.getPlayer2().getDeck().getDeckHero().getHeroHp()));
+        myButton.setForeground(Color.RED);
+    }
+
+    private void setManas() {
+        MyButton myButton = addMyButton("", "1Mana", GraphicConstants.PLAY_MANA_BUTTON_FIRST_X,
+                GraphicConstants.PLAY_MANA_BUTTON_FIRST_Y, GraphicConstants.PLAY_MANA_BUTTON_WIDTH,
+                GraphicConstants.PLAY_MANA_BUTTON_HEIGHT);
+        myButton.setText("5/5");
+        myButton.setForeground(Color.BLUE);
+
+        myButton = addMyButton("", "2Mana", GraphicConstants.PLAY_MANA_BUTTON_SECOND_X,
+                GraphicConstants.PLAY_MANA_BUTTON_SECOND_Y, GraphicConstants.PLAY_MANA_BUTTON_WIDTH,
+                GraphicConstants.PLAY_MANA_BUTTON_HEIGHT);
+        myButton.setText("5/5");
+        myButton.setForeground(Color.BLUE);
+    }
+
+    private void setDecks() {
+        MyButton myButton = addMyButton("", "1Deck", GraphicConstants.PLAY_DECK_BUTTON_FIRST_X,
+                GraphicConstants.PLAY_DECK_BUTTON_FIRST_Y, GraphicConstants.PLAY_DECK_BUTTON_WIDTH,
+                GraphicConstants.PLAY_DECK_BUTTON_HEIGHT);
+        myButton.setText(0 + " CARDS REMAINED");
+
+        myButton = addMyButton("", "2Deck", GraphicConstants.PLAY_DECK_BUTTON_SECOND_X,
+                GraphicConstants.PLAY_DECK_BUTTON_SECOND_Y, GraphicConstants.PLAY_DECK_BUTTON_WIDTH,
+                GraphicConstants.PLAY_DECK_BUTTON_HEIGHT);
+        myButton.setText(0 + " CARDS REMAINED");
+    }
+
+    private void setWeapons() {
+        MyButton myButton = addMyButton("", "1Weapon", GraphicConstants.PLAY_WEAPON_BUTTON_FIRST_X,
+                GraphicConstants.PLAY_WEAPON_BUTTON_FIRST_Y, GraphicConstants.PLAY_WEAPON_BUTTON_WIDTH,
+                GraphicConstants.PLAY_WEAPON_BUTTON_HEIGHT);
+
+        myButton = addMyButton("", "2Weapon", GraphicConstants.PLAY_WEAPON_BUTTON_SECOND_X,
+                GraphicConstants.PLAY_WEAPON_BUTTON_SECOND_Y, GraphicConstants.PLAY_WEAPON_BUTTON_WIDTH,
+                GraphicConstants.PLAY_WEAPON_BUTTON_HEIGHT);
+
+    }
+
+    private void setSkills() {
+        MyButton myButton = addMyButton("HERO POWER", "1Skill", GraphicConstants.PLAY_SKILL_BUTTON_FIRST_X,
+                GraphicConstants.PLAY_SKILL_BUTTON_FIRST_Y, GraphicConstants.PLAY_SKILL_BUTTON_WIDTH,
+                GraphicConstants.PLAY_SKILL_BUTTON_HEIGHT);
+
+        myButton = addMyButton("HERO POWER", "2Skill", GraphicConstants.PLAY_SKILL_BUTTON_SECOND_X,
+                GraphicConstants.PLAY_SKILL_BUTTON_SECOND_Y, GraphicConstants.PLAY_SKILL_BUTTON_WIDTH,
+                GraphicConstants.PLAY_SKILL_BUTTON_HEIGHT);
+    }
+
+    private void setEnd() {
+        MyButton myButton = addMyButton("END", "End", GraphicConstants.PLAY_FRAME_WIDTH - 103,
+                GraphicConstants.PLAY_FRAME_HEIGHT / 2 - 35, 90, 30);
+        myButton.setBackground(Color.ORANGE);
+    }
+
+    //
 //
 //    private void showHand(GameState gameState) {
 //        for (int i = 0; i <= gameState.getFirstHand().size() - 1; i++) {

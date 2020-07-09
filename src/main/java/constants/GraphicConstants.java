@@ -134,37 +134,55 @@ public class GraphicConstants {
     final public static int PLAY_DECK_Y_SEPARATOR = 43;
     final public static int PLAY_DECK_FIRST_X = (FRAME_WIDTH - PLAY_DECK_X_SEPARATOR - PLAY_DECK_WIDTH) / 2;
     final public static int PLAY_DECK_FIRST_Y = 100;
+
     final public static int PLAY_HAND_BUTTON_WIDTH = 170;
     final public static int PLAY_HAND_BUTTON_HEIGHT = 241;
     final public static int PLAY_HAND_BUTTON_X_SEPARATOR = 155;
     final public static int PLAY_HAND_BUTTON_FIRST_X = 40;
     final public static int PLAY_HAND_BUTTON_FIRST_Y = 510;
+
     final public static int PLAY_HERO_BUTTON_WIDTH = 120;
     final public static int PLAY_HERO_BUTTON_HEIGHT = 160;
     final public static int PLAY_HERO_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 10;
     final public static int PLAY_HERO_BUTTON_FIRST_Y = 520;
     final public static int PLAY_HERO_BUTTON_SECOND_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 10;
     final public static int PLAY_HERO_BUTTON_SECOND_Y = 100;
+
     final public static int PLAY_HEROHP_BUTTON_WIDTH = 120;
     final public static int PLAY_HEROHP_BUTTON_HEIGHT = 40;
     final public static int PLAY_HEROHP_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 + 120;
-    final public static int PLAY_HEROHP_BUTTON_FIRST_Y = 450;
+    final public static int PLAY_HEROHP_BUTTON_FIRST_Y = 180;
+    final public static int PLAY_HEROHP_BUTTON_SECOND_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 + 120;
+    final public static int PLAY_HEROHP_BUTTON_SECOND_Y = 550;
+
     final public static int PLAY_MANA_BUTTON_WIDTH = 120;
     final public static int PLAY_MANA_BUTTON_HEIGHT = 40;
     final public static int PLAY_MANA_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 + 120;
-    final public static int PLAY_MANA_BUTTON_FIRST_Y = 405;
+    final public static int PLAY_MANA_BUTTON_FIRST_Y = 130;
+    final public static int PLAY_MANA_BUTTON_SECOND_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 + 120;
+    final public static int PLAY_MANA_BUTTON_SECOND_Y = 600;
+
     final public static int PLAY_DECK_BUTTON_WIDTH = 220;
     final public static int PLAY_DECK_BUTTON_HEIGHT = 40;
-    final public static int PLAY_DECK_BUTTON_FIRST_X = 750;
-    final public static int PLAY_DECK_BUTTON_FIRST_Y = 450;
+    final public static int PLAY_DECK_BUTTON_FIRST_X = 900;
+    final public static int PLAY_DECK_BUTTON_FIRST_Y = 130;
+    final public static int PLAY_DECK_BUTTON_SECOND_X = 900;
+    final public static int PLAY_DECK_BUTTON_SECOND_Y = 600;
+
     final public static int PLAY_WEAPON_BUTTON_WIDTH = 120;
     final public static int PLAY_WEAPON_BUTTON_HEIGHT = 40;
-    final public static int PLAY_WEAPON_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 - 120;
-    final public static int PLAY_WEAPON_BUTTON_FIRST_Y = 405;
+    final public static int PLAY_WEAPON_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 - 125;
+    final public static int PLAY_WEAPON_BUTTON_FIRST_Y = 130;
+    final public static int PLAY_WEAPON_BUTTON_SECOND_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 - 125;
+    final public static int PLAY_WEAPON_BUTTON_SECOND_Y = 600;
+
     final public static int PLAY_SKILL_BUTTON_WIDTH = 120;
     final public static int PLAY_SKILL_BUTTON_HEIGHT = 40;
-    final public static int PLAY_SKILL_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 - 120;
-    final public static int PLAY_SKILL_BUTTON_FIRST_Y = 450;
+    final public static int PLAY_SKILL_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 - 125;
+    final public static int PLAY_SKILL_BUTTON_FIRST_Y = 180;
+    final public static int PLAY_SKILL_BUTTON_SECOND_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 5 - 125;
+    final public static int PLAY_SKILL_BUTTON_SECOND_Y = 550;
+
     final public static int PLAY_MINION_BUTTON_WIDTH = 120;
     final public static int PLAY_MINION_BUTTON_HEIGHT = 170;
     final public static int PLAY_MINION_BUTTON_X = 60;
