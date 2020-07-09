@@ -1,6 +1,8 @@
 package playUI;
 
+import card.Card;
 import constants.GraphicConstants;
+import constants.LogicConstants;
 import file.FileAssistance;
 import playlogic.GameState;
 import userInterface.MyButton;
@@ -8,29 +10,24 @@ import userInterface.StatePanel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class PlayPage extends StatePanel {
     GameState gameState = GameState.getInstance();
-//    private ArrayList<PlayButton> handButtons;
-    //  private ArrayList<PlayButton> playedButtons;
+    private ArrayList<PlayButton> handButtonsPlayer1 = new ArrayList<>();
+    private ArrayList<PlayButton> handButtonsPlayer2 = new ArrayList<>();
+    private ArrayList<PlayButton> playedButtonsPlayer1 = new ArrayList<>();
+    private ArrayList<PlayButton> playedButtonsPlayer2 = new ArrayList<>();
 
 
     public PlayPage() {
-//        handButtons = new ArrayList<>();
-//        playedButtons = new ArrayList<>();
-
         setAdditionals();
-
-//
-//        showHand(gameState);
-//        showPlayed(gameState);
-
         setPanel();
     }
 
     private void setAdditionals() {
-        //    setHandInitials();
-        //  setPlayedInitials();
+        setHandsInitials();
+        //setPlayedInitials();
 
         setWeapons();
         setEnd();
@@ -66,24 +63,28 @@ public class PlayPage extends StatePanel {
         add(jLabel);
     }
 
-    // private void setHandInitials() {
-//        handButtons = new ArrayList<>();
-//        for (int i = 0; i <= 5; i++) {
-//            StoreButton jButton = new StoreButton(player, GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
-//                    i * GraphicConstants.PLAY_HAND_BUTTON_X_SEPARATOR, GraphicConstants.PLAY_HAND_BUTTON_FIRST_Y, ""
-//                    , false);
-//            jButton.getCardButton().addMouseListener(new MouseAdapter() {
-//                public void mousePressed(MouseEvent event) {
-//                    if (jButton.getCard() != null) {
-//                        jButton.setDoOpp(true);
-//                    }
-//                }
-//            });
-//            handButtons.add(jButton);
-//            add(jButton.getCardButton());
-//            //jButton.setNewCard(gameState.getFirstHand().get(7 - i), true);
-//        }
-    // }
+    private void setHandsInitials() {
+        handButtonsPlayer1 = new ArrayList<>();
+        for (int i = 0; i <= LogicConstants.MAX_HAND_CARDS; i++) {
+            PlayButton jButton = new PlayButton(GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
+                    i * GraphicConstants.PLAY_HAND_BUTTON_X_SEPARATOR, GraphicConstants.PLAY_HAND_BUTTON_FIRST_Y);
+            jButton.setHover(+100);
+            jButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Flare")));
+            handButtonsPlayer1.add(jButton);
+
+            add(jButton.getCardButton());
+        }
+
+        handButtonsPlayer2 = new ArrayList<>();
+        for (int i = 0; i <= LogicConstants.MAX_HAND_CARDS; i++) {
+            PlayButton jButton = new PlayButton(GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
+                    i * GraphicConstants.PLAY_HAND_BUTTON_X_SEPARATOR, GraphicConstants.PLAY_HAND_BUTTON_SECOND_Y);
+            jButton.setHover(-100);
+            jButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Flare")));
+            handButtonsPlayer2.add(jButton);
+            add(jButton.getCardButton());
+        }
+    }
 
 //        private void setPlayedInitials (GameState gameState){
 //            playedButtons = new ArrayList<>();
@@ -183,33 +184,6 @@ public class PlayPage extends StatePanel {
         myButton.setBackground(Color.ORANGE);
     }
 
-    //
-//
-//    private void showHand(GameState gameState) {
-//        for (int i = 0; i <= gameState.getFirstHand().size() - 1; i++) {
-//            if (handButtons.get(i).getCard() != null) {
-//                if (handButtons.get(i).getCard().getCardName().equals(gameState.getFirstHand().get(i).getCardName()))
-//                    continue;
-//            }
-//            handButtons.get(i).setNewCard(gameState.getFirstHand().get(i), true);
-//        }
-//        for (int i = gameState.getFirstHand().size(); i < 6; i++)
-//            handButtons.get(i).setEmpty();
-//    }
-//
-//    private void showPlayed(GameState gameState) {
-//        for (int i = 0; i <= gameState.getFirstPlayed().size() - 1; i++) {
-//            if (playedButtons.get(i).getCard() != null) {
-//                if (playedButtons.get(i).getCard().getCardName().equals(gameState.getFirstPlayed().get(i).getCardName()))
-//                    continue;
-//            }
-//            playedButtons.get(i).setNewCard(gameState.getFirstPlayed().get(i), true);
-//            playedButtons.get(i).setBound(GraphicConstants.PLAY_MINION_BUTTON_WIDTH, GraphicConstants.PLAY_MINION_BUTTON_HEIGHT);
-//        }
-//        for (int i = gameState.getFirstPlayed().size(); i < 7; i++)
-//            playedButtons.get(i).setEmpty();
-//    }
-//
     @Override
     public boolean runState() {
 //        gameJFrame.setContentPane(this);

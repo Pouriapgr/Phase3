@@ -136,10 +136,11 @@ public class GraphicConstants {
     final public static int PLAY_DECK_FIRST_Y = 100;
 
     final public static int PLAY_HAND_BUTTON_WIDTH = 170;
-    final public static int PLAY_HAND_BUTTON_HEIGHT = 241;
+    final public static int PLAY_HAND_BUTTON_HEIGHT = 200;
     final public static int PLAY_HAND_BUTTON_X_SEPARATOR = 155;
-    final public static int PLAY_HAND_BUTTON_FIRST_X = 40;
-    final public static int PLAY_HAND_BUTTON_FIRST_Y = 510;
+    final public static int PLAY_HAND_BUTTON_FIRST_X = 80;
+    final public static int PLAY_HAND_BUTTON_FIRST_Y = 650;
+    final public static int PLAY_HAND_BUTTON_SECOND_Y = -90;
 
     final public static int PLAY_HERO_BUTTON_WIDTH = 120;
     final public static int PLAY_HERO_BUTTON_HEIGHT = 160;
@@ -188,6 +189,8 @@ public class GraphicConstants {
     final public static int PLAY_MINION_BUTTON_X = 60;
     final public static int PLAY_MINION_BUTTON_Y = 200;
     final public static int PLAY_MINION_BUTTON_SEPARATOR = 130;
+
+    final public static int MOVE_RATE = 3;
 
     final public static int PASSIVE_PAGE_X = 220;
     final public static int PASSIVE_PAGE_Y = 150;

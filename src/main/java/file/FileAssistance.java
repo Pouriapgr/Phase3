@@ -19,6 +19,7 @@ public class FileAssistance {
         return new File(getResources() + "/cards/" + name);
     }
 
+
     public static File findHeroJSON(String name) {
         name += ".json";
         File[] files = getFolder("heroes").listFiles();
@@ -70,6 +71,7 @@ public class FileAssistance {
                 width, height, bufferedImageOp);
         return scaledImage;
     }
+
 
     public static File getFolder(String name) {
         return new File(getResources() + "/" + name);
