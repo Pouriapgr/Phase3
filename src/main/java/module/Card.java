@@ -1,4 +1,4 @@
-package card;
+package module;
 
 import com.google.gson.Gson;
 import file.FileAssistance;
@@ -76,6 +76,11 @@ public class Card {
             out += " ";
         out += "ManaCost: " + getCardCost() + "   Class: " + getCardClass();
         return out;
+    }
+
+    public static Card copy(Card newCard) {
+        Card card = new Card(newCard);
+        return card;
     }
 
     public String getCardName() {

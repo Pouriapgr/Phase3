@@ -22,6 +22,7 @@ public class GameState {
         return gameState;
     }
 
+
     public PlayerInfo getPlayer1() {
         return player1;
     }

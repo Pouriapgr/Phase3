@@ -1,8 +1,8 @@
 package file;
 
-import card.Passive;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import module.Passive;
 
 import java.io.File;
 import java.io.FileWriter;

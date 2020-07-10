@@ -1,10 +1,10 @@
 package file;
 
-import card.Minion;
-import card.Spell;
-import card.Weapon;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import module.Minion;
+import module.Spell;
+import module.Weapon;
 
 import java.io.File;
 import java.io.FileWriter;

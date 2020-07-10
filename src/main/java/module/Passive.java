@@ -1,4 +1,4 @@
-package card;
+package module;
 
 import com.google.gson.Gson;
 import file.FileAssistance;
@@ -15,6 +15,11 @@ public class Passive {
     private Passive(Passive newPassive) {
         passiveName = newPassive.getPassiveName();
         description = newPassive.getDescription();
+    }
+
+    public static Passive copy(Passive passive) {
+        Passive newPassive = new Passive(passive);
+        return newPassive;
     }
 
     public Passive(String passiveName, String description) {

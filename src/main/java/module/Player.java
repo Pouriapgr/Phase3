@@ -1,6 +1,5 @@
 package module;
 
-import card.Card;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import constants.LogicConstants;

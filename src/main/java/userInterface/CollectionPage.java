@@ -1,8 +1,8 @@
 package userInterface;
 
-import card.Card;
 import constants.GraphicConstants;
 import constants.LogicConstants;
+import module.Card;
 import module.Deck;
 import module.Hero;
 

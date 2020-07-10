@@ -1,7 +1,7 @@
 package userInterface;
 
-import card.Card;
 import constants.GraphicConstants;
+import module.Card;
 
 import java.awt.*;
 import java.util.ArrayList;

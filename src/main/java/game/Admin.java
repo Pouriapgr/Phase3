@@ -1,6 +1,6 @@
 package game;
 
-import card.Card;
+import module.Card;
 import module.Player;
 
 public class Admin {

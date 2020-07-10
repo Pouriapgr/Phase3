@@ -1,8 +1,8 @@
 package playUI;
 
-import card.Card;
 import constants.GraphicConstants;
 import file.FileAssistance;
+import module.Card;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;

@@ -1,7 +1,7 @@
 package userInterface;
 
-import card.Card;
 import constants.GraphicConstants;
+import module.Card;
 
 public class ShowCard extends StatePanel {
     private Card card;

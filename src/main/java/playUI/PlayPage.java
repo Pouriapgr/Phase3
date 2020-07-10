@@ -1,9 +1,9 @@
 package playUI;
 
-import card.Card;
 import constants.GraphicConstants;
 import constants.LogicConstants;
 import file.FileAssistance;
+import module.Card;
 import playlogic.GameState;
 import userInterface.MyButton;
 import userInterface.StatePanel;

@@ -1,7 +1,5 @@
 package module;
 
-import card.Card;
-
 import java.util.ArrayList;
 
 public class Deck {
@@ -21,6 +19,15 @@ public class Deck {
         deckNoOfGames = 0;
         deckNoOfLosses = 0;
         deckNoOfWins = 0;
+    }
+
+    public static Deck copy(Deck deck) {
+        ArrayList<Card> cards = new ArrayList<>();
+        for (Card card : deck.getDeckCards()) {
+            cards.add(Card.copy(card));
+        }
+        Deck newDeck = new Deck(deck.getDeckHero(), cards, deck.getDeckName());
+        return newDeck;
     }
 
     public double getAverageCost() {

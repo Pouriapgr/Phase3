@@ -1,7 +1,7 @@
 package userInterface;
 
-import card.Passive;
 import constants.GraphicConstants;
+import module.Passive;
 import playlogic.PlayerInfo;
 
 import java.util.ArrayList;

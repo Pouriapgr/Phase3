@@ -1,8 +1,8 @@
 package userInterface;
 
-import card.Card;
 import constants.GraphicConstants;
 import file.FileAssistance;
+import module.Card;
 import module.Deck;
 
 import javax.swing.*;

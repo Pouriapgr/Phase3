@@ -1,10 +1,10 @@
 package userInterface;
 
-import card.Card;
 import constants.GraphicConstants;
 import file.FileAssistance;
 import game.Admin;
 import game.InfoHolder;
+import module.Card;
 import module.Player;
 
 import javax.swing.*;
