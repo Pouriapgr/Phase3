@@ -1,17 +1,20 @@
 package userInterface;
 
 import constants.GraphicConstants;
+import game.InfoHolder;
 import module.Deck;
+import module.Player;
 import playlogic.PlayerInfo;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
-public class ChooseDeckPage extends StatePanel {
+public class ChooseDeckPage extends State {
     private ArrayList<Deck> decks;
     private DeckButton showDeck;
     private PlayerInfo playerInfo;
+    private Player player = InfoHolder.getInstance().getPlayer();
 
     public ChooseDeckPage(PlayerInfo playerInfo) {
         this.playerInfo = playerInfo;
@@ -26,6 +29,7 @@ public class ChooseDeckPage extends StatePanel {
         setDecks();
         setPanel();
     }
+
 
     private void setDecks() {
         for (int j = 0; j < 10; j++) {
@@ -55,9 +59,6 @@ public class ChooseDeckPage extends StatePanel {
 
         while (true) {
             uiController.validate();
-            if (newAction("Back")) {
-                return true;
-            }
             if (checkSelectNewDeck())
                 return true;
         }

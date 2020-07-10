@@ -21,13 +21,15 @@ public class SignPage extends State {
         setPanel();
     }
 
-    private void setPanel() {
+    @Override
+    protected void setPanel() {
         setLayout(null);
         setBounds(0, 0, GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT);
         setBackground();
     }
 
-    private void setBackground() {
+    @Override
+    protected void setBackground() {
         JLabel jLabel = new JLabel();
         jLabel.setBounds(0, 0, GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT);
         ImageIcon imageIcon = new ImageIcon(FileAssistance.getScaledImage("login", "background.jpg",

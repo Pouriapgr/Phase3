@@ -1,5 +1,6 @@
 package userInterface;
 
+import constants.GraphicConstants;
 import file.FileAssistance;
 import game.TimeAssistance;
 import game.UIController;
@@ -40,7 +41,7 @@ public abstract class State extends JPanel {
     }
 
 
-    protected MyButton getMyButton(String name) {
+    public MyButton getMyButton(String name) {
         for (MyButton myButton : myButtons)
             if (myButton.getButtonName().equals(name))
                 return myButton;
@@ -78,7 +79,7 @@ public abstract class State extends JPanel {
         myButton.setForeground(Color.black);
     }
 
-    protected boolean newAction(String name) {
+    public boolean newAction(String name) {
         if (getMyButton(name).isPressed()) {
             getMyButton(name).setPressed(false);
             return true;
@@ -90,6 +91,21 @@ public abstract class State extends JPanel {
         removeAll();
         myButtons.clear();
         myFields.clear();
+    }
+
+    protected void setPanel() {
+        setLayout(null);
+        setBounds(0, 0, GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT);
+        setBackground();
+    }
+
+    protected void setBackground() {
+        JLabel jLabel = new JLabel();
+        jLabel.setBounds(0, 0, GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT);
+        ImageIcon imageIcon = new ImageIcon(FileAssistance.getScaledImage("background", "background.jpg",
+                GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT));
+        jLabel.setIcon(imageIcon);
+        add(jLabel);
     }
 
     public abstract boolean runState();

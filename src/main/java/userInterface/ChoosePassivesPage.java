@@ -6,7 +6,7 @@ import playlogic.PlayerInfo;
 
 import java.util.ArrayList;
 
-public class ChoosePassivesPage extends StatePanel {
+public class ChoosePassivesPage extends State {
     private ArrayList<Passive> passives = Passive.getAllHPassives();
     private PlayerInfo playerInfo;
 
@@ -33,9 +33,6 @@ public class ChoosePassivesPage extends StatePanel {
         uiController.setContentPane(this);
 
         while (true) {
-            if (newAction("Back")) {
-                return true;
-            }
             if (checkNewSelect())
                 return true;
             uiController.validate();

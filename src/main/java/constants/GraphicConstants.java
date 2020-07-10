@@ -44,7 +44,7 @@ public class GraphicConstants {
     final public static int STORE_BS_BUTTON_PLUS_Y = 240;
 
     final public static int SHOW_CARD_WIDTH = 400;
-    final public static int SHOW_CARD_HEIGHT = 550;
+    final public static int SHOW_CARD_HEIGHT = 543;
     final public static int SHOW_CARD_X = (FRAME_WIDTH - SHOW_CARD_WIDTH) / 2;
     final public static int SHOW_CARD_Y = (FRAME_HEIGHT - SHOW_CARD_HEIGHT) / 2 - 50;
     final public static int SHOW_CARD_ASSURE_WIDTH = 340;
@@ -143,9 +143,9 @@ public class GraphicConstants {
     final public static int PLAY_HAND_BUTTON_SECOND_Y = -90;
 
     final public static int PLAY_HERO_BUTTON_WIDTH = 120;
-    final public static int PLAY_HERO_BUTTON_HEIGHT = 160;
+    final public static int PLAY_HERO_BUTTON_HEIGHT = 140;
     final public static int PLAY_HERO_BUTTON_FIRST_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 10;
-    final public static int PLAY_HERO_BUTTON_FIRST_Y = 520;
+    final public static int PLAY_HERO_BUTTON_FIRST_Y = 540;
     final public static int PLAY_HERO_BUTTON_SECOND_X = (PLAY_FRAME_WIDTH - PLAY_HERO_BUTTON_WIDTH) / 2 - 10;
     final public static int PLAY_HERO_BUTTON_SECOND_Y = 100;
 
@@ -185,9 +185,10 @@ public class GraphicConstants {
     final public static int PLAY_SKILL_BUTTON_SECOND_Y = 550;
 
     final public static int PLAY_MINION_BUTTON_WIDTH = 120;
-    final public static int PLAY_MINION_BUTTON_HEIGHT = 170;
-    final public static int PLAY_MINION_BUTTON_X = 60;
-    final public static int PLAY_MINION_BUTTON_Y = 200;
+    final public static int PLAY_MINION_BUTTON_HEIGHT = 150;
+    final public static int PLAY_MINION_BUTTON_X = 190;
+    final public static int PLAY_MINION_BUTTON_FIRST_Y = 230;
+    final public static int PLAY_MINION_BUTTON_SECOND_Y = 395;
     final public static int PLAY_MINION_BUTTON_SEPARATOR = 130;
 
     final public static int MOVE_RATE = 3;

@@ -13,21 +13,19 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class PlayPage extends StatePanel {
-    GameState gameState = GameState.getInstance();
-    private ArrayList<PlayButton> handButtonsPlayer1 = new ArrayList<>();
-    private ArrayList<PlayButton> handButtonsPlayer2 = new ArrayList<>();
+    private GameState gameState = GameState.getInstance();
+    private ArrayList<HandButton> handButtonsPlayer1 = new ArrayList<>();
+    private ArrayList<HandButton> handButtonsPlayer2 = new ArrayList<>();
     private ArrayList<PlayButton> playedButtonsPlayer1 = new ArrayList<>();
     private ArrayList<PlayButton> playedButtonsPlayer2 = new ArrayList<>();
 
 
     public PlayPage() {
-        setAdditionals();
-        setPanel();
     }
 
-    private void setAdditionals() {
+    public void setInitials() {
         setHandsInitials();
-        //setPlayedInitials();
+        setPlayedInitials();
 
         setWeapons();
         setEnd();
@@ -36,6 +34,8 @@ public class PlayPage extends StatePanel {
         setHeroesHps();
         setDecks();
         setSkills();
+
+        setPanel();
     }
 
     @Override
@@ -66,43 +66,46 @@ public class PlayPage extends StatePanel {
     private void setHandsInitials() {
         handButtonsPlayer1 = new ArrayList<>();
         for (int i = 0; i <= LogicConstants.MAX_HAND_CARDS; i++) {
-            PlayButton jButton = new PlayButton(GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
+            HandButton handButton = new HandButton(GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
                     i * GraphicConstants.PLAY_HAND_BUTTON_X_SEPARATOR, GraphicConstants.PLAY_HAND_BUTTON_FIRST_Y);
-            jButton.setHover(+100);
-            jButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Flare")));
-            handButtonsPlayer1.add(jButton);
+            handButton.setHover(+100);
+            handButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Flare")));
+            handButtonsPlayer1.add(handButton);
 
-            add(jButton.getCardButton());
+            add(handButton.getCardButton());
         }
 
         handButtonsPlayer2 = new ArrayList<>();
         for (int i = 0; i <= LogicConstants.MAX_HAND_CARDS; i++) {
-            PlayButton jButton = new PlayButton(GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
+            HandButton handButton = new HandButton(GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
                     i * GraphicConstants.PLAY_HAND_BUTTON_X_SEPARATOR, GraphicConstants.PLAY_HAND_BUTTON_SECOND_Y);
-            jButton.setHover(-100);
-            jButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Flare")));
-            handButtonsPlayer2.add(jButton);
-            add(jButton.getCardButton());
+            handButton.setHover(-100);
+            handButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Flare")));
+            handButtonsPlayer2.add(handButton);
+            add(handButton.getCardButton());
         }
     }
 
-//        private void setPlayedInitials (GameState gameState){
-//            playedButtons = new ArrayList<>();
-//            for (int i = 0; i <= 6; i++) {
-//                StoreButton jButton = new StoreButton(player, GraphicConstants.PLAY_MINION_BUTTON_X +
-//                        i * GraphicConstants.PLAY_MINION_BUTTON_SEPARATOR, GraphicConstants.PLAY_MINION_BUTTON_Y, ""
-//                        , false);
-//                jButton.getCardButton().addMouseListener(new MouseAdapter() {
-//                    public void mousePressed(MouseEvent event) {
-//                        if (jButton.getCard() != null) {
-//                        jButton.setDoOpp(true);
-//                    }
-//                }
-//            });
-//            playedButtons.add(jButton);
-//            add(jButton.getCardButton());
-//        }
-//    }
+    private void setPlayedInitials() {
+        playedButtonsPlayer1 = new ArrayList<>();
+        for (int i = 0; i <= 6; i++) {
+            PlayButton playButton = new PlayButton(GraphicConstants.PLAY_MINION_BUTTON_X +
+                    i * GraphicConstants.PLAY_MINION_BUTTON_SEPARATOR, GraphicConstants.PLAY_MINION_BUTTON_FIRST_Y);
+            playButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Evasive Drakonid")));
+            playedButtonsPlayer1.add(playButton);
+            add(playButton.getCardButton());
+        }
+
+        playedButtonsPlayer2 = new ArrayList<>();
+        for (int i = 0; i <= 6; i++) {
+            PlayButton playButton = new PlayButton(GraphicConstants.PLAY_MINION_BUTTON_X +
+                    i * GraphicConstants.PLAY_MINION_BUTTON_SEPARATOR, GraphicConstants.PLAY_MINION_BUTTON_SECOND_Y);
+
+            playButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Evasive Drakonid")));
+            playedButtonsPlayer2.add(playButton);
+            add(playButton.getCardButton());
+        }
+    }
 
     private void setHeroes() {
         addMyButton("", "1Hero", GraphicConstants.PLAY_HERO_BUTTON_FIRST_X,
@@ -122,13 +125,13 @@ public class PlayPage extends StatePanel {
                 GraphicConstants.PLAY_HEROHP_BUTTON_FIRST_Y, GraphicConstants.PLAY_HEROHP_BUTTON_WIDTH,
                 GraphicConstants.PLAY_HEROHP_BUTTON_HEIGHT);
         myButton.setText(Integer.toString(gameState.getPlayer1().getDeck().getDeckHero().getHeroHp()));
-        myButton.setForeground(Color.RED);
+        myButton.setBackground(Color.RED);
 
         myButton = addMyButton("", "2HeroHp", GraphicConstants.PLAY_HEROHP_BUTTON_SECOND_X,
                 GraphicConstants.PLAY_HEROHP_BUTTON_SECOND_Y, GraphicConstants.PLAY_HEROHP_BUTTON_WIDTH,
                 GraphicConstants.PLAY_HEROHP_BUTTON_HEIGHT);
         myButton.setText(Integer.toString(gameState.getPlayer2().getDeck().getDeckHero().getHeroHp()));
-        myButton.setForeground(Color.RED);
+        myButton.setBackground(Color.RED);
     }
 
     private void setManas() {
@@ -136,13 +139,13 @@ public class PlayPage extends StatePanel {
                 GraphicConstants.PLAY_MANA_BUTTON_FIRST_Y, GraphicConstants.PLAY_MANA_BUTTON_WIDTH,
                 GraphicConstants.PLAY_MANA_BUTTON_HEIGHT);
         myButton.setText("5/5");
-        myButton.setForeground(Color.BLUE);
+        myButton.setBackground(Color.blue.brighter());
 
         myButton = addMyButton("", "2Mana", GraphicConstants.PLAY_MANA_BUTTON_SECOND_X,
                 GraphicConstants.PLAY_MANA_BUTTON_SECOND_Y, GraphicConstants.PLAY_MANA_BUTTON_WIDTH,
                 GraphicConstants.PLAY_MANA_BUTTON_HEIGHT);
         myButton.setText("5/5");
-        myButton.setForeground(Color.BLUE);
+        myButton.setBackground(Color.blue.brighter());
     }
 
     private void setDecks() {
@@ -161,21 +164,26 @@ public class PlayPage extends StatePanel {
         MyButton myButton = addMyButton("", "1Weapon", GraphicConstants.PLAY_WEAPON_BUTTON_FIRST_X,
                 GraphicConstants.PLAY_WEAPON_BUTTON_FIRST_Y, GraphicConstants.PLAY_WEAPON_BUTTON_WIDTH,
                 GraphicConstants.PLAY_WEAPON_BUTTON_HEIGHT);
+        myButton.setContentAreaFilled(true);
+        myButton.setVisible(false);
 
         myButton = addMyButton("", "2Weapon", GraphicConstants.PLAY_WEAPON_BUTTON_SECOND_X,
                 GraphicConstants.PLAY_WEAPON_BUTTON_SECOND_Y, GraphicConstants.PLAY_WEAPON_BUTTON_WIDTH,
                 GraphicConstants.PLAY_WEAPON_BUTTON_HEIGHT);
-
+        myButton.setContentAreaFilled(true);
+        myButton.setVisible(false);
     }
 
     private void setSkills() {
         MyButton myButton = addMyButton("HERO POWER", "1Skill", GraphicConstants.PLAY_SKILL_BUTTON_FIRST_X,
                 GraphicConstants.PLAY_SKILL_BUTTON_FIRST_Y, GraphicConstants.PLAY_SKILL_BUTTON_WIDTH,
                 GraphicConstants.PLAY_SKILL_BUTTON_HEIGHT);
+        myButton.setBackground(Color.YELLOW.darker());
 
         myButton = addMyButton("HERO POWER", "2Skill", GraphicConstants.PLAY_SKILL_BUTTON_SECOND_X,
                 GraphicConstants.PLAY_SKILL_BUTTON_SECOND_Y, GraphicConstants.PLAY_SKILL_BUTTON_WIDTH,
                 GraphicConstants.PLAY_SKILL_BUTTON_HEIGHT);
+        myButton.setBackground(Color.YELLOW.darker());
     }
 
     private void setEnd() {
@@ -186,65 +194,11 @@ public class PlayPage extends StatePanel {
 
     @Override
     public boolean runState() {
-//        gameJFrame.setContentPane(this);
-//
-//        while (true) {
-//            gameJFrame.validate();
-//            if (getGoBack()) {
-//                return true;
-//            }
-//            checkShowHand();
-//            checkShowPlayed();
-//            checkEnd();
-//        }
-        uiController.setContentPane(this);
-        while (true) {
-            if (gameState.getPlayer1() == null)
-                break;
-        }
         return true;
     }
-//
-//    private void checkShowHand() {
-//        for (StoreButton storeButton : handButtons) {
-//            if (storeButton.isDoOpp()) {
-//                gameJFrame.changeState(this, new ShowCard(storeButton.getCard(), player,
-//                        "DO YOU WANT TO PLAY THIS", true, gameState));
-//                showPlayed(gameState);
-//                storeButton.setDoOpp(false);
-//            }
-//        }
-//    }
-//
-//    private void checkShowPlayed() {
-//        for (StoreButton storeButton : playedButtons) {
-//            if (storeButton.isDoOpp()) {
-//                gameJFrame.changeState(this, new ShowCard(storeButton.getCard(), player, "", false,
-//                        //             gameState));
-//                        //       storeButton.setDoOpp(false);
-//            }
-//        }
-//    }
-//
-//    private void checkEnd() {
-//        if (!end)
-//            return;
-//        setEnd(false);
-//        gameState.nextTurn();
-//        updateState();
-//    }
-//
-//@Override
-public void updateState() {
-    System.out.println();
-//        manaButton.setText(gameState.manaToMax());
-//        hpButton.setText(Integer.toString(gameState.getFirstHero().getHeroHp()));
-//        deckButton.setText(gameState.getFirstDeck().size() + " CARDS REMAINED");
-//        showHand(gameState);
-//        showPlayed(gameState);
-}
-//
-//    public void setEnd(boolean end) {
-//        this.end = end;
-//    }
+
+    @Override
+    public void updateState() {
+        return;
+    }
 }

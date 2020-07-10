@@ -9,7 +9,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
-public class PlayButton {
+
+public class HandButton {
     private Card card;
     private int x, y;
     private JButton cardButton;
@@ -17,7 +18,7 @@ public class PlayButton {
     private boolean selectCard = false;
     private boolean showCard = false;
 
-    public PlayButton(int x, int y) {
+    public HandButton(int x, int y) {
         this.x = x;
         this.y = y;
         setCardButton(x, y);
@@ -25,7 +26,9 @@ public class PlayButton {
 
     private void setCardButton(int x, int y) {
         cardButton = new JButton();
-        cardButton.setBounds(x, y, GraphicConstants.PLAY_MINION_BUTTON_WIDTH, GraphicConstants.PLAY_MINION_BUTTON_HEIGHT);
+        cardButton.setBounds(x, y, GraphicConstants.PLAY_HAND_BUTTON_WIDTH, GraphicConstants.PLAY_HAND_BUTTON_HEIGHT);
+        cardButton.setBorder(null);
+        cardButton.setContentAreaFilled(false);
         cardButton.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent event) {
                 if (card == null) {
@@ -38,17 +41,28 @@ public class PlayButton {
                 }
             }
         });
-        cardButton.setBorder(null);
-        cardButton.setContentAreaFilled(false);
+    }
+
+    public void setHover(int dy) {
+        cardButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent me) {
+                if (card != null) {
+                    Animator animator = new Animator(cardButton, x, y - dy, 20L, x, y, "HandMover");
+                    animator.start();
+                }
+            }
+        });
     }
 
     public void setNewCard(Card card) {
         this.card = card;
 
-        String cardName = card.getCardName() + ".png";
+        String cardName = card.getCardName();
+        cardName = cardName + ".png";
 
         BufferedImage bufferedImage = FileAssistance.getScaledImage("cards", cardName,
-                GraphicConstants.PLAY_MINION_BUTTON_WIDTH, GraphicConstants.PLAY_MINION_BUTTON_HEIGHT);
+                GraphicConstants.PLAY_HAND_BUTTON_WIDTH, GraphicConstants.PLAY_HAND_BUTTON_HEIGHT);
         ImageIcon imageIcon = new ImageIcon(bufferedImage);
         cardButton.setBorder(null);
         cardButton.setContentAreaFilled(false);

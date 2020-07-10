@@ -1,13 +1,10 @@
 package userInterface;
 
 import constants.GraphicConstants;
-import file.FileAssistance;
 import game.InfoHolder;
 import game.UIController;
 import playlogic.PlayHandler;
 import playlogic.PlayerInfo;
-
-import javax.swing.*;
 
 public class MenuPage extends State {
     private UIController uiController = UIController.getInstance();
@@ -28,20 +25,6 @@ public class MenuPage extends State {
         setPanel();
     }
 
-    private void setPanel() {
-        setLayout(null);
-        setBounds(0, 0, GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT);
-        setBackground();
-    }
-
-    public void setBackground() {
-        JLabel jLabel = new JLabel();
-        jLabel.setBounds(0, 0, GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT);
-        ImageIcon imageIcon = new ImageIcon(FileAssistance.getScaledImage("background", "background.jpg",
-                GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT));
-        jLabel.setIcon(imageIcon);
-        add(jLabel);
-    }
 
     public void setPlayButton() {
         addMyButton("", "Play", GraphicConstants.MENU_BUTTON_X, GraphicConstants.MENU_BUTTON_FIRST_Y,

@@ -17,6 +17,7 @@ public abstract class StatePanel extends State {
     public StatePanel() {
     }
 
+    @Override
     protected void setPanel() {
         setBack();
         setLayout(null);
@@ -24,6 +25,7 @@ public abstract class StatePanel extends State {
         setBackground();
     }
 
+    @Override
     protected void setBackground() {
         JLabel jLabel = new JLabel();
         jLabel.setBounds(0, 0, GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT);

@@ -13,7 +13,22 @@ public class PlayHandler {
     }
 
     public void initializeFrame(MenuPage menuPage) {
-        uiController.changeFrame();
-        uiController.changeState(menuPage, new PlayPage());
+        PlayPage playPage = new PlayPage();
+        playPage.setInitials();
+        uiController.changeFrame(playPage);
+        runPlay(playPage);
+        uiController.rechangeFrame(menuPage);
+    }
+
+    public void runPlay(PlayPage playPage) {
+        playPage.setInitials();
+        uiController.setContentPane(playPage);
+
+        while (true) {
+            uiController.validate();
+            if (playPage.newAction("Back")) {
+                return;
+            }
+        }
     }
 }

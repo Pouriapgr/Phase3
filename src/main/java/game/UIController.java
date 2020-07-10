@@ -1,7 +1,10 @@
 package game;
 
 import constants.GraphicConstants;
+import playUI.PlayPage;
+import userInterface.ChooseDeckPage;
 import userInterface.GameJFrame;
+import userInterface.MenuPage;
 import userInterface.State;
 
 import java.awt.*;
@@ -22,14 +25,22 @@ public class UIController {
     public void changeState(State pre, State next) {
         if (next.runState()) {
             pre.updateState();
-            uiController.setContentPane(pre);
+            if (!(next instanceof ChooseDeckPage))
+                uiController.setContentPane(pre);
             uiController.validate();
         }
     }
 
-    public void changeFrame() {
+    public void changeFrame(PlayPage playPage) {
         gameJFrame.setSize(GraphicConstants.PLAY_FRAME_WIDTH, GraphicConstants.PLAY_FRAME_HEIGHT);
         gameJFrame.setLocationRelativeTo(null);
+        gameJFrame.setContentPane(playPage);
+    }
+
+    public void rechangeFrame(MenuPage menuPage) {
+        gameJFrame.setSize(GraphicConstants.FRAME_WIDTH, GraphicConstants.FRAME_HEIGHT);
+        gameJFrame.setLocationRelativeTo(null);
+        gameJFrame.setContentPane(menuPage);
     }
 
     public void setContentPane(Container contentPane) {
