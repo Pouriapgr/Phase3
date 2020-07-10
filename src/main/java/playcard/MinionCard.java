@@ -13,6 +13,13 @@ public abstract class MinionCard extends PlayCard {
     protected boolean stealth = false;
     protected boolean taunt = false;
     protected boolean beTargetedBySpellAndPower = true;
+    protected boolean charge = false;
+    protected boolean windfury = false;
+    protected boolean divineShield = false;
+    protected boolean lifesteal = false;
+    protected boolean poisonous = false;
+    protected boolean rush = false;
+
 
     public MinionCard(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
         super(minion, playerInfo, playHandler, id);
@@ -24,12 +31,12 @@ public abstract class MinionCard extends PlayCard {
     }
 
     public abstract void doDeathrattle();
-
     public abstract void endTurn();
-
     public abstract void die();
 
     public abstract void doWhenSummon();
+
+    public abstract void doBattlecry();
 
     public int getAttack() {
         return attack;
@@ -77,5 +84,53 @@ public abstract class MinionCard extends PlayCard {
 
     public void setBeTargetedBySpellAndPower(boolean beTargetedBySpellAndPower) {
         this.beTargetedBySpellAndPower = beTargetedBySpellAndPower;
+    }
+
+    public boolean isCharge() {
+        return charge;
+    }
+
+    public void setCharge(boolean charge) {
+        this.charge = charge;
+    }
+
+    public boolean isWindfury() {
+        return windfury;
+    }
+
+    public void setWindfury(boolean windfury) {
+        this.windfury = windfury;
+    }
+
+    public boolean isDivineShield() {
+        return divineShield;
+    }
+
+    public void setDivineShield(boolean divineShield) {
+        this.divineShield = divineShield;
+    }
+
+    public boolean isLifesteal() {
+        return lifesteal;
+    }
+
+    public void setLifesteal(boolean lifesteal) {
+        this.lifesteal = lifesteal;
+    }
+
+    public boolean isPoisonous() {
+        return poisonous;
+    }
+
+    public void setPoisonous(boolean poisonous) {
+        this.poisonous = poisonous;
+    }
+
+    public boolean isRush() {
+        return rush;
+    }
+
+    public void setRush(boolean rush) {
+        this.rush = rush;
     }
 }

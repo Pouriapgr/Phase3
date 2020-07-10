@@ -4,8 +4,8 @@ import module.Minion;
 import playlogic.PlayHandler;
 import playlogic.PlayerInfo;
 
-public class CardDreadscale extends MinionCard {
-    public CardDreadscale(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
+public class CardGnomishInventor extends MinionCard {
+    public CardGnomishInventor(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
         super(minion, playerInfo, playHandler, id);
     }
 
@@ -16,7 +16,7 @@ public class CardDreadscale extends MinionCard {
 
     @Override
     public void endTurn() {
-        //playHandler.damageAll(this, 1);
+        return;
     }
 
     @Override
@@ -31,6 +31,7 @@ public class CardDreadscale extends MinionCard {
 
     @Override
     public void doBattlecry() {
-        return;
+//        MinionCard minionCard = playHandler.draw(playerInfo);
+//        playHandler.addCard(minionCard);
     }
 }

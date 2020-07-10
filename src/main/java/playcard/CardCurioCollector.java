@@ -30,4 +30,9 @@ public class CardCurioCollector extends MinionCard {
         playerInfo.setAddToDrawAttack(playerInfo.getAddToDrawAttack() + 1);
         playerInfo.setAddToDrawHp(playerInfo.getAddToDrawHp() + 1);
     }
+
+    @Override
+    public void doBattlecry() {
+        return;
+    }
 }

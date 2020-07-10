@@ -4,19 +4,22 @@ import module.Minion;
 import playlogic.PlayHandler;
 import playlogic.PlayerInfo;
 
-public class CardDreadscale extends MinionCard {
-    public CardDreadscale(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
+public class CardOctosari extends MinionCard {
+    public CardOctosari(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
         super(minion, playerInfo, playHandler, id);
     }
 
     @Override
     public void doDeathrattle() {
-        return;
+//        for (int i = 0; i <= 7; i++) {
+//            PlayCard playCard = playHandler.draw(playerInfo);
+//            playHandler.addCard(playCard);
+//        }
     }
 
     @Override
     public void endTurn() {
-        //playHandler.damageAll(this, 1);
+        return;
     }
 
     @Override

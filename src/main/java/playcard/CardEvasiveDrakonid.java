@@ -29,4 +29,9 @@ public class CardEvasiveDrakonid extends MinionCard {
         setTaunt(true);
         setBeTargetedBySpellAndPower(false);
     }
+
+    @Override
+    public void doBattlecry() {
+        return;
+    }
 }

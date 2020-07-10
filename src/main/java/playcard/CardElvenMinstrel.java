@@ -31,4 +31,9 @@ public class CardElvenMinstrel extends MinionCard {
 //            playHandler.addCard(player, playCard);
 //        }
     }
+
+    @Override
+    public void doBattlecry() {
+        return;
+    }
 }

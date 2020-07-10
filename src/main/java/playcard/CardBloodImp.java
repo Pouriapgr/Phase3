@@ -29,4 +29,9 @@ public class CardBloodImp extends MinionCard {
     public void doWhenSummon() {
         setStealth(true);
     }
+
+    @Override
+    public void doBattlecry() {
+        return;
+    }
 }

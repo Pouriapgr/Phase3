@@ -29,6 +29,11 @@ public class CardArenaTreasureChest extends MinionCard {
 
     @Override
     public void doWhenSummon() {
+        return;
+    }
 
+    @Override
+    public void doBattlecry() {
+        return;
     }
 }
