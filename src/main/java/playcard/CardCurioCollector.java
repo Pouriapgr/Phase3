@@ -21,14 +21,14 @@ public class CardCurioCollector extends MinionCard {
 
     @Override
     public void die() {
-        playerInfo.setAddToDrawAttack(playerInfo.getAddToDrawAttack() - 1);
-        playerInfo.setAddToDrawHp(playerInfo.getAddToDrawHp() - 1);
+//        playerInfo.setAddToDrawAttack(playerInfo.getAddToDrawAttack() - 1);
+//        playerInfo.setAddToDrawHp(playerInfo.getAddToDrawHp() - 1);
     }
 
     @Override
     public void doWhenSummon() {
-        playerInfo.setAddToDrawAttack(playerInfo.getAddToDrawAttack() + 1);
-        playerInfo.setAddToDrawHp(playerInfo.getAddToDrawHp() + 1);
+//        playerInfo.setAddToDrawAttack(playerInfo.getAddToDrawAttack() + 1);
+//        playerInfo.setAddToDrawHp(playerInfo.getAddToDrawHp() + 1);
     }
 
     @Override

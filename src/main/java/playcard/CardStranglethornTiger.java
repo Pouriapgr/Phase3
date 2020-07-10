@@ -4,8 +4,8 @@ import module.Minion;
 import playlogic.PlayHandler;
 import playlogic.PlayerInfo;
 
-public class CardEvasiveDrakonid extends MinionCard {
-    public CardEvasiveDrakonid(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
+public class CardStranglethornTiger extends MinionCard {
+    public CardStranglethornTiger(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
         super(minion, playerInfo, playHandler, id);
     }
 
@@ -26,12 +26,10 @@ public class CardEvasiveDrakonid extends MinionCard {
 
     @Override
     public void doWhenSummon() {
-//        setTaunt(true);
-//        setBeTargetedBySpellAndPower(false);
+        // setStealth(true);
     }
 
     @Override
     public void doBattlecry() {
-        return;
     }
 }
