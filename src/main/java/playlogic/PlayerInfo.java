@@ -16,6 +16,9 @@ public class PlayerInfo {
     private PlayDeck deck;
     private Passive passive;
 
+    private int turnMana;
+    private int mana;
+
     private int addToDrawAttack;
     private int addToDrawHp;
 
@@ -60,5 +63,25 @@ public class PlayerInfo {
 
     public void setAddToDrawHp(int addToDrawHp) {
         this.addToDrawHp = addToDrawHp;
+    }
+
+    public int getMana() {
+        return mana;
+    }
+
+    public void setMana(int mana) {
+        this.mana = mana;
+    }
+
+    public int getTurnMana() {
+        return turnMana;
+    }
+
+    public void setTurnMana(int turnMana) {
+        this.turnMana = turnMana;
+    }
+
+    public String getManaToString() {
+        return getMana() + "/" + getTurnMana();
     }
 }

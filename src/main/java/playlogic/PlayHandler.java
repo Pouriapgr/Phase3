@@ -40,11 +40,14 @@ public class PlayHandler {
 
     public void runPlay(PlayPage playPage) {
         playPage.setInitials();
+        FieldChecker fieldChecker = new FieldChecker(playPage);
+        fieldChecker.start();
         uiController.setContentPane(playPage);
 
         while (true) {
             uiController.validate();
             if (playPage.newAction("Back")) {
+                fieldChecker.interrupt();
                 return;
             }
         }

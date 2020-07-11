@@ -15,6 +15,8 @@ public abstract class PlayHero {
 
     protected int skillCost = 2;
 
+    protected boolean useSkill = true;
+
     public PlayHero(Hero hero, PlayerInfo playerInfo) {
         this.playerInfo = playerInfo;
         name = hero.getHeroName();
@@ -23,6 +25,10 @@ public abstract class PlayHero {
     protected abstract void doSkill();
 
     protected abstract void doSpecial();
+
+    public String getName() {
+        return name;
+    }
 
     public int getInitialHp() {
         return initialHp;
@@ -42,5 +48,13 @@ public abstract class PlayHero {
 
     public void setSkillCost(int skillCost) {
         this.skillCost = skillCost;
+    }
+
+    public boolean isUseSkill() {
+        return useSkill;
+    }
+
+    public void setUseSkill(boolean useSkill) {
+        this.useSkill = useSkill;
     }
 }

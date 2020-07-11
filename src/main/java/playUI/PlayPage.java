@@ -3,6 +3,7 @@ package playUI;
 import constants.GraphicConstants;
 import constants.LogicConstants;
 import file.FileAssistance;
+import playlogic.GameState;
 import userInterface.MyButton;
 import userInterface.StatePanel;
 
@@ -11,6 +12,7 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class PlayPage extends StatePanel {
+    private GameState gameState = GameState.getInstance();
     private ArrayList<HandButton> handButtonsPlayer1 = new ArrayList<>();
     private ArrayList<HandButton> handButtonsPlayer2 = new ArrayList<>();
     private ArrayList<PlayButton> playedButtonsPlayer1 = new ArrayList<>();
@@ -107,11 +109,13 @@ public class PlayPage extends StatePanel {
     private void setHeroes() {
         addMyButton("", "1Hero", GraphicConstants.PLAY_HERO_BUTTON_FIRST_X,
                 GraphicConstants.PLAY_HERO_BUTTON_FIRST_Y, GraphicConstants.PLAY_HERO_BUTTON_WIDTH,
-                GraphicConstants.PLAY_HERO_BUTTON_HEIGHT);
+                GraphicConstants.PLAY_HERO_BUTTON_HEIGHT, "heroes",
+                gameState.getPlayer1().getDeck().getHero().getName() + ".png");
 
         addMyButton("", "2Hero", GraphicConstants.PLAY_HERO_BUTTON_SECOND_X,
                 GraphicConstants.PLAY_HERO_BUTTON_SECOND_Y, GraphicConstants.PLAY_HERO_BUTTON_WIDTH,
-                GraphicConstants.PLAY_HERO_BUTTON_HEIGHT);
+                GraphicConstants.PLAY_HERO_BUTTON_HEIGHT, "heroes",
+                gameState.getPlayer2().getDeck().getHero().getName() + ".png");
 
     }
 
