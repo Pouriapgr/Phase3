@@ -1,12 +1,11 @@
 package playcard;
 
-import module.Minion;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardNightBlade extends MinionCard {
-    public CardNightBlade(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(minion, playerInfo, playHandler, id);
+    public CardNightBlade(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
     @Override
@@ -26,7 +25,7 @@ public class CardNightBlade extends MinionCard {
 
     @Override
     public void doWhenSummon() {
-        //playHandler.dealDamageToEnemyHero(playerInfo, 3);
+        //.dealDamageToEnemyHero(playerInfo, 3);
     }
 
     @Override

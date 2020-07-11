@@ -1,21 +1,20 @@
 package playcard;
 
-import module.Spell;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardPharaohsBlessing extends SpellCard {
-    public CardPharaohsBlessing(Spell spell, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(spell, playerInfo, playHandler, id);
+    public CardPharaohsBlessing(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
 
     @Override
     public void doOperation() {
-//        MinionCard minionCard = playHandler.getMinion();
-//        minionCard.setAttack(minionCard.getAttack() + 4);
-//        minionCard.setHp(minionCard.getHp() + 4);
-//        minionCard.setDivineShield(true);
-//        minionCard.setTaunt(true);
+//        CardCard cardCard = .getCard();
+//        cardCard.setAttack(cardCard.getAttack() + 4);
+//        cardCard.setHp(cardCard.getHp() + 4);
+//        cardCard.setDivineShield(true);
+//        cardCard.setTaunt(true);
     }
 }

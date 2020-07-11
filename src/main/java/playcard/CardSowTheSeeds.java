@@ -1,17 +1,16 @@
 package playcard;
 
-import module.Spell;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardSowTheSeeds extends SpellCard {
-    public CardSowTheSeeds(Spell spell, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(spell, playerInfo, playHandler, id);
+    public CardSowTheSeeds(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
 
     @Override
     public void doOperation() {
-        //playHandler.giveAllDeck(+3, +3, playerInfo);
+        //.giveAllDeck(+3, +3, playerInfo);
     }
 }

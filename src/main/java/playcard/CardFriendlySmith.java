@@ -1,19 +1,18 @@
 package playcard;
 
-import module.Spell;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardFriendlySmith extends SpellCard {
-    public CardFriendlySmith(Spell spell, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(spell, playerInfo, playHandler, id);
+    public CardFriendlySmith(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
 
     @Override
     public void doOperation() {
-//        WeaponCard weaponCard = playHandler.discoverWeapon();
-//        playHandler.addCard(weaponCard, playerInfo);
+//        CardCard cardCard = .discoverCard();
+//        .addCard(cardCard, playerInfo);
     }
 
 }

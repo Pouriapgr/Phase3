@@ -1,17 +1,16 @@
 package playcard;
 
-import module.Spell;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardFieryBurst extends SpellCard {
-    public CardFieryBurst(Spell spell, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(spell, playerInfo, playHandler, id);
+    public CardFieryBurst(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
 
     @Override
     public void doOperation() {
-        //playHandler.damageAllEnemies(this, playerInfo, 2);
+        //.damageAllEnemies(this, playerInfo, 2);
     }
 }

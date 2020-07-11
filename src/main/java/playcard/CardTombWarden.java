@@ -1,12 +1,11 @@
 package playcard;
 
-import module.Minion;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardTombWarden extends MinionCard {
-    public CardTombWarden(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(minion, playerInfo, playHandler, id);
+    public CardTombWarden(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
     @Override
@@ -31,6 +30,6 @@ public class CardTombWarden extends MinionCard {
 
     @Override
     public void doBattlecry() {
-        //playHandler.summonCopy(this);
+        //.summonCopy(this);
     }
 }

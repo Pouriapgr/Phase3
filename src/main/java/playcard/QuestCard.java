@@ -1,14 +1,13 @@
 package playcard;
 
-import module.Quest;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public abstract class QuestCard extends PlayCard {
     protected int manaUsedFirst;
 
-    public QuestCard(Quest quest, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(quest, playerInfo, playHandler, id);
+    public QuestCard(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
     public abstract void checkProgress();

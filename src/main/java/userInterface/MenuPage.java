@@ -63,13 +63,13 @@ public class MenuPage extends State {
     }
 
     private void initializePlay() {
+        PlayHandler playHandler = PlayHandler.newHandler();
         PlayerInfo player1 = new PlayerInfo();
         PlayerInfo player2 = new PlayerInfo();
         System.out.println("TTT");
         uiController.changeState(this, new ChooseDeckPage(player1));
         System.out.println("SSS");
         uiController.changeState(this, new ChooseDeckPage(player2));
-        PlayHandler playHandler = new PlayHandler();
         playHandler.startPlayPage(player1, player2, this);
     }
 

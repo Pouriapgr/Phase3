@@ -1,19 +1,18 @@
 package playcard;
 
-import module.Minion;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardOctosari extends MinionCard {
-    public CardOctosari(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(minion, playerInfo, playHandler, id);
+    public CardOctosari(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
     @Override
     public void doDeathrattle() {
 //        for (int i = 0; i <= 7; i++) {
-//            PlayCard playCard = playHandler.draw(playerInfo);
-//            playHandler.addCard(playCard);
+//            PlayCard playCard = .draw(playerInfo);
+//            .addCard(playCard);
 //        }
     }
 

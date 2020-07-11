@@ -1,12 +1,11 @@
 package playcard;
 
-import module.Weapon;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardAshbringer extends WeaponCard {
-    public CardAshbringer(Weapon weapon, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(weapon, playerInfo, playHandler, id);
+    public CardAshbringer(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
 }

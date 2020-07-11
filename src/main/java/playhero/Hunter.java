@@ -1,12 +1,11 @@
 package playhero;
 
 import module.Hero;
-import playlogic.PlayHandler;
 import playlogic.PlayerInfo;
 
 public class Hunter extends PlayHero {
-    public Hunter(Hero hero, PlayerInfo playerInfo, PlayHandler playHandler) {
-        super(hero, playerInfo, playHandler);
+    public Hunter(Hero hero, PlayerInfo playerInfo) {
+        super(hero, playerInfo);
         setSkillCost(0);
     }
 
@@ -17,6 +16,6 @@ public class Hunter extends PlayHero {
 
     @Override
     protected void doSpecial() {
-        // playHandler.setAllRush();
+        // .setAllRush();
     }
 }

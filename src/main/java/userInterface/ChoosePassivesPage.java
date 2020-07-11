@@ -23,7 +23,7 @@ public class ChoosePassivesPage extends State {
             Passive passive = passives.get(i);
             addMyButton("", passive.getPassiveName(), GraphicConstants.PASSIVE_PAGE_X +
                             i * GraphicConstants.PASSIVE_PAGE_SEPARATOR, GraphicConstants.PASSIVE_PAGE_Y,
-                    GraphicConstants.STORE_BUTTON_WIDTH, GraphicConstants.STORE_BUTTON_HEIGHT, "passives",
+                    GraphicConstants.PASSIVE_PAGE_WIDTH, GraphicConstants.PASSIVE_PAGE_HEIGHT, "passives",
                     passive.getPassiveName() + ".png");
         }
     }

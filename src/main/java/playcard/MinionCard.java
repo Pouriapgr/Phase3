@@ -1,7 +1,6 @@
 package playcard;
 
-import module.Minion;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public abstract class MinionCard extends PlayCard {
@@ -12,7 +11,7 @@ public abstract class MinionCard extends PlayCard {
 
     protected boolean stealth = false;
     protected boolean taunt = false;
-    protected boolean beTargetedBySpellAndPower = true;
+    protected boolean beTargetedByCardAndPower = true;
     protected boolean charge = false;
     protected boolean windfury = false;
     protected boolean divineShield = false;
@@ -21,17 +20,19 @@ public abstract class MinionCard extends PlayCard {
     protected boolean rush = false;
 
 
-    public MinionCard(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(minion, playerInfo, playHandler, id);
+    public MinionCard(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
 
-        initialHp = minion.getCardHp();
+        initialHp = card.getCardHp();
         hp = initialHp;
-        initialAttack = minion.getCardAttack();
+        initialAttack = card.getCardAttack();
         attack = initialAttack;
     }
 
     public abstract void doDeathrattle();
+
     public abstract void endTurn();
+
     public abstract void die();
 
     public abstract void doWhenSummon();
@@ -78,12 +79,12 @@ public abstract class MinionCard extends PlayCard {
         this.taunt = taunt;
     }
 
-    public boolean isBeTargetedBySpellAndPower() {
-        return beTargetedBySpellAndPower;
+    public boolean isBeTargetedByCardAndPower() {
+        return beTargetedByCardAndPower;
     }
 
-    public void setBeTargetedBySpellAndPower(boolean beTargetedBySpellAndPower) {
-        this.beTargetedBySpellAndPower = beTargetedBySpellAndPower;
+    public void setBeTargetedByCardAndPower(boolean beTargetedByCardAndPower) {
+        this.beTargetedByCardAndPower = beTargetedByCardAndPower;
     }
 
     public boolean isCharge() {

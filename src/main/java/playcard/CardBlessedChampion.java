@@ -1,18 +1,17 @@
 package playcard;
 
-import module.Spell;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardBlessedChampion extends SpellCard {
-    public CardBlessedChampion(Spell spell, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(spell, playerInfo, playHandler, id);
+    public CardBlessedChampion(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
 
     @Override
     public void doOperation() {
-        //    MinionCard minionCard = playHandler.getFriendlyMinion(player);
-        //    minionCard.setAttack(minionCard.getAttack() * 2);
+        //    CardCard cardCard = .getFriendlyCard(player);
+        //    cardCard.setAttack(cardCard.getAttack() * 2);
     }
 }

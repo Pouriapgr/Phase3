@@ -1,19 +1,18 @@
 package playcard;
 
-import module.Minion;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardArenaTreasureChest extends MinionCard {
-    public CardArenaTreasureChest(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(minion, playerInfo, playHandler, id);
+    public CardArenaTreasureChest(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
     @Override
     public void doDeathrattle() {
 //        for (int i = 0; i <= 1; i++) {
-//            PlayCard playCard = playHandler.drawCard(player);
-//            playHandler.addCard(player, playCard);
+//            PlayCard playCard = .drawCard(player);
+//            .addCard(player, playCard);
 //        }
     }
 

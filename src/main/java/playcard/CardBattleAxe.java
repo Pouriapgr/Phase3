@@ -1,12 +1,11 @@
 package playcard;
 
-import module.Weapon;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardBattleAxe extends WeaponCard {
-    public CardBattleAxe(Weapon weapon, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(weapon, playerInfo, playHandler, id);
+    public CardBattleAxe(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
 }

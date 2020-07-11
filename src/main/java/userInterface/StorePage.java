@@ -6,7 +6,8 @@ import module.Card;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class StorePage extends StatePanel {
+public class
+StorePage extends StatePanel {
     private ArrayList<StoreButton> storeBuyButtons;
     private ArrayList<StoreButton> storeSellButtons;
     private ArrayList<Card> buyCards;

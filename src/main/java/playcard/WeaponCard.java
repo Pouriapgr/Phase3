@@ -1,7 +1,6 @@
 package playcard;
 
-import module.Weapon;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public abstract class WeaponCard extends PlayCard {
@@ -10,13 +9,13 @@ public abstract class WeaponCard extends PlayCard {
     protected int durability;
     protected int attack;
 
-    public WeaponCard(Weapon weapon, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(weapon, playerInfo, playHandler, id);
+    public WeaponCard(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
 
-        initialDurability = weapon.getCardHp();
+        initialDurability = card.getCardHp();
         durability = initialDurability;
 
-        initialAttack = weapon.getCardAttack();
+        initialAttack = card.getCardAttack();
         attack = initialAttack;
     }
 

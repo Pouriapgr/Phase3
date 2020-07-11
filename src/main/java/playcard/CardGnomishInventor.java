@@ -1,12 +1,11 @@
 package playcard;
 
-import module.Minion;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardGnomishInventor extends MinionCard {
-    public CardGnomishInventor(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(minion, playerInfo, playHandler, id);
+    public CardGnomishInventor(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
     @Override
@@ -31,7 +30,7 @@ public class CardGnomishInventor extends MinionCard {
 
     @Override
     public void doBattlecry() {
-//        MinionCard minionCard = playHandler.draw(playerInfo);
-//        playHandler.addCard(minionCard);
+//        CardCard cardCard = .draw(playerInfo);
+//        .addCard(cardCard);
     }
 }

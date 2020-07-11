@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import constants.LogicConstants;
 import file.FileAssistance;
 import playhero.*;
-import playlogic.PlayHandler;
 import playlogic.PlayerInfo;
 
 import java.io.File;
@@ -77,17 +76,17 @@ public class Hero {
         return names;
     }
 
-    public PlayHero playCopy(PlayerInfo playerInfo, PlayHandler playHandler) {
+    public PlayHero playCopy(PlayerInfo playerInfo) {
         if (heroClass.equals("Mage"))
-            return new Mage(this, playerInfo, playHandler);
+            return new Mage(this, playerInfo);
         if (heroClass.equals("Rogue"))
-            return new Rogue(this, playerInfo, playHandler);
+            return new Rogue(this, playerInfo);
         if (heroClass.equals("Paladin"))
-            return new Paladin(this, playerInfo, playHandler);
+            return new Paladin(this, playerInfo);
         if (heroClass.equals("Warlock"))
-            return new Warlock(this, playerInfo, playHandler);
+            return new Warlock(this, playerInfo);
         if (heroClass.equals("Hunter"))
-            return new Hunter(this, playerInfo, playHandler);
+            return new Hunter(this, playerInfo);
 
         System.out.println(heroName);
         return null;

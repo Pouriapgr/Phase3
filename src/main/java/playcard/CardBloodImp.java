@@ -1,12 +1,11 @@
 package playcard;
 
-import module.Minion;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardBloodImp extends MinionCard {
-    public CardBloodImp(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(minion, playerInfo, playHandler, id);
+    public CardBloodImp(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
     @Override
@@ -16,8 +15,8 @@ public class CardBloodImp extends MinionCard {
 
     @Override
     public void endTurn() {
-        //   MinionCard minionCard = playHandler.getRandomFriendly(player);
-        //   minionCard.setHp(minionCard.getHp() + 1);
+        //   CardCard cardCard = .getRandomFriendly(player);
+        //   cardCard.setHp(cardCard.getHp() + 1);
     }
 
     @Override

@@ -1,12 +1,11 @@
 package playcard;
 
-import module.Spell;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public abstract class SpellCard extends PlayCard {
-    public SpellCard(Spell spell, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(spell, playerInfo, playHandler, id);
+    public SpellCard(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
     public abstract void doOperation();

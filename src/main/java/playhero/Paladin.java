@@ -1,12 +1,11 @@
 package playhero;
 
 import module.Hero;
-import playlogic.PlayHandler;
 import playlogic.PlayerInfo;
 
 public class Paladin extends PlayHero {
-    public Paladin(Hero hero, PlayerInfo playerInfo, PlayHandler playHandler) {
-        super(hero, playerInfo, playHandler);
+    public Paladin(Hero hero, PlayerInfo playerInfo) {
+        super(hero, playerInfo);
     }
 
     @Override
@@ -16,6 +15,6 @@ public class Paladin extends PlayHero {
 
     @Override
     protected void doSpecial() {
-        //playHandler.giveRandomMinion(+1,+1);
+        //.giveRandomMinion(+1,+1);
     }
 }

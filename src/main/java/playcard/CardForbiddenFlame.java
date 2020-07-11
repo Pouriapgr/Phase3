@@ -1,18 +1,17 @@
 package playcard;
 
-import module.Spell;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardForbiddenFlame extends SpellCard {
-    public CardForbiddenFlame(Spell spell, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(spell, playerInfo, playHandler, id);
+    public CardForbiddenFlame(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
 
     @Override
     public void doOperation() {
-        // MinionCard minionCard = playHandler.getEnemyMinion();
-        // playHandler.dealAllMana(minionCard, playerInfo);
+        // CardCard cardCard = .getEnemyCard();
+        // .dealAllMana(cardCard, playerInfo);
     }
 }

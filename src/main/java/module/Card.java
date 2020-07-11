@@ -3,7 +3,6 @@ package module;
 import com.google.gson.Gson;
 import file.FileAssistance;
 import playcard.*;
-import playlogic.PlayHandler;
 import playlogic.PlayerInfo;
 
 import java.io.File;
@@ -81,83 +80,83 @@ public class Card {
         return out;
     }
 
-    public PlayCard playCopy(PlayerInfo playerInfo, PlayHandler playHandler) {
+    public PlayCard playCopy(PlayerInfo playerInfo) {
         String id = Long.toString(System.currentTimeMillis());
 
         if (cardShowName.equals("Arena Treasure Chest"))
-            return new CardArenaTreasureChest((Minion) this, playerInfo, playHandler, id);
+            return new CardArenaTreasureChest(this, playerInfo, id);
         if (cardShowName.equals("Ashbringer"))
-            return new CardAshbringer((Weapon) this, playerInfo, playHandler, id);
+            return new CardAshbringer(this, playerInfo, id);
         if (cardShowName.equals("Battle Axe"))
-            return new CardBattleAxe((Weapon) this, playerInfo, playHandler, id);
+            return new CardBattleAxe(this, playerInfo, id);
         if (cardShowName.equals("Blessed Champion"))
-            return new CardBlessedChampion((Spell) this, playerInfo, playHandler, id);
+            return new CardBlessedChampion(this, playerInfo, id);
         if (cardShowName.equals("Blood Imp"))
-            return new CardBloodImp((Minion) this, playerInfo, playHandler, id);
+            return new CardBloodImp(this, playerInfo, id);
         if (cardShowName.equals("Book of Specters"))
-            return new CardBookOfSpecters((Spell) this, playerInfo, playHandler, id);
+            return new CardBookOfSpecters(this, playerInfo, id);
         if (cardShowName.equals("Curio Collector"))
-            return new CardCurioCollector((Minion) this, playerInfo, playHandler, id);
+            return new CardCurioCollector(this, playerInfo, id);
         if (cardShowName.equals("Divine Sweets"))
-            return new CardDivineSweets((Spell) this, playerInfo, playHandler, id);
+            return new CardDivineSweets(this, playerInfo, id);
         if (cardShowName.equals("Dreadscale"))
-            return new CardDreadscale((Minion) this, playerInfo, playHandler, id);
+            return new CardDreadscale(this, playerInfo, id);
         if (cardShowName.equals("Elven Minstrel"))
-            return new CardElvenMinstrel((Minion) this, playerInfo, playHandler, id);
+            return new CardElvenMinstrel(this, playerInfo, id);
         if (cardShowName.equals("Evasive Drakonid"))
-            return new CardEvasiveDrakonid((Minion) this, playerInfo, playHandler, id);
+            return new CardEvasiveDrakonid(this, playerInfo, id);
         if (cardShowName.equals("Fiery Burst"))
-            return new CardFieryBurst((Spell) this, playerInfo, playHandler, id);
+            return new CardFieryBurst(this, playerInfo, id);
         if (cardShowName.equals("Flare"))
-            return new CardFlare((Spell) this, playerInfo, playHandler, id);
+            return new CardFlare(this, playerInfo, id);
         if (cardShowName.equals("Forbidden Flame"))
-            return new CardForbiddenFlame((Spell) this, playerInfo, playHandler, id);
+            return new CardForbiddenFlame(this, playerInfo, id);
         if (cardShowName.equals("Friendly Smith"))
-            return new CardFriendlySmith((Spell) this, playerInfo, playHandler, id);
+            return new CardFriendlySmith(this, playerInfo, id);
         if (cardShowName.equals("Gnomish Army Knife"))
-            return new CardGnomishArmyKnife((Spell) this, playerInfo, playHandler, id);
+            return new CardGnomishArmyKnife(this, playerInfo, id);
         if (cardShowName.equals("Gnomish Inventor"))
-            return new CardGnomishInventor((Minion) this, playerInfo, playHandler, id);
+            return new CardGnomishInventor(this, playerInfo, id);
         if (cardShowName.equals("Learn Draconic"))
-            return new CardLearnDraconic((Quest) this, playerInfo, playHandler, id);
+            return new CardLearnDraconic(this, playerInfo, id);
         if (cardShowName.equals("Nightblade"))
-            return new CardNightBlade((Minion) this, playerInfo, playHandler, id);
+            return new CardNightBlade(this, playerInfo, id);
         if (cardShowName.equals("Octosari"))
-            return new CardOctosari((Minion) this, playerInfo, playHandler, id);
+            return new CardOctosari(this, playerInfo, id);
         if (cardShowName.equals("Orb of the Untold"))
-            return new CardOrbOfTheUntold((Spell) this, playerInfo, playHandler, id);
+            return new CardOrbOfTheUntold(this, playerInfo, id);
         if (cardShowName.equals("Party Elemental"))
-            return new CardPartyElemental((Minion) this, playerInfo, playHandler, id);
+            return new CardPartyElemental(this, playerInfo, id);
         if (cardShowName.equals("Pharaoh's Blessing"))
-            return new CardPharaohsBlessing((Spell) this, playerInfo, playHandler, id);
+            return new CardPharaohsBlessing(this, playerInfo, id);
         if (cardShowName.equals("Poisoned Daggers"))
-            return new CardPoisonedDaggers((Weapon) this, playerInfo, playHandler, id);
+            return new CardPoisonedDaggers(this, playerInfo, id);
         if (cardShowName.equals("Polymorph"))
-            return new CardPolymorph((Spell) this, playerInfo, playHandler, id);
+            return new CardPolymorph(this, playerInfo, id);
         if (cardShowName.equals("Sathrovarr"))
-            return new CardSathrovarr((Minion) this, playerInfo, playHandler, id);
+            return new CardSathrovarr(this, playerInfo, id);
         if (cardShowName.equals("Security Rover"))
-            return new CardSecurityRover((Minion) this, playerInfo, playHandler, id);
+            return new CardSecurityRover(this, playerInfo, id);
         if (cardShowName.equals("Skydiving Instructor"))
-            return new CardSkydivingInstructor((Minion) this, playerInfo, playHandler, id);
+            return new CardSkydivingInstructor(this, playerInfo, id);
         if (cardShowName.equals("Sow the Seeds"))
-            return new CardSowTheSeeds((Spell) this, playerInfo, playHandler, id);
+            return new CardSowTheSeeds(this, playerInfo, id);
         if (cardShowName.equals("Sprint"))
-            return new CardSprint((Spell) this, playerInfo, playHandler, id);
+            return new CardSprint(this, playerInfo, id);
         if (cardShowName.equals("Stone Fox Statue"))
-            return new CardStoneFoxStatue((Spell) this, playerInfo, playHandler, id);
+            return new CardStoneFoxStatue(this, playerInfo, id);
         if (cardShowName.equals("Stranglethorn Tiger"))
-            return new CardStranglethornTiger((Minion) this, playerInfo, playHandler, id);
+            return new CardStranglethornTiger(this, playerInfo, id);
         if (cardShowName.equals("Strength in Numbers"))
-            return new CardStrengthInNumbers((Quest) this, playerInfo, playHandler, id);
+            return new CardStrengthInNumbers(this, playerInfo, id);
         if (cardShowName.equals("Swamp King Dred"))
-            return new CardSwampKingDred((Minion) this, playerInfo, playHandler, id);
+            return new CardSwampKingDred(this, playerInfo, id);
         if (cardShowName.equals("Swarm of Locusts"))
-            return new CardSwarmOfLocusts((Spell) this, playerInfo, playHandler, id);
+            return new CardSwarmOfLocusts(this, playerInfo, id);
         if (cardShowName.equals("Tomb Warden"))
-            return new CardTombWarden((Minion) this, playerInfo, playHandler, id);
+            return new CardTombWarden(this, playerInfo, id);
         if (cardShowName.equals("Will of Mukla"))
-            return new CardWillOfMukla((Spell) this, playerInfo, playHandler, id);
+            return new CardWillOfMukla(this, playerInfo, id);
         System.out.println(cardShowName);
         return null;
     }

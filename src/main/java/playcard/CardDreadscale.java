@@ -1,12 +1,11 @@
 package playcard;
 
-import module.Minion;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardDreadscale extends MinionCard {
-    public CardDreadscale(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(minion, playerInfo, playHandler, id);
+    public CardDreadscale(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
     @Override
@@ -16,7 +15,7 @@ public class CardDreadscale extends MinionCard {
 
     @Override
     public void endTurn() {
-        //playHandler.damageAll(this, 1);
+        //.damageAll(this, 1);
     }
 
     @Override

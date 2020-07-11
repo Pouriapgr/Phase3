@@ -1,17 +1,16 @@
 package playhero;
 
 import module.Hero;
-import playlogic.PlayHandler;
 import playlogic.PlayerInfo;
 
 public class Mage extends PlayHero {
-    public Mage(Hero hero, PlayerInfo playerInfo, PlayHandler playHandler) {
-        super(hero, playerInfo, playHandler);
+    public Mage(Hero hero, PlayerInfo playerInfo) {
+        super(hero, playerInfo);
     }
 
     @Override
     protected void doSkill() {
-        // playHandler.damageMinion(1);
+        // .damageMinion(1);
     }
 
     @Override

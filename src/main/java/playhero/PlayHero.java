@@ -6,7 +6,7 @@ import playlogic.PlayerInfo;
 
 public abstract class PlayHero {
     protected final PlayerInfo playerInfo;
-    protected final PlayHandler playHandler;
+    protected final PlayHandler playHandler = PlayHandler.getInstance();
 
     protected final String name;
 
@@ -15,9 +15,8 @@ public abstract class PlayHero {
 
     protected int skillCost = 2;
 
-    public PlayHero(Hero hero, PlayerInfo playerInfo, PlayHandler playHandler) {
+    public PlayHero(Hero hero, PlayerInfo playerInfo) {
         this.playerInfo = playerInfo;
-        this.playHandler = playHandler;
         name = hero.getHeroName();
     }
 

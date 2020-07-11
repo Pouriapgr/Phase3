@@ -195,5 +195,7 @@ public class GraphicConstants {
 
     final public static int PASSIVE_PAGE_X = 220;
     final public static int PASSIVE_PAGE_Y = 150;
-    final public static int PASSIVE_PAGE_SEPARATOR = 200;
+    final public static int PASSIVE_PAGE_WIDTH = 220;
+    final public static int PASSIVE_PAGE_HEIGHT = 300;
+    final public static int PASSIVE_PAGE_SEPARATOR = 220;
 }

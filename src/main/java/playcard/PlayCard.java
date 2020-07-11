@@ -6,7 +6,7 @@ import playlogic.PlayerInfo;
 
 public abstract class PlayCard {
     protected final PlayerInfo playerInfo;
-    protected final PlayHandler playHandler;
+    protected final PlayHandler playHandler = PlayHandler.getInstance();
 
     protected final String name;
     protected final String id;
@@ -16,9 +16,8 @@ public abstract class PlayCard {
 
     protected String cardClass;
 
-    public PlayCard(Card card, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
+    public PlayCard(Card card, PlayerInfo playerInfo, String id) {
         this.playerInfo = playerInfo;
-        this.playHandler = playHandler;
 
         name = card.getCardShowName();
         this.id = id;
@@ -52,10 +51,6 @@ public abstract class PlayCard {
 
     public String getName() {
         return name;
-    }
-
-    public PlayHandler getPlayHandler() {
-        return playHandler;
     }
 
     public String getCardClass() {

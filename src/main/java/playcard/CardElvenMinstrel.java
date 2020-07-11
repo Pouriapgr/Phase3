@@ -1,12 +1,11 @@
 package playcard;
 
-import module.Minion;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardElvenMinstrel extends MinionCard {
-    public CardElvenMinstrel(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(minion, playerInfo, playHandler, id);
+    public CardElvenMinstrel(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
     @Override
@@ -27,8 +26,8 @@ public class CardElvenMinstrel extends MinionCard {
     @Override
     public void doWhenSummon() {
         //        for(int i = 0; i <= 2; i++) {
-//            PlayCard playCard = PlayHandler.draw(player);
-//            playHandler.addCard(player, playCard);
+//            PlayCard playCard = .draw(player);
+//            .addCard(player, playCard);
 //        }
     }
 

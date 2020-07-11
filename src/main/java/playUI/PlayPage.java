@@ -3,8 +3,6 @@ package playUI;
 import constants.GraphicConstants;
 import constants.LogicConstants;
 import file.FileAssistance;
-import module.Card;
-import playlogic.GameState;
 import userInterface.MyButton;
 import userInterface.StatePanel;
 
@@ -13,7 +11,6 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class PlayPage extends StatePanel {
-    private GameState gameState = GameState.getInstance();
     private ArrayList<HandButton> handButtonsPlayer1 = new ArrayList<>();
     private ArrayList<HandButton> handButtonsPlayer2 = new ArrayList<>();
     private ArrayList<PlayButton> playedButtonsPlayer1 = new ArrayList<>();
@@ -69,7 +66,7 @@ public class PlayPage extends StatePanel {
             HandButton handButton = new HandButton(GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
                     i * GraphicConstants.PLAY_HAND_BUTTON_X_SEPARATOR, GraphicConstants.PLAY_HAND_BUTTON_FIRST_Y);
             handButton.setHover(+100);
-            handButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Flare")));
+//            handButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Flare")));
             handButtonsPlayer1.add(handButton);
 
             add(handButton.getCardButton());
@@ -80,7 +77,7 @@ public class PlayPage extends StatePanel {
             HandButton handButton = new HandButton(GraphicConstants.PLAY_HAND_BUTTON_FIRST_X +
                     i * GraphicConstants.PLAY_HAND_BUTTON_X_SEPARATOR, GraphicConstants.PLAY_HAND_BUTTON_SECOND_Y);
             handButton.setHover(-100);
-            handButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Flare")));
+//            handButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Flare")));
             handButtonsPlayer2.add(handButton);
             add(handButton.getCardButton());
         }
@@ -91,7 +88,7 @@ public class PlayPage extends StatePanel {
         for (int i = 0; i <= 6; i++) {
             PlayButton playButton = new PlayButton(GraphicConstants.PLAY_MINION_BUTTON_X +
                     i * GraphicConstants.PLAY_MINION_BUTTON_SEPARATOR, GraphicConstants.PLAY_MINION_BUTTON_FIRST_Y);
-            playButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Evasive Drakonid")));
+//            playButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Evasive Drakonid")));
             playedButtonsPlayer1.add(playButton);
             add(playButton.getCardButton());
         }
@@ -101,7 +98,7 @@ public class PlayPage extends StatePanel {
             PlayButton playButton = new PlayButton(GraphicConstants.PLAY_MINION_BUTTON_X +
                     i * GraphicConstants.PLAY_MINION_BUTTON_SEPARATOR, GraphicConstants.PLAY_MINION_BUTTON_SECOND_Y);
 
-            playButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Evasive Drakonid")));
+//            playButton.setNewCard(Card.loadCard(FileAssistance.findCardJSON("Evasive Drakonid")));
             playedButtonsPlayer2.add(playButton);
             add(playButton.getCardButton());
         }
@@ -110,13 +107,11 @@ public class PlayPage extends StatePanel {
     private void setHeroes() {
         addMyButton("", "1Hero", GraphicConstants.PLAY_HERO_BUTTON_FIRST_X,
                 GraphicConstants.PLAY_HERO_BUTTON_FIRST_Y, GraphicConstants.PLAY_HERO_BUTTON_WIDTH,
-                GraphicConstants.PLAY_HERO_BUTTON_HEIGHT, "heroes",
-                gameState.getPlayer1().getDeck().getDeckHero().getHeroName() + ".png");
+                GraphicConstants.PLAY_HERO_BUTTON_HEIGHT);
 
         addMyButton("", "2Hero", GraphicConstants.PLAY_HERO_BUTTON_SECOND_X,
                 GraphicConstants.PLAY_HERO_BUTTON_SECOND_Y, GraphicConstants.PLAY_HERO_BUTTON_WIDTH,
-                GraphicConstants.PLAY_HERO_BUTTON_HEIGHT, "heroes",
-                gameState.getPlayer2().getDeck().getDeckHero().getHeroName() + ".png");
+                GraphicConstants.PLAY_HERO_BUTTON_HEIGHT);
 
     }
 
@@ -124,13 +119,11 @@ public class PlayPage extends StatePanel {
         MyButton myButton = addMyButton("", "1HeroHp", GraphicConstants.PLAY_HEROHP_BUTTON_FIRST_X,
                 GraphicConstants.PLAY_HEROHP_BUTTON_FIRST_Y, GraphicConstants.PLAY_HEROHP_BUTTON_WIDTH,
                 GraphicConstants.PLAY_HEROHP_BUTTON_HEIGHT);
-        myButton.setText(Integer.toString(gameState.getPlayer1().getDeck().getDeckHero().getHeroHp()));
         myButton.setBackground(Color.RED);
 
         myButton = addMyButton("", "2HeroHp", GraphicConstants.PLAY_HEROHP_BUTTON_SECOND_X,
                 GraphicConstants.PLAY_HEROHP_BUTTON_SECOND_Y, GraphicConstants.PLAY_HEROHP_BUTTON_WIDTH,
                 GraphicConstants.PLAY_HEROHP_BUTTON_HEIGHT);
-        myButton.setText(Integer.toString(gameState.getPlayer2().getDeck().getDeckHero().getHeroHp()));
         myButton.setBackground(Color.RED);
     }
 

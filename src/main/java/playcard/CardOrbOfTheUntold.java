@@ -1,17 +1,16 @@
 package playcard;
 
-import module.Spell;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardOrbOfTheUntold extends SpellCard {
-    public CardOrbOfTheUntold(Spell spell, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(spell, playerInfo, playHandler, id);
+    public CardOrbOfTheUntold(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
 
     @Override
     public void doOperation() {
-        //playHandler.dealRandomDamage(playerInfo, 20);
+        //.dealRandomDamage(playerInfo, 20);
     }
 }

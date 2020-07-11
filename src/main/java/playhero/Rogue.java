@@ -1,20 +1,19 @@
 package playhero;
 
 import module.Hero;
-import playlogic.PlayHandler;
 import playlogic.PlayerInfo;
 
 public class Rogue extends PlayHero {
-    public Rogue(Hero hero, PlayerInfo playerInfo, PlayHandler playHandler) {
-        super(hero, playerInfo, playHandler);
+    public Rogue(Hero hero, PlayerInfo playerInfo) {
+        super(hero, playerInfo);
         setSkillCost(3);
     }
 
     @Override
     protected void doSkill() {
 //        if(upgraded())
-//            playHandler.stealEnemyHand();
-//        playHandler.stealEnemyDeck()
+//            .stealEnemyHand();
+//        .stealEnemyDeck()
     }
 
     @Override

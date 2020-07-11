@@ -1,6 +1,7 @@
 package game;
 
 import constants.GraphicConstants;
+import playUI.ChangeCardPage;
 import playUI.PlayPage;
 import userInterface.ChooseDeckPage;
 import userInterface.GameJFrame;
@@ -25,7 +26,7 @@ public class UIController {
     public void changeState(State pre, State next) {
         if (next.runState()) {
             pre.updateState();
-            if (!(next instanceof ChooseDeckPage))
+            if (!(next instanceof ChooseDeckPage) && !(next instanceof ChangeCardPage))
                 uiController.setContentPane(pre);
             uiController.validate();
         }

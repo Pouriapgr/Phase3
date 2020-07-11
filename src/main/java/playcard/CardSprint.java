@@ -1,20 +1,19 @@
 package playcard;
 
-import module.Spell;
-import playlogic.PlayHandler;
+import module.Card;
 import playlogic.PlayerInfo;
 
 public class CardSprint extends SpellCard {
-    public CardSprint(Spell spell, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(spell, playerInfo, playHandler, id);
+    public CardSprint(Card card, PlayerInfo playerInfo, String id) {
+        super(card, playerInfo, id);
     }
 
 
     @Override
     public void doOperation() {
 //        for(int i = 0; i <= 3; i++) {
-//            PlayCard playCard = PlayHandler.draw(player);
-//                playHandler.addCard(player, playCard);
+//            PlayCard playCard = .draw(player);
+//                .addCard(player, playCard);
 //        }
     }
 }

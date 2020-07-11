@@ -9,13 +9,21 @@ import java.util.ArrayList;
 
 public class PlayDeck {
     private PlayHero hero;
-    private ArrayList<PlayCard> cards;
+    private ArrayList<PlayCard> cards = new ArrayList<>();
 
 
-    public PlayDeck(Deck deck, PlayerInfo playerInfo, PlayHandler playHandler) {
-        hero = deck.getDeckHero().playCopy(playerInfo, playHandler);
+    public PlayDeck(Deck deck, PlayerInfo playerInfo) {
+        hero = deck.getDeckHero().playCopy(playerInfo);
         for (Card card : deck.getDeckCards()) {
-            cards.add(card.playCopy(playerInfo, playHandler));
+            cards.add(card.playCopy(playerInfo));
         }
+    }
+
+    public PlayHero getHero() {
+        return hero;
+    }
+
+    public ArrayList<PlayCard> getCards() {
+        return cards;
     }
 }
