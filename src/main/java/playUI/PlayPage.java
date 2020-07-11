@@ -187,6 +187,9 @@ public class PlayPage extends StatePanel {
         MyButton myButton = addMyButton("END", "End", GraphicConstants.PLAY_FRAME_WIDTH - 103,
                 GraphicConstants.PLAY_FRAME_HEIGHT / 2 - 35, 90, 30);
         myButton.setBackground(Color.ORANGE);
+        myButton = addMyButton("", "Timer", GraphicConstants.PLAY_FRAME_WIDTH - 103,
+                GraphicConstants.PLAY_FRAME_HEIGHT / 2, 90, 30);
+        myButton.setBackground(Color.gray.brighter());
     }
 
     @Override

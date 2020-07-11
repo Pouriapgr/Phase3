@@ -9,6 +9,7 @@ public class PlayHandler {
     private static PlayHandler playHandler;
     private UIController uiController = UIController.getInstance();
     private GameState gameState;
+    private FieldChecker fieldChecker;
 
     private PlayHandler() {
     }
@@ -24,13 +25,13 @@ public class PlayHandler {
     }
 
     public void startPlayPage(PlayerInfo player1, PlayerInfo player2, MenuPage menuPage) {
-        GameState gameState = GameState.getInstance(1, player1, player2);
+        gameState = GameState.getInstance(1, player1, player2);
         uiController.changeState(menuPage, new ChangeCardPage(player1));
         uiController.changeState(menuPage, new ChangeCardPage(player2));
         initializeFrame(menuPage);
     }
 
-    public void initializeFrame(MenuPage menuPage) {
+    private void initializeFrame(MenuPage menuPage) {
         PlayPage playPage = new PlayPage();
         playPage.setInitials();
         uiController.changeFrame(playPage);
@@ -40,16 +41,30 @@ public class PlayHandler {
 
     public void runPlay(PlayPage playPage) {
         playPage.setInitials();
-        FieldChecker fieldChecker = new FieldChecker(playPage);
-        fieldChecker.start();
-        uiController.setContentPane(playPage);
+        doLogicInitials(playPage);
 
         while (true) {
             uiController.validate();
             if (playPage.newAction("Back")) {
-                fieldChecker.interrupt();
+                endPlay();
                 return;
+            }
+
+            if (playPage.newAction("End")) {
+                gameState.changeTurn(playPage);
             }
         }
     }
+
+    private void doLogicInitials(PlayPage playPage) {
+        fieldChecker = new FieldChecker(playPage);
+        fieldChecker.start();
+        uiController.setContentPane(playPage);
+        gameState.changeTurn(playPage);
+    }
+
+    private void endPlay() {
+        fieldChecker.interrupt();
+    }
+
 }

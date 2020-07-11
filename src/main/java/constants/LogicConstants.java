@@ -11,4 +11,6 @@ public class LogicConstants {
     final public static int MIN_NUMBER_OF_DECK_CARDS = 10;
     final public static int MAX_HAND_CARDS = 6;
     final public static int MAX_PLAYED_CARDS = 7;
+
+    final public static int TURN_TIME = 10;
 }

@@ -78,7 +78,10 @@ public class PlayerInfo {
     }
 
     public void setTurnMana(int turnMana) {
-        this.turnMana = turnMana;
+        if (turnMana <= 10)
+            this.turnMana = turnMana;
+        else
+            turnMana = 10;
     }
 
     public String getManaToString() {
