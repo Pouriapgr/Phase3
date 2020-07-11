@@ -26,7 +26,7 @@ public class CardPartyElemental extends MinionCard {
 
     @Override
     public void doWhenSummon() {
-        // playHandler.doPart();
+        // playHandler.doParty();
     }
 
     @Override

@@ -1,14 +1,14 @@
 package playcard;
 
-import module.Minion;
+import module.Quest;
 import playlogic.PlayHandler;
 import playlogic.PlayerInfo;
 
 public abstract class QuestCard extends PlayCard {
     protected int manaUsedFirst;
 
-    public QuestCard(Minion minion, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
-        super(minion, playerInfo, playHandler, id);
+    public QuestCard(Quest quest, PlayerInfo playerInfo, PlayHandler playHandler, String id) {
+        super(quest, playerInfo, playHandler, id);
     }
 
     public abstract void checkProgress();

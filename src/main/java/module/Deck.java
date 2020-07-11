@@ -21,15 +21,6 @@ public class Deck {
         deckNoOfWins = 0;
     }
 
-    public static Deck copy(Deck deck) {
-        ArrayList<Card> cards = new ArrayList<>();
-        for (Card card : deck.getDeckCards()) {
-            cards.add(Card.copy(card));
-        }
-        Deck newDeck = new Deck(deck.getDeckHero(), cards, deck.getDeckName());
-        return newDeck;
-    }
-
     public double getAverageCost() {
         if (deckCards.size() == 0)
             return 0;

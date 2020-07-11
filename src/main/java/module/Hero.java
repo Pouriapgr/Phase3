@@ -3,6 +3,9 @@ package module;
 import com.google.gson.Gson;
 import constants.LogicConstants;
 import file.FileAssistance;
+import playhero.*;
+import playlogic.PlayHandler;
+import playlogic.PlayerInfo;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -72,6 +75,22 @@ public class Hero {
         names.add("Hunter");
 
         return names;
+    }
+
+    public PlayHero playCopy(PlayerInfo playerInfo, PlayHandler playHandler) {
+        if (heroClass.equals("Mage"))
+            return new Mage(this, playerInfo, playHandler);
+        if (heroClass.equals("Rogue"))
+            return new Rogue(this, playerInfo, playHandler);
+        if (heroClass.equals("Paladin"))
+            return new Paladin(this, playerInfo, playHandler);
+        if (heroClass.equals("Warlock"))
+            return new Warlock(this, playerInfo, playHandler);
+        if (heroClass.equals("Hunter"))
+            return new Hunter(this, playerInfo, playHandler);
+
+        System.out.println(heroName);
+        return null;
     }
 
     public String getHeroName() {
