@@ -2,7 +2,7 @@ package playUI;
 
 import constants.GraphicConstants;
 import file.FileAssistance;
-import module.Card;
+import playcard.PlayCard;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
@@ -10,12 +10,13 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 public class PlayButton {
-    private Card card;
+    private PlayCard card;
     private int x, y;
     private JButton cardButton;
 
     private boolean selectCard = false;
     private boolean showCard = false;
+    private boolean selectPlace = false;
 
     public PlayButton(int x, int y) {
         this.x = x;
@@ -29,6 +30,7 @@ public class PlayButton {
         cardButton.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent event) {
                 if (card == null) {
+                    selectPlace = true;
                     return;
                 }
                 if (event.equals(MouseEvent.BUTTON3)) {
@@ -42,10 +44,10 @@ public class PlayButton {
         cardButton.setContentAreaFilled(false);
     }
 
-    public void setNewCard(Card card) {
+    public void setNewCard(PlayCard card) {
         this.card = card;
 
-        String cardName = card.getCardName() + ".png";
+        String cardName = card.getName() + ".png";
 
         BufferedImage bufferedImage = FileAssistance.getScaledImage("cards", cardName,
                 GraphicConstants.PLAY_MINION_BUTTON_WIDTH, GraphicConstants.PLAY_MINION_BUTTON_HEIGHT);
@@ -60,7 +62,7 @@ public class PlayButton {
         cardButton.setIcon(null);
     }
 
-    public Card getCard() {
+    public PlayCard getCard() {
         return card;
     }
 
@@ -74,5 +76,21 @@ public class PlayButton {
 
     public boolean isSelectCard() {
         return selectCard;
+    }
+
+    public boolean isSelectPlace() {
+        return selectPlace;
+    }
+
+    public void setSelectPlace(boolean selectPlace) {
+        this.selectPlace = selectPlace;
+    }
+
+    public void setShowCard(boolean showCard) {
+        this.showCard = showCard;
+    }
+
+    public void setSelectCard(boolean selectCard) {
+        this.selectCard = selectCard;
     }
 }

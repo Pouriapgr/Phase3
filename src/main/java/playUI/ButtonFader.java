@@ -3,16 +3,38 @@ package playUI;
 import game.TimeAssistance;
 import userInterface.MyButton;
 
-public class ButtonFader {
+public class ButtonFader extends Thread {
     private static boolean lock = false;
 
-    public static synchronized void fadeButton(MyButton myButton, String name) {
+    private MyButton myButton;
+    private String name;
+
+    public ButtonFader(MyButton myButton, String name) {
+        this.myButton = myButton;
+        this.name = name;
+    }
+
+    public synchronized void fadeButton() {
         myButton.changeIcon(name + ".png");
         myButton.setVisible(true);
         TimeAssistance.waitFor(1500L);
         myButton.changeIcon(name + "-lock.png");
         TimeAssistance.waitFor(1000L);
         myButton.setVisible(false);
+    }
+
+    @Override
+    public void run() {
+        while (lock == true) {
+            try {
+                sleep(50L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        lock = true;
+        fadeButton();
+        lock = false;
     }
 
     public static boolean isLock() {

@@ -21,6 +21,7 @@ public class PlayerInfo {
     private int turnMana;
     private int mana;
 
+    private int addToMana;
     private int addToDrawAttack;
     private int addToDrawHp;
 
@@ -31,6 +32,22 @@ public class PlayerInfo {
 
     public void addToHand(PlayCard playCard) {
         hand.add(playCard);
+    }
+
+    public void addToDeck(PlayCard playCard) {
+        deck.getCards().add(playCard);
+    }
+
+    public void removeFromHand(PlayCard playCard) {
+        hand.remove(playCard);
+    }
+
+    public void removeFromDec(PlayCard playCard) {
+        deck.getCards().remove(playCard);
+    }
+
+    public int getFinalMana(PlayCard playCard) {
+        return playCard.getManaCost() + addToMana;
     }
 
     public PlayDeck getDeck() {
@@ -105,5 +122,13 @@ public class PlayerInfo {
 
     public void setStart(ArrayList<PlayCard> start) {
         this.start = start;
+    }
+
+    public int getAddToMana() {
+        return addToMana;
+    }
+
+    public void setAddToMana(int addToMana) {
+        this.addToMana = addToMana;
     }
 }

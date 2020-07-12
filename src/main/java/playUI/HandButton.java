@@ -48,8 +48,8 @@ public class HandButton {
             @Override
             public void mouseEntered(MouseEvent me) {
                 if (card != null) {
-                    Animator animator = new Animator(cardButton, x, y - dy, 20L, x, y, "HandMover");
-                    animator.start();
+                    ButtonMover buttonMover = new ButtonMover(cardButton, x, y - dy, 20L);
+                    buttonMover.start();
                 }
             }
         });
@@ -71,6 +71,7 @@ public class HandButton {
 
     public void setEmpty() {
         card = null;
+        cardButton.setLocation(x, y);
         cardButton.setIcon(null);
     }
 
@@ -88,5 +89,13 @@ public class HandButton {
 
     public boolean isSelectCard() {
         return selectCard;
+    }
+
+    public void setSelectCard(boolean selectCard) {
+        this.selectCard = selectCard;
+    }
+
+    public void setShowCard(boolean showCard) {
+        this.showCard = showCard;
     }
 }

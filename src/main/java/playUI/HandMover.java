@@ -4,12 +4,26 @@ import constants.GraphicConstants;
 import playcard.PlayCard;
 import userInterface.MyButton;
 
-public class HandMover {
+public class HandMover extends Thread {
     private static boolean lock = false;
 
-    public static synchronized void moveButton(MyButton myButton, HandButton desButton, long speed, String name, PlayCard playCard) {
-        myButton.changeIcon(name + ".png");
+    private MyButton myButton;
+    private HandButton destButton;
+    private long speed;
+    private PlayCard playCard;
+
+    public HandMover(MyButton myButton, HandButton destButton, long speed, PlayCard playCard) {
+        this.myButton = myButton;
+        this.destButton = destButton;
+        this.speed = speed;
+        this.playCard = playCard;
+    }
+
+    public synchronized void moveButton() {
+        myButton.changeIcon(playCard.getName() + ".png");
         myButton.setVisible(true);
+        destButton.getCardButton().setVisible(false);
+        destButton.setNewCard(playCard);
 
         long last = System.currentTimeMillis();
         int initX = myButton.getX();
@@ -24,8 +38,8 @@ public class HandMover {
 
             int x = myButton.getX();
             int y = myButton.getY();
-            int xDis = desButton.getCardButton().getX();
-            int yDis = desButton.getCardButton().getY();
+            int xDis = destButton.getCardButton().getX();
+            int yDis = destButton.getCardButton().getY();
             if (x < xDis - GraphicConstants.MOVE_RATE) {
                 x += 2 * GraphicConstants.MOVE_RATE;
             } else if (x > xDis + GraphicConstants.MOVE_RATE) {
@@ -43,9 +57,23 @@ public class HandMover {
                     y - yDis <= 2 * GraphicConstants.MOVE_RATE && y - yDis >= -2 * GraphicConstants.MOVE_RATE)
                 break;
         }
-        desButton.setNewCard(playCard);
         myButton.setVisible(false);
+        destButton.getCardButton().setVisible(true);
         myButton.setBounds(initX, initY, myButton.getWidth(), myButton.getHeight());
+    }
+
+    @Override
+    public void run() {
+        while (lock == true) {
+            try {
+                sleep(50L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        lock = true;
+        moveButton();
+        lock = false;
     }
 
     public static boolean isLock() {

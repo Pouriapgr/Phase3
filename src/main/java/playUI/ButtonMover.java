@@ -4,11 +4,24 @@ import constants.GraphicConstants;
 
 import javax.swing.*;
 
-public class ButtonMover {
-
+public class ButtonMover extends Thread {
     private static boolean lock = false;
 
-    public static synchronized void moveButton(JButton jButton, int xDis, int yDis, long speed) {
+    private JButton jButton;
+    private int xDis;
+    private int yDis;
+    private long speed;
+    private int initY;
+
+    public ButtonMover(JButton jButton, int xDis, int yDis, long speed) {
+        this.jButton = jButton;
+        this.xDis = xDis;
+        this.yDis = yDis;
+        this.speed = speed;
+        initY = jButton.getY();
+    }
+
+    public synchronized void moveButton() {
         long last = System.currentTimeMillis();
 
         while (true) {
@@ -39,13 +52,22 @@ public class ButtonMover {
                     y - yDis <= GraphicConstants.MOVE_RATE && y - yDis >= -GraphicConstants.MOVE_RATE)
                 break;
         }
+        jButton.setLocation(xDis, yDis);
     }
 
-    public static boolean isLock() {
-        return lock;
-    }
-
-    public static void setLock(boolean lock) {
-        ButtonMover.lock = lock;
+    @Override
+    public void run() {
+        if (lock == true)
+            return;
+        lock = true;
+        moveButton();
+        yDis = initY;
+        try {
+            sleep(3000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        moveButton();
+        lock = false;
     }
 }

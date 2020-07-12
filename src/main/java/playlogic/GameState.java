@@ -1,6 +1,9 @@
 package playlogic;
 
 import game.TimeAssistance;
+import playUI.HandButton;
+import playUI.PlayButton;
+import playcard.PlayCard;
 
 public class GameState {
     private static GameState gameState = null;
@@ -47,6 +50,18 @@ public class GameState {
         timer.start();
     }
 
+    public boolean canPlayCard(PlayerInfo playerInfo, PlayCard playCard) {
+        return playerInfo.getFinalMana(playCard) <= playerInfo.getMana();
+    }
+
+    public void playCard(PlayCard playCard, PlayButton playButton, HandButton handButton) {
+        PlayerInfo playerInfo = playCard.getPlayerInfo();
+        playerInfo.setMana(playerInfo.getMana() - playerInfo.getFinalMana(playCard));
+        playerInfo.addToDeck(playCard);
+        playerInfo.removeFromHand(playCard);
+        playButton.setNewCard(playCard);
+        handButton.setEmpty();
+    }
 
     public PlayerInfo getPlayer1() {
         return player1;
