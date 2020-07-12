@@ -1,11 +1,11 @@
 package playlogic;
 
 import game.TimeAssistance;
-import playUI.PlayPage;
 
 public class GameState {
     private static GameState gameState = null;
     private int noOfGame;
+    private PlayHandler playHandler = PlayHandler.getInstance();
 
     private PlayerInfo player1;
     private PlayerInfo player2;
@@ -28,20 +28,22 @@ public class GameState {
         return gameState;
     }
 
-    public void changeTurn(PlayPage playPage) {
+    public void changeTurn() {
         if (playerTurn == 1) {
             playerTurn = 2;
             player2.setTurnMana(player2.getTurnMana() + 1);
             player2.setMana(player2.getTurnMana());
+            playHandler.drawCard(player2);
         } else {
             playerTurn = 1;
             player1.setTurnMana(player1.getTurnMana() + 1);
             player1.setMana(player1.getTurnMana());
+            playHandler.drawCard(player1);
         }
         turnNo++;
         Timer.setExit(true);
         TimeAssistance.waitFor(500L);
-        Timer timer = new Timer(playPage);
+        Timer timer = new Timer(playHandler.getPlayPage());
         timer.start();
     }
 

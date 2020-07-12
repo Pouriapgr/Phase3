@@ -64,8 +64,8 @@ public class MenuPage extends State {
 
     private void initializePlay() {
         PlayHandler playHandler = PlayHandler.newHandler();
-        PlayerInfo player1 = new PlayerInfo();
-        PlayerInfo player2 = new PlayerInfo();
+        PlayerInfo player1 = new PlayerInfo(1);
+        PlayerInfo player2 = new PlayerInfo(2);
         System.out.println("TTT");
         uiController.changeState(this, new ChooseDeckPage(player1));
         System.out.println("SSS");

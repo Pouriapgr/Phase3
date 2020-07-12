@@ -80,8 +80,7 @@ public class ChangeCardPage extends State {
                 playerInfo.getDeck().getCards().add(startingHand.get(i));
             }
         }
-        for (PlayCard playCard : newCards)
-            playerInfo.addToHand(playCard);
+        playerInfo.setStart(newCards);
     }
 
     @Override

@@ -8,10 +8,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class PlayerInfo {
+    private int id;
     private Deck initDeck;
     private Passive initPassive;
     private PlayHandler playHandler;
 
+    private ArrayList<PlayCard> start;
     private ArrayList<PlayCard> hand = new ArrayList<>();
     private PlayDeck deck;
     private Passive passive;
@@ -22,17 +24,13 @@ public class PlayerInfo {
     private int addToDrawAttack;
     private int addToDrawHp;
 
-    public PlayerInfo() {
+    public PlayerInfo(int id) {
         playHandler = PlayHandler.getInstance();
+        this.id = id;
     }
 
     public void addToHand(PlayCard playCard) {
         hand.add(playCard);
-    }
-
-    public void setPassive(Passive passive) {
-        initPassive = passive;
-        this.passive = Passive.copy(initPassive);
     }
 
     public PlayDeck getDeck() {
@@ -47,6 +45,11 @@ public class PlayerInfo {
 
     public Passive getPassive() {
         return passive;
+    }
+
+    public void setPassive(Passive passive) {
+        initPassive = passive;
+        this.passive = Passive.copy(initPassive);
     }
 
     public int getAddToDrawAttack() {
@@ -86,5 +89,21 @@ public class PlayerInfo {
 
     public String getManaToString() {
         return getMana() + "/" + getTurnMana();
+    }
+
+    public ArrayList<PlayCard> getHand() {
+        return hand;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public ArrayList<PlayCard> getStart() {
+        return start;
+    }
+
+    public void setStart(ArrayList<PlayCard> start) {
+        this.start = start;
     }
 }

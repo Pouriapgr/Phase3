@@ -2,7 +2,7 @@ package playUI;
 
 import constants.GraphicConstants;
 import file.FileAssistance;
-import module.Card;
+import playcard.PlayCard;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 
 
 public class HandButton {
-    private Card card;
+    private PlayCard card;
     private int x, y;
     private JButton cardButton;
 
@@ -55,10 +55,10 @@ public class HandButton {
         });
     }
 
-    public void setNewCard(Card card) {
+    public void setNewCard(PlayCard card) {
         this.card = card;
 
-        String cardName = card.getCardName();
+        String cardName = card.getName();
         cardName = cardName + ".png";
 
         BufferedImage bufferedImage = FileAssistance.getScaledImage("cards", cardName,
@@ -74,7 +74,7 @@ public class HandButton {
         cardButton.setIcon(null);
     }
 
-    public Card getCard() {
+    public PlayCard getCard() {
         return card;
     }
 

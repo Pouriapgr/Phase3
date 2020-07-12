@@ -19,7 +19,7 @@ public abstract class State extends JPanel {
         super(true);
     }
 
-    protected MyButton addMyButton(String action, String name, int x, int y, int width, int height) {
+    public MyButton addMyButton(String action, String name, int x, int y, int width, int height) {
         MyButton myButton = new MyButton(action, name);
         myButton.setBounds(x, y, width, height);
         myButton.setBorder(null);
@@ -28,7 +28,7 @@ public abstract class State extends JPanel {
         return myButton;
     }
 
-    protected MyButton addMyButton(String action, String name, int x, int y, int width, int height, String pack, String picName) {
+    public MyButton addMyButton(String action, String name, int x, int y, int width, int height, String pack, String picName) {
         MyButton myButton = new MyButton(action, name);
         myButton.setBounds(x, y, width, height);
         add(myButton);
@@ -91,6 +91,11 @@ public abstract class State extends JPanel {
         removeAll();
         myButtons.clear();
         myFields.clear();
+    }
+
+    public void removeButton(MyButton myButton) {
+        myButton.remove(myButton);
+        remove(myButton);
     }
 
     protected void setPanel() {

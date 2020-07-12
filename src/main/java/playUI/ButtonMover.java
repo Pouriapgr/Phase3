@@ -39,7 +39,6 @@ public class ButtonMover {
                     y - yDis <= GraphicConstants.MOVE_RATE && y - yDis >= -GraphicConstants.MOVE_RATE)
                 break;
         }
-        System.out.println(Thread.activeCount());
     }
 
     public static boolean isLock() {

@@ -191,7 +191,13 @@ public class GraphicConstants {
     final public static int PLAY_MINION_BUTTON_SECOND_Y = 230;
     final public static int PLAY_MINION_BUTTON_SEPARATOR = 130;
 
-    final public static int MOVE_RATE = 3;
+    final public static int PLAY_DRAW_BUTTON_WIDTH = 170;
+    final public static int PLAY_DRAW_BUTTON_HEIGHT = 200;
+    final public static int PLAY_DRAW_FIRST_Y = 455;
+    final public static int PLAY_DRAW_SECOND_Y = 105;
+    final public static int PLAY_DRAW_BUTTON_X = 1115;
+
+    final public static int MOVE_RATE = 5;
 
     final public static int PASSIVE_PAGE_X = 220;
     final public static int PASSIVE_PAGE_Y = 150;

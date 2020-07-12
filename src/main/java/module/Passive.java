@@ -17,14 +17,14 @@ public class Passive {
         description = newPassive.getDescription();
     }
 
-    public static Passive copy(Passive passive) {
-        Passive newPassive = new Passive(passive);
-        return newPassive;
-    }
-
     public Passive(String passiveName, String description) {
         this.passiveName = passiveName;
         this.description = description;
+    }
+
+    public static Passive copy(Passive passive) {
+        Passive newPassive = new Passive(passive);
+        return newPassive;
     }
 
     public static Passive loadPassive(File myFile) {

@@ -33,6 +33,7 @@ public class PlayPage extends StatePanel {
         setHeroesHps();
         setDecks();
         setSkills();
+        setDrawButtons();
 
         setPanel();
     }
@@ -136,13 +137,13 @@ public class PlayPage extends StatePanel {
                 GraphicConstants.PLAY_MANA_BUTTON_FIRST_Y, GraphicConstants.PLAY_MANA_BUTTON_WIDTH,
                 GraphicConstants.PLAY_MANA_BUTTON_HEIGHT);
         myButton.setText("5/5");
-        myButton.setBackground(Color.blue.brighter());
+        myButton.setBackground(Color.CYAN.darker());
 
         myButton = addMyButton("", "2Mana", GraphicConstants.PLAY_MANA_BUTTON_SECOND_X,
                 GraphicConstants.PLAY_MANA_BUTTON_SECOND_Y, GraphicConstants.PLAY_MANA_BUTTON_WIDTH,
                 GraphicConstants.PLAY_MANA_BUTTON_HEIGHT);
         myButton.setText("5/5");
-        myButton.setBackground(Color.blue.brighter());
+        myButton.setBackground(Color.CYAN.darker());
     }
 
     private void setDecks() {
@@ -183,6 +184,18 @@ public class PlayPage extends StatePanel {
         myButton.setBackground(Color.YELLOW.darker());
     }
 
+    private void setDrawButtons() {
+        MyButton myButton = addMyButton("", "1Draw", GraphicConstants.PLAY_DRAW_BUTTON_X,
+                GraphicConstants.PLAY_DRAW_FIRST_Y, GraphicConstants.PLAY_DRAW_BUTTON_WIDTH,
+                GraphicConstants.PLAY_DRAW_BUTTON_HEIGHT);
+        myButton.setVisible(false);
+
+        myButton = addMyButton("", "2Draw", GraphicConstants.PLAY_DRAW_BUTTON_X,
+                GraphicConstants.PLAY_DRAW_SECOND_Y, GraphicConstants.PLAY_DRAW_BUTTON_WIDTH,
+                GraphicConstants.PLAY_DRAW_BUTTON_HEIGHT);
+        myButton.setVisible(false);
+    }
+
     private void setEnd() {
         MyButton myButton = addMyButton("END", "End", GraphicConstants.PLAY_FRAME_WIDTH - 103,
                 GraphicConstants.PLAY_FRAME_HEIGHT / 2 - 35, 90, 30);
@@ -200,5 +213,21 @@ public class PlayPage extends StatePanel {
     @Override
     public void updateState() {
         return;
+    }
+
+    public ArrayList<HandButton> getHandButtonsPlayer1() {
+        return handButtonsPlayer1;
+    }
+
+    public ArrayList<HandButton> getHandButtonsPlayer2() {
+        return handButtonsPlayer2;
+    }
+
+    public ArrayList<PlayButton> getPlayedButtonsPlayer1() {
+        return playedButtonsPlayer1;
+    }
+
+    public ArrayList<PlayButton> getPlayedButtonsPlayer2() {
+        return playedButtonsPlayer2;
     }
 }
