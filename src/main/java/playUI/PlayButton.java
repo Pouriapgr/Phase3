@@ -74,8 +74,16 @@ public class PlayButton {
         return showCard;
     }
 
+    public void setShowCard(boolean showCard) {
+        this.showCard = showCard;
+    }
+
     public boolean isSelectCard() {
         return selectCard;
+    }
+
+    public void setSelectCard(boolean selectCard) {
+        this.selectCard = selectCard;
     }
 
     public boolean isSelectPlace() {
@@ -84,13 +92,5 @@ public class PlayButton {
 
     public void setSelectPlace(boolean selectPlace) {
         this.selectPlace = selectPlace;
-    }
-
-    public void setShowCard(boolean showCard) {
-        this.showCard = showCard;
-    }
-
-    public void setSelectCard(boolean selectCard) {
-        this.selectCard = selectCard;
     }
 }

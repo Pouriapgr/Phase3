@@ -19,6 +19,14 @@ public class HandMover extends Thread {
         this.playCard = playCard;
     }
 
+    public static boolean isLock() {
+        return lock;
+    }
+
+    public static void setLock(boolean lock) {
+        HandMover.lock = lock;
+    }
+
     public synchronized void moveButton() {
         myButton.changeIcon(playCard.getName() + ".png");
         myButton.setVisible(true);
@@ -74,14 +82,6 @@ public class HandMover extends Thread {
         lock = true;
         moveButton();
         lock = false;
-    }
-
-    public static boolean isLock() {
-        return lock;
-    }
-
-    public static void setLock(boolean lock) {
-        HandMover.lock = lock;
     }
 
 }

@@ -20,6 +20,7 @@ public class FieldChecker extends Thread {
         checkMana();
         checkHeroPower();
         checkDeckRemains();
+        checkWeapons();
     }
 
     private void checkAndSet(MyButton myButton, String text) {
@@ -33,6 +34,19 @@ public class FieldChecker extends Thread {
         if (myButton.getBackground().equals(color))
             return;
         myButton.setBackground(color);
+    }
+
+    private void checkWeapons() {
+        if (gameState.getPlayer1().getWeaponCard() != null) {
+            checkAndSet(playPage.getMyButton("1Weapon"), gameState.getPlayer1().getWeaponCard().getAttack() +
+                    " / " + gameState.getPlayer1().getWeaponCard().getDurability());
+            playPage.getMyButton("1Weapon").setVisible(true);
+        }
+        if (gameState.getPlayer2().getWeaponCard() != null) {
+            checkAndSet(playPage.getMyButton("2Weapon"), gameState.getPlayer2().getWeaponCard().getAttack() +
+                    " / " + gameState.getPlayer2().getWeaponCard().getDurability());
+            playPage.getMyButton("2Weapon").setVisible(true);
+        }
     }
 
     private void checkHeroHp() {

@@ -14,6 +14,14 @@ public class ButtonFader extends Thread {
         this.name = name;
     }
 
+    public static boolean isLock() {
+        return lock;
+    }
+
+    public static void setLock(boolean lock) {
+        ButtonFader.lock = lock;
+    }
+
     public synchronized void fadeButton() {
         myButton.changeIcon(name + ".png");
         myButton.setVisible(true);
@@ -35,13 +43,5 @@ public class ButtonFader extends Thread {
         lock = true;
         fadeButton();
         lock = false;
-    }
-
-    public static boolean isLock() {
-        return lock;
-    }
-
-    public static void setLock(boolean lock) {
-        ButtonFader.lock = lock;
     }
 }

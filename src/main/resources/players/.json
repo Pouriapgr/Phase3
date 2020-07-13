@@ -7,7 +7,7 @@
     "playerId": 1
   },
   "playerId": 1,
-  "playerCoins": 8,
+  "playerCoins": 28,
   "playerAllDecks": [
     {
       "deckName": "0",
@@ -159,30 +159,6 @@
       },
       "deckCards": [
         {
-          "cardName": "Sprint",
-          "cardType": "Spell",
-          "cardClass": "Neutral",
-          "cardRarity": "Common",
-          "cardShowName": "Sprint",
-          "cardDescription": "Draw 4 cards.",
-          "cardCost": 7,
-          "cardValue": 10,
-          "cardHp": 0,
-          "cardAttack": 0
-        },
-        {
-          "cardName": "Strength in Numbers",
-          "cardType": "Quest",
-          "cardClass": "Neutral",
-          "cardRarity": "Common",
-          "cardShowName": "Strength in Numbers",
-          "cardDescription": "Spend 10 Mana on minions. Summon a minion from your deck.",
-          "cardCost": 1,
-          "cardValue": 10,
-          "cardHp": 0,
-          "cardAttack": 0
-        },
-        {
           "cardName": "Orb of the Untold",
           "cardType": "Spell",
           "cardClass": "Neutral",
@@ -301,6 +277,30 @@
           "cardValue": 10,
           "cardHp": 0,
           "cardAttack": 0
+        },
+        {
+          "cardName": "Battle Axe",
+          "cardType": "Weapon",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Battle Axe",
+          "cardDescription": " ",
+          "cardCost": 1,
+          "cardValue": 10,
+          "cardHp": 2,
+          "cardAttack": 2
+        },
+        {
+          "cardName": "Battle Axe",
+          "cardType": "Weapon",
+          "cardClass": "Neutral",
+          "cardRarity": "Common",
+          "cardShowName": "Battle Axe",
+          "cardDescription": " ",
+          "cardCost": 1,
+          "cardValue": 10,
+          "cardHp": 2,
+          "cardAttack": 2
         }
       ],
       "deckNoOfLosses": 0,
@@ -453,18 +453,6 @@
       "cardAttack": 5
     },
     {
-      "cardName": "Dreadscale",
-      "cardType": "Minion",
-      "cardClass": "Warlock",
-      "cardRarity": "Legendry",
-      "cardShowName": "Dreadscale",
-      "cardDescription": "At the end of your turn, deal 1 damage to all other minions.",
-      "cardCost": 3,
-      "cardValue": 30,
-      "cardHp": 2,
-      "cardAttack": 4
-    },
-    {
       "cardName": "Sathrovarr",
       "cardType": "Minion",
       "cardClass": "Neutral",
@@ -583,6 +571,18 @@
       "cardValue": 10,
       "cardHp": 1,
       "cardAttack": 0
+    },
+    {
+      "cardName": "Battle Axe",
+      "cardType": "Weapon",
+      "cardClass": "Neutral",
+      "cardRarity": "Common",
+      "cardShowName": "Battle Axe",
+      "cardDescription": " ",
+      "cardCost": 1,
+      "cardValue": 10,
+      "cardHp": 2,
+      "cardAttack": 2
     }
   ]
 }

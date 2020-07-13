@@ -3,7 +3,7 @@ package playlogic;
 import game.TimeAssistance;
 import game.UIController;
 import playUI.*;
-import playcard.PlayCard;
+import playcard.*;
 import userInterface.MenuPage;
 import userInterface.MyButton;
 
@@ -48,11 +48,75 @@ public class PlayHandler {
     public void runPlay() {
         doLogicInitials();
 
-        while (isRunning) {
+        while (true) {
             uiController.validate();
-            playTurn();
-            gameState.changeTurn();
-            TimeAssistance.waitFor(500L);
+            if (!isRunning) {
+                gameState.changeTurn();
+                isRunning = true;
+            }
+            if (playPage.newAction("Back")) {
+                endPlay();
+                return;
+            }
+            if (playPage.newAction("End")) {
+                endTurn();
+                continue;
+            }
+
+            HandButton handButton = checkChooseHand();
+            if (handButton != null) {
+                PlayCard playCard = handButton.getCard();
+                if (playCard instanceof MinionCard) {
+                    System.out.println("XXX");
+                    tryPlayMinion(handButton);
+                    continue;
+                }
+                if (playCard instanceof SpellCard) {
+
+                    continue;
+                }
+
+                if (playCard instanceof WeaponCard) {
+                    tryPlayWeapon(handButton);
+                    continue;
+                }
+                if (playCard instanceof QuestCard) {
+                    continue;
+                }
+                continue;
+            }
+
+            PlayButton playButton = checkChoosePlace();
+            if (playButton != null) {
+
+            }
+        }
+    }
+
+    private void tryPlayMinion(HandButton handButton) {
+        while (isRunning) {
+            if (playPage.newAction("End")) {
+                endTurn();
+                return;
+            }
+            PlayButton playButton = checkChoosePlace();
+            if (playButton == null)
+                continue;
+            playMinionInit(handButton, playButton);
+            return;
+        }
+    }
+
+    private void tryPlayWeapon(HandButton handButton) {
+        while (isRunning) {
+            if (playPage.newAction("End")) {
+                endTurn();
+                return;
+            }
+            if (!handButton.isSelectCard())
+                continue;
+            playWeaponInit(handButton);
+            return;
         }
     }
 
@@ -142,7 +206,7 @@ public class PlayHandler {
         return handButton;
     }
 
-    private PlayButton checkChooseButton() {
+    private PlayButton checkChoosePlace() {
         ArrayList<PlayButton> playButtons;
         if (gameState.getPlayerTurn() == 1) {
             playButtons = playPage.getPlayedButtonsPlayer1();
@@ -159,50 +223,51 @@ public class PlayHandler {
         return playButton;
     }
 
-    private void playCardInit(HandButton handButton, PlayButton playButton) {
+    private PlayButton checkChooseCard() {
+        ArrayList<PlayButton> playButtons;
+        if (gameState.getPlayerTurn() == 1) {
+            playButtons = playPage.getPlayedButtonsPlayer1();
+        } else {
+            playButtons = playPage.getPlayedButtonsPlayer2();
+        }
+        PlayButton playButton = null;
+        for (PlayButton button : playButtons) {
+            if (button.isSelectCard()) {
+                playButton = button;
+                button.setSelectCard(false);
+            }
+        }
+        return playButton;
+    }
+
+    private void playMinionInit(HandButton handButton, PlayButton playButton) {
         PlayCard playCard = handButton.getCard();
         if (gameState.getPlayerTurn() == 1) {
             if (gameState.canPlayCard(gameState.getPlayer1(), playCard))
-                gameState.playCard(playCard, playButton, handButton);
+                gameState.playMinion(playCard, playButton, handButton);
         } else if (gameState.getPlayerTurn() == 2) {
             if (gameState.canPlayCard(gameState.getPlayer2(), playCard))
-                gameState.playCard(playCard, playButton, handButton);
+                gameState.playMinion(playCard, playButton, handButton);
         }
     }
 
-    private void playTurn() {
-        HandButton handButton = null;
-        PlayButton playButton = null;
 
-        while (true) {
-            if (playPage.newAction("Back")) {
-                endPlay();
-                return;
-            }
-            if (playPage.newAction("End")) {
-                return;
-            }
-            if (handButton == null && playButton == null) {
-                handButton = checkChooseHand();
-                playButton = checkChooseButton();
-                continue;
-            }
-            if (handButton != null && playButton == null) {
-                playButton = checkChooseButton();
-                continue;
-            }
-            if (handButton == null && playButton != null) {
-                playButton = null;
-                continue;
-            }
-            playCardInit(handButton, playButton);
-            playButton = null;
-            handButton = null;
+    private void playWeaponInit(HandButton handButton) {
+        PlayCard playCard = handButton.getCard();
+        if (gameState.getPlayerTurn() == 1) {
+            if (gameState.canPlayCard(gameState.getPlayer1(), playCard))
+                gameState.playWeapon(playCard, handButton);
+        } else if (gameState.getPlayerTurn() == 2) {
+            if (gameState.canPlayCard(gameState.getPlayer2(), playCard))
+                gameState.playWeapon(playCard, handButton);
         }
+    }
+
+    private void endTurn() {
+        isRunning = false;
     }
 
     private void endPlay() {
-        isRunning = false;
         fieldChecker.interrupt();
     }
 

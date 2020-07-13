@@ -3,6 +3,7 @@ package playlogic;
 import module.Deck;
 import module.Passive;
 import playcard.PlayCard;
+import playcard.WeaponCard;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -17,6 +18,8 @@ public class PlayerInfo {
     private ArrayList<PlayCard> hand = new ArrayList<>();
     private PlayDeck deck;
     private Passive passive;
+
+    private WeaponCard weaponCard;
 
     private int turnMana;
     private int mana;
@@ -39,11 +42,21 @@ public class PlayerInfo {
     }
 
     public void removeFromHand(PlayCard playCard) {
-        hand.remove(playCard);
+        for (int i = 0; i <= hand.size(); i++) {
+            if (hand.get(i).equals(playCard)) {
+                hand.remove(i);
+                return;
+            }
+        }
     }
 
-    public void removeFromDec(PlayCard playCard) {
-        deck.getCards().remove(playCard);
+    public void removeFromDeck(PlayCard playCard) {
+        for (int i = 0; i < deck.getCards().size(); i++) {
+            if (deck.getCards().get(i).equals(playCard)) {
+                deck.getCards().remove(i);
+                return;
+            }
+        }
     }
 
     public int getFinalMana(PlayCard playCard) {
@@ -130,5 +143,13 @@ public class PlayerInfo {
 
     public void setAddToMana(int addToMana) {
         this.addToMana = addToMana;
+    }
+
+    public WeaponCard getWeaponCard() {
+        return weaponCard;
+    }
+
+    public void setWeaponCard(WeaponCard weaponCard) {
+        this.weaponCard = weaponCard;
     }
 }

@@ -4,6 +4,7 @@ import game.TimeAssistance;
 import playUI.HandButton;
 import playUI.PlayButton;
 import playcard.PlayCard;
+import playcard.WeaponCard;
 
 public class GameState {
     private static GameState gameState = null;
@@ -54,12 +55,19 @@ public class GameState {
         return playerInfo.getFinalMana(playCard) <= playerInfo.getMana();
     }
 
-    public void playCard(PlayCard playCard, PlayButton playButton, HandButton handButton) {
+    public void playMinion(PlayCard playCard, PlayButton playButton, HandButton handButton) {
         PlayerInfo playerInfo = playCard.getPlayerInfo();
         playerInfo.setMana(playerInfo.getMana() - playerInfo.getFinalMana(playCard));
-        playerInfo.addToDeck(playCard);
         playerInfo.removeFromHand(playCard);
         playButton.setNewCard(playCard);
+        handButton.setEmpty();
+    }
+
+    public void playWeapon(PlayCard playCard, HandButton handButton) {
+        PlayerInfo playerInfo = playCard.getPlayerInfo();
+        playerInfo.setMana(playerInfo.getMana() - playerInfo.getFinalMana(playCard));
+        playerInfo.removeFromHand(playCard);
+        playerInfo.setWeaponCard((WeaponCard) playCard);
         handButton.setEmpty();
     }
 

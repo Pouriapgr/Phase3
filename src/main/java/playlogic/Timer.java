@@ -4,6 +4,8 @@ import constants.LogicConstants;
 import playUI.PlayPage;
 import userInterface.MyButton;
 
+import java.awt.*;
+
 public class Timer extends Thread {
     private static boolean exit = false;
     private PlayPage playPage;
@@ -27,11 +29,14 @@ public class Timer extends Thread {
             if (myButton.getText().equals(Integer.toString(LogicConstants.TURN_TIME - time)))
                 continue;
             myButton.setText(Integer.toString(LogicConstants.TURN_TIME - time));
+            if (LogicConstants.TURN_TIME - time <= 10)
+                myButton.setBackground(Color.RED);
             if (time == LogicConstants.TURN_TIME) {
                 playPage.getMyButton("End").setPressed(true);
                 break;
             }
         }
+        myButton.setBackground(Color.gray.brighter());
         return;
     }
 }

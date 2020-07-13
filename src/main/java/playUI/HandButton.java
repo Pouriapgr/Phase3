@@ -87,15 +87,15 @@ public class HandButton {
         return showCard;
     }
 
+    public void setShowCard(boolean showCard) {
+        this.showCard = showCard;
+    }
+
     public boolean isSelectCard() {
         return selectCard;
     }
 
     public void setSelectCard(boolean selectCard) {
         this.selectCard = selectCard;
-    }
-
-    public void setShowCard(boolean showCard) {
-        this.showCard = showCard;
     }
 }
